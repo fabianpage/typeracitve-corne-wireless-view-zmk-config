@@ -51,6 +51,19 @@ Default five-role vocabulary: `needs-triage`, `needs-info`, `ready-for-agent`, `
 Single-context layout — one `CONTEXT.md` + `docs/adr/` at the repo root. See `docs/agents/domain.md`.
 
 ## Clojure (all files which end with .clj)
- - use the clj-surgeon skill to list/analyze and edit clojure files. Berofe reading a clojure file start at least with clj-surgeon :op :ls :file filename
- - use the brepl skill to run clojure code and test clojure code
- - error and stop if you can't use brepl or clj-surgeon
+- Read the skill file before using either tool:
+  - `read /Users/fabian/.agents/skills/clj-surgeon/SKILL.md`
+  - `read .agents/skills/brepl/SKILL.md`
+- Use **clj-surgeon** to list/analyze and edit Clojure files. Before reading a large `.clj` file, start with:
+  ```bash
+  clj-surgeon :op :ls :file generator.clj
+  ```
+- Use **brepl** (REPL client) to run Clojure code and test interactively. Always use the heredoc pattern:
+  ```bash
+  brepl <<'EOF'
+  (require '[generator :as g])
+  (g/indent 2)
+  EOF
+  ```
+- For the full test suite, run `bb test` (defined in `bb.edn`).
+- If either `brepl` or `clj-surgeon` is unavailable, error and stop.
