@@ -5,9 +5,9 @@
                                      "bb" "generator.clj"
                                      "--config" "totem_config.edn"
                                      "--input" "totem_template.keymap"
-                                     "--output" "config/totem.keymap"))]
+                                     "--output" "config/corne.keymap"))]
                     (if (zero? exit)
-                      (println "Generated config/totem.keymap")
+                      (println "Generated config/corne.keymap")
                       (throw (ex-info "Generator failed" {:exit exit}))))}
   verify-totem-equivalence {:doc "Regenerate Totem keymap and diff it against the pre-refactor baseline"
                             :task (let [baseline "examples/totem_generated_baseline.keymap"

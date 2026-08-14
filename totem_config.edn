@@ -1,4 +1,4 @@
-{:keyboard {:row-widths [10 10 12 6], :empty :trans},
+{:keyboard {:row-widths [12 12 12 6], :empty :trans},
  :regions
  [[:combos
    {:nodes
@@ -7,8 +7,8 @@
       :pattern [[0 0] [0 1]],
       :layers [:BASE],
       :bindings
-      [[:DE_X :DE_W :DE_M :DE_Z :none :none :none :none :none :none]
-       [:DE_Q :TAB :DE_V :DE_G :none :none :none :none :none :none]
+      [[:DE_X :DE_W :DE_M :DE_Z :none :none :none :none :none :none :none :none]
+       [:DE_Q :TAB :DE_V :DE_G :none :none :none :none :none :none :none :none]
        [:none
         :DE_Y
         :DE_K
@@ -36,8 +36,10 @@
         :none
         :none
         :none
+        :none
+        :none
         :none]
-       [:none :none :none :none :none :none :none :none :none :none]
+       [:none :none :none :none :none :none :none :none :none :none :none :none]
        [:none
         :none
         :none
@@ -65,12 +67,16 @@
         :none
         :none
         :none
+        :none
+        :none
         :none]
        [:ENTER
         [:square_brackets]
         :none
         [:caps_word]
         [:sk :LCTRL]
+        :none
+        :none
         :none
         :none
         :none
@@ -94,12 +100,14 @@
       :pattern [[0 0] [-1 -1]],
       :layers [:BASE],
       :bindings
-      [[:none :none :none :none :none :none :none :none :none :none]
+      [[:none :none :none :none :none :none :none :none :none :none :none :none]
        [:none
         :none
         :none
         :none
         [:curly_brackets]
+        :none
+        :none
         :none
         :none
         :none
@@ -123,8 +131,8 @@
       :pattern [[0 0] [-1 -2]],
       :layers [:BASE],
       :bindings
-      [[:none :none :none :none :none :none :none :none :none :none]
-       [:none :none :none :none :none :none :none :none :none :none]
+      [[:none :none :none :none :none :none :none :none :none :none :none :none]
+       [:none :none :none :none :none :none :none :none :none :none :none :none]
        [:none
         :none
         :none
@@ -346,8 +354,8 @@
    {:nodes
     ({:name "BASE",
       :left
-      [[:P :O :I :U :T]
-       [[:lt 3 :DE_S] :A :E :N :R]
+      [[:trans :P :O :I :U :T]
+       [:trans [:lt 3 :DE_S] :A :E :N :R]
        [:DE_G :D :L :C :F :H]
        [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]],
       :right-override
@@ -355,14 +363,15 @@
         [:bt :BT_SEL 1]
         [:out :OUT_TOG]
         [:bootloader]
-        [:bt :BT_CLR_ALL]]
-       [:H :D :DE_F :DE_H [:mt :RGUI :O]]
+        [:bt :BT_CLR_ALL]
+        :trans]
+       [:H :D :DE_F :DE_H [:mt :RGUI :O] :trans]
        [:K :M :COMMA :DOT :FSLH :FSLH]
        [:C :A :B]]}
      {:name "Nav1",
       :left
-      [[[:B_UE] :END :PG_UP :PG_DN :HOME]
-       [[:B_OE] :RIGHT_ARROW :UP :DOWN :LEFT_ARROW]
+      [[:trans [:B_UE] :END :PG_UP :PG_DN :HOME]
+       [:trans [:B_OE] :RIGHT_ARROW :UP :DOWN :LEFT_ARROW]
        [:trans
         :DE_A_UMLAUT
         :N9
@@ -371,18 +380,19 @@
         [:hash_pipe]]
        [:trans :trans :trans]],
       :right-override
-      [[:N1 :trans :trans :trans :trans]
-       [:trans :trans :trans :trans :trans]
+      [[:N1 :trans :trans :trans :trans :trans]
+       [:trans :trans :trans :trans :trans :trans]
        [:N3 :trans :trans :trans :trans :*]
        [:* :* :*]]}
      {:name "Nav2",
       :left
-      [[[:frage_ausrufe_zeichen]
+      [[:trans
+        [:frage_ausrufe_zeichen]
         [:mac_prev_next_window]
         [:swapper]
         [:tmux_next_pre]
         [:kp "LC(DE_U_UMLAUT)"]]
-       [[:at_equal] [:lCl] [:kCk] [:jCj] [:hCh]]
+       [:trans [:at_equal] [:lCl] [:kCk] [:jCj] [:hCh]]
        [:trans
         [:slash_backslash]
         [:dollar_ampersand]
@@ -391,29 +401,25 @@
         [:daechli_tilde]]
        [:trans :trans :trans]],
       :right-override
-      [[:trans :trans :trans :trans :trans]
-       [:trans :trans :trans :trans :trans]
+      [[:trans :trans :trans :trans :trans :trans]
+       [:trans :trans :trans :trans :trans :trans]
        [:trans :trans :* :trans :trans :*]
        [:* :* :*]]}
      {:name "Num",
       :left
-      [[:trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
-       [:trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
+      [[:trans :trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
+       [:trans :trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
        [:trans :trans [:n9ue9] [:n8ue8] [:n7ue7] [:mal_plus]]
        [:trans :trans :trans]],
       :right-override
-      [[:trans :trans :trans :trans :*]
-       [:trans :trans :trans :trans :*]
+      [[:trans :trans :trans :trans :* :*]
+       [:trans :trans :trans :trans :* :*]
        [:trans :trans :trans :trans :* :*]
        [:* :* :*]]}
      {:name "BT",
       :left
-      [[[:bt :BT_CLR_ALL]
-        [:bt :BT_SEL 2]
-        [:bt :BT_SEL 1]
-        [:bt :BT_SEL 0]
-        [:bt :BT_CLR]]
-       [:trans :trans :trans [:out :OUT_BLE] :trans]
+      [[:trans [:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]
+       [:trans :trans :trans :trans [:out :OUT_BLE] :trans]
        [:trans
         [:esc_layerreset]
         :trans
@@ -422,7 +428,7 @@
         [:bootloader]]
        [:trans :trans :trans]],
       :right-override
-      [[:trans :trans :trans :trans :trans]
-       [:* :trans :* :* :*]
+      [[:trans :trans :trans :trans :trans :trans]
+       [:* :trans :* :* :* :*]
        [:trans :trans :* :* :trans :*]
        [:* :* :*]]})}]]}

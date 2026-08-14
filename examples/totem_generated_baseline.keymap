@@ -49,133 +49,133 @@
 
         horiz_base_1_0 {
             bindings = <&kp DE_Q>;
-            key-positions = <10 11>;
+            key-positions = <12 13>;
             layers = <0>;
         };
 
         horiz_base_1_1 {
             bindings = <&kp TAB>;
-            key-positions = <11 12>;
+            key-positions = <13 14>;
             layers = <0>;
         };
 
         horiz_base_1_2 {
             bindings = <&kp DE_V>;
-            key-positions = <12 13>;
+            key-positions = <14 15>;
             layers = <0>;
         };
 
         horiz_base_1_3 {
             bindings = <&kp DE_G>;
-            key-positions = <13 14>;
+            key-positions = <15 16>;
             layers = <0>;
         };
 
         horiz_base_2_1 {
             bindings = <&kp DE_Y>;
-            key-positions = <21 22>;
+            key-positions = <25 26>;
             layers = <0>;
         };
 
         horiz_base_2_2 {
             bindings = <&kp DE_K>;
-            key-positions = <22 23>;
+            key-positions = <26 27>;
             layers = <0>;
         };
 
         horiz_base_2_3 {
             bindings = <&kp DE_J>;
-            key-positions = <23 24>;
+            key-positions = <27 28>;
             layers = <0>;
         };
 
         horiz_base_2_4 {
             bindings = <&kp DE_B>;
-            key-positions = <24 25>;
+            key-positions = <28 29>;
             layers = <0>;
         };
 
         vert_base_0_0 {
             bindings = <&backspace_delete>;
-            key-positions = <0 10>;
+            key-positions = <0 12>;
             layers = <0>;
         };
 
         vert_base_0_1 {
             bindings = <&round_brackets>;
-            key-positions = <1 11>;
+            key-positions = <1 13>;
             layers = <0>;
         };
 
         vert_base_0_2 {
             bindings = <&esc_layerreset>;
-            key-positions = <2 12>;
+            key-positions = <2 14>;
             layers = <0>;
         };
 
         vert_base_0_3 {
             bindings = <&sk LEFT_ALT>;
-            key-positions = <3 13>;
+            key-positions = <3 15>;
             layers = <0>;
         };
 
         vert_base_0_4 {
             bindings = <&sk LEFT_GUI>;
-            key-positions = <4 14>;
+            key-positions = <4 16>;
             layers = <0>;
         };
 
         diag_down_base_0_2 {
             bindings = <&punkt_doppelpunkt>;
-            key-positions = <2 13>;
+            key-positions = <2 15>;
             layers = <0>;
         };
 
         diag_down_base_1_0 {
             bindings = <&kp ENTER>;
-            key-positions = <10 21>;
+            key-positions = <12 25>;
             layers = <0>;
         };
 
         diag_down_base_1_1 {
             bindings = <&square_brackets>;
-            key-positions = <11 22>;
+            key-positions = <13 26>;
             layers = <0>;
         };
 
         diag_down_base_1_3 {
             bindings = <&caps_word>;
-            key-positions = <13 24>;
+            key-positions = <15 28>;
             layers = <0>;
         };
 
         diag_down_base_1_4 {
             bindings = <&sk LCTRL>;
-            key-positions = <14 25>;
+            key-positions = <16 29>;
             layers = <0>;
         };
 
         diag_up_base_1_4 {
             bindings = <&curly_brackets>;
-            key-positions = <14 3>;
+            key-positions = <16 3>;
             layers = <0>;
         };
 
         diag_up_base_2_3 {
             bindings = <&kp SPACE>;
-            key-positions = <23 12>;
+            key-positions = <27 14>;
             layers = <0>;
         };
 
         diag_knight_base_2_4 {
             bindings = <&komma_strickpunkt>;
-            key-positions = <24 12>;
+            key-positions = <28 14>;
             layers = <0>;
         };
 
         diag_knight_base_2_5 {
             bindings = <&angled_brackets>;
-            key-positions = <25 13>;
+            key-positions = <29 15>;
             layers = <0>;
         };
 
@@ -612,8 +612,8 @@
         BASE {
             display-name = "BASE";
             bindings = <
-&kp P &kp O &kp I &kp U &kp T &bt BT_SEL 0 &bt BT_SEL 1 &out OUT_TOG &bootloader &bt BT_CLR_ALL
-&lt 3 DE_S &kp A &kp E &kp N &kp R &kp H &kp D &kp DE_F &kp DE_H &mt RGUI O
+&trans &kp P &kp O &kp I &kp U &kp T &bt BT_SEL 0 &bt BT_SEL 1 &out OUT_TOG &bootloader &bt BT_CLR_ALL &trans
+&trans &lt 3 DE_S &kp A &kp E &kp N &kp R &kp H &kp D &kp DE_F &kp DE_H &mt RGUI O &trans
 &kp DE_G &kp D &kp L &kp C &kp F &kp H &kp K &kp M &kp COMMA &kp DOT &kp FSLH &kp FSLH
 &sl 1 &sk LEFT_SHIFT &sl 2 &kp C &kp A &kp B
             >;
@@ -622,8 +622,8 @@
         Nav1 {
             display-name = "Nav1";
             bindings = <
-&B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp N1 &trans &trans &trans &trans
-&B_OE &kp RIGHT_ARROW &kp UP &kp DOWN &kp LEFT_ARROW &trans &trans &trans &trans &trans
+&trans &B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp N1 &trans &trans &trans &trans &trans
+&trans &B_OE &kp RIGHT_ARROW &kp UP &kp DOWN &kp LEFT_ARROW &trans &trans &trans &trans &trans &trans
 &trans &kp DE_A_UMLAUT &kp N9 &double_single_quote &back_front_tick &hash_pipe &kp N3 &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans
             >;
@@ -632,8 +632,8 @@
         Nav2 {
             display-name = "Nav2";
             bindings = <
-&frage_ausrufe_zeichen &mac_prev_next_window &swapper &tmux_next_pre &kp LC(DE_U_UMLAUT) &trans &trans &trans &trans &trans
-&at_equal &lCl &kCk &jCj &hCh &trans &trans &trans &trans &trans
+&trans &frage_ausrufe_zeichen &mac_prev_next_window &swapper &tmux_next_pre &kp LC(DE_U_UMLAUT) &trans &trans &trans &trans &trans &trans
+&trans &at_equal &lCl &kCk &jCj &hCh &trans &trans &trans &trans &trans &trans
 &trans &slash_backslash &dollar_ampersand &trans &prozent_ringli &daechli_tilde &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans
             >;
@@ -642,8 +642,8 @@
         Num {
             display-name = "Num";
             bindings = <
-&trans &n3ue3 &n2ue2 &n1ue1 &minus_underscore &trans &trans &trans &trans &trans
-&trans &n6ue6 &n5ue5 &n4ue4 &n0ue0 &trans &trans &trans &trans &trans
+&trans &trans &n3ue3 &n2ue2 &n1ue1 &minus_underscore &trans &trans &trans &trans &trans &trans
+&trans &trans &n6ue6 &n5ue5 &n4ue4 &n0ue0 &trans &trans &trans &trans &trans &trans
 &trans &trans &n9ue9 &n8ue8 &n7ue7 &mal_plus &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans
             >;
@@ -652,8 +652,8 @@
         BT {
             display-name = "BT";
             bindings = <
-&bt BT_CLR_ALL &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_CLR &trans &trans &trans &trans &trans
-&trans &trans &trans &out OUT_BLE &trans &trans &trans &trans &trans &trans
+&trans &bt BT_CLR_ALL &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_CLR &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &out OUT_BLE &trans &trans &trans &trans &trans &trans &trans
 &trans &esc_layerreset &trans &trans &out OUT_USB &bootloader &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans
             >;
