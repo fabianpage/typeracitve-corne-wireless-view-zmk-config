@@ -1,0 +1,68 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        // BEGIN macros
+        esc_layerreset: esc_layerreset {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &to 0>;
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        hello: hello {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp H &kp E &kp L &kp L &kp O>;
+        };
+
+        slow_macro: slow_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp B>;
+        };
+
+        pause_demo: pause_demo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &lt 2 LCTRL &macro_wait_time 30 &kp A &macro_tap_time 50 &macro_pause_for_release &kp B &macro_release &lt 2 LCTRL>;
+        };
+
+        upper: upper {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&kp CAPSLOCK>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&kp CAPSLOCK>;
+            wait-ms = <80>;
+            tap-ms = <80>;
+        };
+
+        swap: swap {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_2to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_param_2to2>,
+                <&kp MACRO_PLACEHOLDER>;
+            wait-ms = <20>;
+        };
+        // END macros
+
+        // BEGIN keymap
+        BASE {
+            display-name = "BASE";
+            bindings = <
+&kp Q &kp W &kp E
+&kp A &kp S &kp D
+            >;
+        };
+        // END keymap
+    };
+};
+

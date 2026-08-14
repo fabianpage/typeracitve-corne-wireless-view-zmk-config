@@ -1,0 +1,39 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        // BEGIN combos
+        raw_combo {
+            bindings = <&kp A>;
+            key-positions = <0 1>;
+        };
+
+        diag_base_0_0 {
+            bindings = <&kp Q>;
+            key-positions = <0 4>;
+            layers = <0>;
+        };
+
+        diag_base_0_1 {
+            bindings = <&kp W>;
+            key-positions = <1 5>;
+            layers = <0>;
+        };
+        // END combos
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        // BEGIN keymap
+        BASE {
+            display-name = "BASE";
+            bindings = <
+&kp Q &kp W &kp E
+&kp A &kp S &kp D
+            >;
+        };
+        // END keymap
+    };
+};
+

@@ -1,0 +1,8 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        // BEGIN keymap
+        // END keymap
+    };
+};

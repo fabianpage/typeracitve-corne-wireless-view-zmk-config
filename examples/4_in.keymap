@@ -1,0 +1,15 @@
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        // BEGIN combos
+        // END combos
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        // BEGIN keymap
+        // END keymap
+    };
+};

@@ -1,0 +1,45 @@
+{:aliases
+ {:ESC :ESCAPE
+  :CTRL [:lt 2 :LCTRL]}
+ :regions
+ [[:macros
+   {:nodes
+    [{:name "esc_layerreset"
+      :label "esc_layerreset"
+      :type :macro
+      :bindings [:ESCAPE [:to 0]]
+      :wait-ms 20
+      :tap-ms 20}
+     {:name "hello"
+      :label "hello"
+      :type :macro
+      :bindings [:H :E :L :L :O]}
+     {:name "slow_macro"
+      :label "slow_macro"
+      :type :macro
+      :bindings [:A :B]}
+     {:name "pause_demo"
+      :label "pause_demo"
+      :type :macro
+      :bindings [[:press :CTRL]
+                 [:wait 30]
+                 :A
+                 [:tap-time 50]
+                 [:pause]
+                 :B
+                 [:release :CTRL]]}
+     {:name "upper"
+      :label "upper"
+      :type :macro-one-param
+      :bindings [:CAPSLOCK [:pause] [:param-1to1 [:kp :_placeholder]] :CAPSLOCK]
+      :wait-ms 80
+      :tap-ms 80}
+     {:name "swap"
+      :label "swap"
+      :type :macro-two-param
+      :bindings [[:param-2to1 [:kp :_placeholder]] [:param-2to2 [:kp :_placeholder]]]
+      :wait-ms 20}]}]
+  [:keymap
+   {:nodes [{:name "BASE"
+              :bindings [[:Q :W :E]
+                         [:A :S :D]]}]}]]}

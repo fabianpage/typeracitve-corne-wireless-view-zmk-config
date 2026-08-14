@@ -1,0 +1,11 @@
+{:aliases
+ {:_ :trans
+  :S [:lt 3 :DE_S]
+  :Q [:kp "LC(DE_U_UMLAUT)"]}
+ :regions
+ [[:keymap
+   {:nodes
+    [{:name "BASE"
+      :bindings
+      [[:Q :S :_]
+       [:A :B :C]]}]}]]}

@@ -1,0 +1,19 @@
+{:regions
+ [[:combos
+   {:nodes
+    [{:name "raw_combo"
+      :body ["bindings = <&kp A>;" "key-positions = <0 1>;"]}
+     {:name "diag_base"
+      :type :combo-layer
+      :row-widths [3 3]
+      :pattern [[0 0] [1 1]]
+      :bindings
+      [[:Q :W :E]
+       [:A :S :D]]
+      :layers [:BASE]}]}]
+  [:keymap
+   {:nodes
+    [{:name "BASE"
+      :bindings
+      [[:Q :W :E]
+       [:A :S :D]]}]}]]}

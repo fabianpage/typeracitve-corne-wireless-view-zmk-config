@@ -1,0 +1,11 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        // BEGIN macros
+        // END macros
+
+        // BEGIN keymap
+        // END keymap
+    };
+};

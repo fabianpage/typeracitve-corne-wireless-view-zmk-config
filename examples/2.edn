@@ -1,0 +1,11 @@
+{:regions
+ [[:keymap
+   {:nodes
+    [{:name "BASE"
+      :bindings
+      [[:A :B :C]
+       [:D :E :F]]}
+     {:name "NAV"
+      :bindings
+      [[:trans :trans :trans]
+       [:none :none :none]]}]}]]}

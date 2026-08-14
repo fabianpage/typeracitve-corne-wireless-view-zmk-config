@@ -1,0 +1,21 @@
+.DS_Store
+# Editor / REPL tooling
+.calva/
+.lsp/
+.clj-kondo/
+.portal/
+.nrepl-port
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Local automation logs
+logs/issue-runner/
+.pi-subagents

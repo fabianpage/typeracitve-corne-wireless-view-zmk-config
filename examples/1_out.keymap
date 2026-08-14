@@ -1,0 +1,674 @@
+#include "keys_de_swiss.h"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+&default_transform { col-offset = <0>; };
+
+#define BASE 0
+#define NAV  1
+#define SYM  2
+#define ADJ  3
+
+&mt {
+    quick-tap-ms = <100>;
+    global-quick-tap;
+    flavor = "tap-preferred";
+    tapping-term-ms = <170>;
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        // BEGIN combos
+        horizontal_ltr_0_0 {
+            bindings = <&kp DE_X>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        horizontal_ltr_0_1 {
+            bindings = <&kp DE_W>;
+            key-positions = <1 2>;
+            layers = <0>;
+        };
+
+        horizontal_ltr_1_0 {
+            bindings = <&kp DE_Q>;
+            key-positions = <10 11>;
+            layers = <0>;
+        };
+
+        horizontal_ltr_1_1 {
+            bindings = <&kp TAB>;
+            key-positions = <11 12>;
+            layers = <0>;
+        };
+
+        horizontal_ltr_1_3 {
+            bindings = <&kp DE_G>;
+            key-positions = <13 14>;
+            layers = <0>;
+        };
+
+        horizontal_ltr_2_1 {
+            bindings = <&kp DE_Y>;
+            key-positions = <21 22>;
+            layers = <0>;
+        };
+
+        horizontal_ltr_2_2 {
+            bindings = <&kp DE_K>;
+            key-positions = <22 23>;
+            layers = <0>;
+        };
+
+        horizontal_rtl_0_3 {
+            bindings = <&kp DE_M>;
+            key-positions = <3 2>;
+            layers = <0>;
+        };
+
+        horizontal_rtl_0_4 {
+            bindings = <&kp DE_Z>;
+            key-positions = <4 3>;
+            layers = <0>;
+        };
+
+        horizontal_rtl_1_3 {
+            bindings = <&kp DE_V>;
+            key-positions = <13 12>;
+            layers = <0>;
+        };
+
+        horizontal_rtl_2_4 {
+            bindings = <&kp DE_J>;
+            key-positions = <24 23>;
+            layers = <0>;
+        };
+
+        horizontal_rtl_2_5 {
+            bindings = <&kp DE_B>;
+            key-positions = <25 24>;
+            layers = <0>;
+        };
+
+        vertical_0_0 {
+            bindings = <&backspace_delete>;
+            key-positions = <0 10>;
+            layers = <0>;
+        };
+
+        vertical_0_1 {
+            bindings = <&round_brackets>;
+            key-positions = <1 11>;
+            layers = <0>;
+        };
+
+        vertical_0_2 {
+            bindings = <&esc_layerreset>;
+            key-positions = <2 12>;
+            layers = <0>;
+        };
+
+        vertical_0_3 {
+            bindings = <&sk LEFT_ALT>;
+            key-positions = <3 13>;
+            layers = <0>;
+        };
+
+        vertical_0_4 {
+            bindings = <&sk LEFT_GUI>;
+            key-positions = <4 14>;
+            layers = <0>;
+        };
+
+        diagonal_down_right_0_2 {
+            bindings = <&punkt_doppelpunkt>;
+            key-positions = <2 13>;
+            layers = <0>;
+        };
+
+        diagonal_down_right_1_0 {
+            bindings = <&kp ENTER>;
+            key-positions = <10 21>;
+            layers = <0>;
+        };
+
+        diagonal_down_right_1_1 {
+            bindings = <&square_brackets>;
+            key-positions = <11 22>;
+            layers = <0>;
+        };
+
+        diagonal_down_right_1_3 {
+            bindings = <&caps_word>;
+            key-positions = <13 24>;
+            layers = <0>;
+        };
+
+        diagonal_down_right_1_4 {
+            bindings = <&sk LCTRL>;
+            key-positions = <14 25>;
+            layers = <0>;
+        };
+
+        diagonal_down_right_reverse_1_4 {
+            bindings = <&curly_brackets>;
+            key-positions = <14 3>;
+            layers = <0>;
+        };
+
+        diagonal_down_right_reverse_2_3 {
+            bindings = <&kp SPACE>;
+            key-positions = <23 12>;
+            layers = <0>;
+        };
+
+        angled_brackets {
+            bindings = <&angled_brackets>;
+            key-positions = <25 13>;
+            layers = <0>;
+        };
+
+        komma_strichpunkt {
+            bindings = <&komma_strickpunkt>;
+            key-positions = <24 12>;
+            layers = <0>;
+        };
+
+        toBT {
+            bindings = <&to 4>;
+            key-positions = <1 2 3 4>;
+            layers = <0>;
+        };
+
+        ae {
+            bindings = <&M_UPPER_AEOEUE DE_A_UMLAUT>;
+            key-positions = <33 21 32>;
+            layers = <0>;
+        };
+        // END combos
+    };
+
+    macros {
+        // BEGIN macros
+        esc_layerreset: esc_layerreset {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &to 0>;
+        };
+
+        daechli: daechli {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_CARET &kp SPACE>;
+        };
+
+        tilde: tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_N) &kp SPACE>;
+        };
+
+        M_UPPER_AEOEUE: AE {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&kp CAPSLOCK>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&kp CAPSLOCK>;
+            wait-ms = <80>;
+            tap-ms = <80>;
+        };
+
+        M_UE: UE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPSLOCK &kp DE_U_UMLAUT &kp CAPSLOCK>;
+            wait-ms = <20>;
+            tap-ms = <20>;
+        };
+
+        M_OE: M_OE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPSLOCK &kp DE_O_UMLAUT &kp CAPSLOCK>;
+            wait-ms = <100>;
+            tap-ms = <100>;
+        };
+
+        backtick_macro: backtick_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_GRAVE &kp SPACE>;
+        };
+
+        fronttick_macro: fronttick_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(EQUAL) &kp SPACE>;
+        };
+
+        ue1: ue1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N1>;
+        };
+
+        ue2: ue2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N2>;
+        };
+
+        ue3: ue3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N3>;
+        };
+
+        ue4: ue4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N4>;
+        };
+
+        ue5: ue5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N5>;
+        };
+
+        ue6: ue6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N6>;
+        };
+
+        ue7: ue7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N7>;
+        };
+
+        ue8: ue8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N8>;
+        };
+
+        ue9: ue9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N9>;
+        };
+
+        ue0: ue0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N0>;
+        };
+
+        tmux_next_window: tmux_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N>;
+        };
+
+        tmux_prev_window: tmux_prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_P>;
+        };
+        // END macros
+    };
+
+    behaviors {
+        // BEGIN behaviors
+        square_brackets: square_brackets {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_N5)>, <&kp LA(DE_N6)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        round_brackets: round_brackets {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DE_N8)>, <&kp LS(DE_N9)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        angled_brackets: angled_brackets {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_LESS_THAN>, <&kp DE_GREATER_THAN>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        curly_brackets: curly_brackets {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_N8)>, <&kp LA(DE_N9)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        backspace_delete: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        double_single_quote: double_single_quote {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_DOUBLE_QUOTES>, <&kp MINUS>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        back_front_tick: back_front_tick {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&backtick_macro>, <&fronttick_macro>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        punkt_doppelpunkt: punkt_doppelpunkt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_DOT>, <&kp DE_COLON>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        komma_strickpunkt: komma_strickpunkt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_COMMA>, <&kp DE_SEMICOLON>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        frage_ausrufe_zeichen: frage_ausrufe_zeichen {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_QUESTION>, <&kp DE_EXCLAMATION>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        daechli_tilde: daechli_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&daechli>, <&tilde>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        prozent_ringli: prozent_ringli {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_PERCENT>, <&kp LS(NON_US_BSLH)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        hash_pipe: hash_pipe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_HASH>, <&kp DE_PIPE>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        at_equal: at_equal {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DE_G)>, <&kp DE_EQUAL>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        dollar_ampersand: dollar_ampersand {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_DOLLAR>, <&kp DE_AMPERSAND>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        slash_backslash: slash_backslash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_SLASH>, <&kp LS(LA(DE_N7))>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mal_plus: mal_plus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_ASTERISK>, <&kp DE_PLUS>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        minus_underscore: minus_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_MINUS>, <&kp DE_UNDER>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        B_AE: B_AE {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_A_UMLAUT>, <&M_UPPER_AEOEUE DE_A_UMLAUT>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        B_UE: B_UE {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_U_UMLAUT>, <&M_UE>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        B_OE: B_OE {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_O_UMLAUT>, <&M_OE>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        hCh: hCh {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_H>, <&kp LC(DE_H)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        jCj: jCj {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_J>, <&kp LC(DE_J)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        kCk: kCk {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_K>, <&kp LC(DE_K)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        lCl: lCl {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_L>, <&kp LC(DE_L)>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n0ue0: n0ue0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N0>, <&ue0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n1ue1: n1ue1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N1>, <&ue1>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n2ue2: n2ue2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N2>, <&ue2>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n3ue3: n3ue3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N3>, <&ue3>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n4ue4: n4ue4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N4>, <&ue4>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n5ue5: n5ue5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N5>, <&ue5>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n6ue6: n6ue6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N6>, <&ue6>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n7ue7: n7ue7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N7>, <&ue7>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n8ue8: n8ue8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N8>, <&ue8>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        n9ue9: n9ue9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_N9>, <&ue9>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        tmux_next_pre: tmux_next_pre {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&tmux_next_window>, <&tmux_prev_window>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mac_next_prev_app: mac_next_prev_app {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LG(TAB)>, <&kp LG(LS(TAB))>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        mac_prev_next_window: mac_prev_next_window {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F9)>, <&kp LS(LC(F9))>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        swapper: swapper {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp TAB>;
+            ignored-key-positions = <33>;
+        };
+        // END behaviors
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+
+        // BEGIN keymap
+        BASE {
+            display-name = "BASE";
+            bindings = <
+&kp P &kp O &kp I &kp U &kp T &bt BT_SEL 0 &bt BT_SEL 1 &out OUT_TOG &bootloader &bt BT_CLR_ALL
+&lt 3 DE_S &kp A &kp E &kp N &kp R &kp H &kp D &kp DE_F &kp DE_H &mt RGUI O
+&kp DE_G &kp D &kp L &kp C &kp F &kp H &kp K &kp M &kp COMMA &kp DOT &kp FSLH &kp FSLH
+&sl 1 &sk LEFT_SHIFT &sl 2 &kp C &kp A &kp B
+            >;
+        };
+
+        Nav1 {
+            display-name = "Nav1";
+            bindings = <
+&B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp N1 &trans &trans &trans &trans
+&B_OE &kp RIGHT_ARROW &kp UP &kp DOWN &kp LEFT_ARROW &trans &trans &trans &trans &trans
+&trans &kp DE_A_UMLAUT &kp N9 &kp double_single_quote &kp back_front_tick &kp hash_pipe &kp N3 &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
+
+        Nav2 {
+            display-name = "Nav2";
+            bindings = <
+&frage_ausrufe_zeichen &mac_prev_next_window &swapper &tmux_next_pre &kp LC(DE_U_UMLAUT) &trans &trans &trans &trans &trans
+&at_equal &lCl &kCk &jCj &hCh &trans &trans &trans &trans &trans
+&trans &slash_backslash &dollar_ampersand &trans &prozent_ringli &daechli_tilde &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
+
+        Num {
+            display-name = "Num";
+            bindings = <
+&trans &n3ue3 &n2ue2 &n1ue1 &minus_underscore &trans &trans &trans &trans &trans
+&trans &n6ue6 &n5ue5 &n4ue4 &n0ue0 &trans &trans &trans &trans &trans
+&trans &trans &n9ue9 &n8ue8 &n7ue7 &mal_plus &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
+
+        BT {
+            display-name = "BT";
+            bindings = <
+&bt BT_CLR_ALL &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_CLR &trans &trans &trans &trans &trans
+&trans &trans &trans &out OUT_BLE &trans &trans &trans &trans &trans &trans
+&trans &esc_layerreset &trans &trans &out OUT_USB &bootloader &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
+        // END keymap
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        BT {
+            if-layers = <1 2>;
+            then-layer = <4>;
+        };
+    };
+};
+
