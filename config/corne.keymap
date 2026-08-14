@@ -187,7 +187,7 @@
 
         ae {
             bindings = <&M_UPPER_AEOEUE DE_A_UMLAUT>;
-            key-positions = <33 21 32>;
+            key-positions = <36 25 37>;
             layers = <0>;
         };
         // END combos
@@ -600,7 +600,7 @@
             compatible = "zmk,behavior-smart-toggle";
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&kp TAB>;
-            ignored-key-positions = <33>;
+            ignored-key-positions = <37>;
         };
         // END behaviors
     };
