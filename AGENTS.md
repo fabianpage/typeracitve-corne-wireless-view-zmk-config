@@ -41,6 +41,7 @@ Do **not** modify firmware config files in `config/` or `build.yaml` unless expl
 ### Issue tracker
 
 Issues live in the repo's GitHub Issues. See `docs/agents/issue-tracker.md`.
+Warn me if you can't use the gh cli
 
 ### Triage labels
 

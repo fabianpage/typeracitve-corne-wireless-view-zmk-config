@@ -144,8 +144,10 @@
    For each node in the :keymap region that has :left, assemble a full :bindings
    grid by mirroring and applying :right-override. Any existing :bindings is
    overwritten.
-   For each :combo-layer node that does not declare :row-widths, inject
-   :keyboard :row-widths."
+   For each :combo-layer node:
+   - if it declares both :bindings and :left, throw
+   - if it declares :left, assemble full bindings and set :auto-symmetric? true
+   - if it does not declare :row-widths, inject :keyboard :row-widths."
   [config]
   (let [keyboard (:keyboard config)]
     (update config :regions
@@ -162,11 +164,29 @@
                                                         (dissoc :left :right-override)
                                                         (assoc :bindings bindings)))
 
-                                                  ;; combo-layer without :row-widths → inherit from keyboard if present
-                                                  (and (= (:type node) :combo-layer) (not (:row-widths node)))
-                                                  (if keyboard
-                                                    (assoc node :row-widths (:row-widths keyboard))
-                                                    node)
+                                                  ;; combo-layer → resolve :left or inject row-widths
+                                                  (= (:type node) :combo-layer)
+                                                  (let [has-bindings (seq (:bindings node))
+                                                        has-left (seq (:left node))
+                                                        node (if (:row-widths node)
+                                                               node
+                                                               (if keyboard
+                                                                 (assoc node :row-widths (:row-widths keyboard))
+                                                                 node))]
+                                                    (cond
+                                                      (and has-bindings has-left)
+                                                      (throw (ex-info "Combo-layer may not declare both :bindings and :left"
+                                                                      {:node node}))
+
+                                                      has-left
+                                                      (let [bindings (assemble-layer-bindings node {:row-widths (:row-widths node)})]
+                                                        (-> node
+                                                            (dissoc :left :right-override)
+                                                            (assoc :bindings bindings
+                                                                   :auto-symmetric? true)))
+
+                                                      :else
+                                                      node))
 
                                                   :else
                                                   node))
@@ -306,19 +326,27 @@
   "Render a :combo-layer node into one or more ZMK combo DT nodes.
    :row-widths is required. :pattern defines relative offsets.
    :bindings uses the normal binding DSL. :layers can be keywords
-   (resolved against the keymap) or raw numbers."
+   (resolved against the keymap) or raw numbers.
+   When :auto-symmetric? is true, the left half uses :pattern and the
+   right half uses the horizontally-mirrored pattern (column offsets negated)."
   ([node level opts]
    (render-combo-layer node level false opts))
-  ([{:keys [name row-widths pattern bindings layers] :as node} level _raw-body? {:keys [layer-index-map]}]
+  ([{:keys [name row-widths pattern bindings layers auto-symmetric?] :as node} level _raw-body? {:keys [layer-index-map]}]
   (when-not row-widths
     (throw (ex-info ":row-widths is required for :combo-layer" {:node node})))
   (let [layer-nums (resolve-layer-nums layers layer-index-map)
         layer-line (when (seq layer-nums)
                      (str (indent (inc level)) "layers = <" (str/join " " layer-nums) ">;"))
+        half-widths (when auto-symmetric? (mapv #(quot % 2) row-widths))
+        mirrored-pattern (when auto-symmetric? (mapv (fn [[dr dc]] [dr (- dc)]) pattern))
         combos (for [r (range (count bindings))
                      c (range (count (nth bindings r)))
                      :let [cell (get-in bindings [r c])
-                           positions (combo-positions row-widths pattern [r c])]
+                           effective-pattern (if (and auto-symmetric?
+                                                      (>= c (nth half-widths r)))
+                                               mirrored-pattern
+                                               pattern)
+                           positions (combo-positions row-widths effective-pattern [r c])]
                      :when (and positions
                                 (not (#{:none :trans} cell)))]
                  (let [combo-name (str name "_" r "_" c)]

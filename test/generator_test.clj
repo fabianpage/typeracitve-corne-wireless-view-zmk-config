@@ -620,6 +620,93 @@
 
 
 
+(deftest combo-layer-left-rejects-bindings-and-left
+  (let [template "    // BEGIN combos\n    // END combos\n"
+        config {:keyboard {:row-widths [4]}
+                :regions [[:combos
+                           {:nodes [{:name "conflict"
+                                      :type :combo-layer
+                                      :pattern [[0 0] [0 1]]
+                                      :bindings [[:A :B :C :D]]
+                                      :left [[:A :B]]}]}]]}]
+    (is (thrown-with-msg?
+         clojure.lang.ExceptionInfo
+         #"both :bindings and :left"
+         (generator/generate-keymap template config)))))
+
+(deftest combo-layer-left-generates-both-halves
+  (let [template "    // BEGIN combos\n    // END combos\n    // BEGIN keymap\n    // END keymap\n"
+        config {:keyboard {:row-widths [4]}
+                :regions [[:combos
+                           {:nodes [{:name "horiz"
+                                      :type :combo-layer
+                                      :pattern [[0 0] [0 1]]
+                                      :layers [:BASE]
+                                      :left [[:A :none]]}]}]
+                          [:keymap
+                           {:nodes [{:name "BASE"
+                                     :bindings [[:A :X :X :A]]}]}]]}
+        generated (generator/generate-keymap template config)]
+    ;; left half uses original pattern (ltr)
+    (is (str/includes? generated "horiz_0_0"))
+    (is (str/includes? generated "key-positions = <0 1>;"))
+    (is (str/includes? generated "bindings = <&kp A>;"))
+    ;; right half uses mirrored pattern (rtl)
+    (is (str/includes? generated "horiz_0_3"))
+    (is (str/includes? generated "key-positions = <3 2>;"))
+    ;; boundary :none cells are skipped
+    (is (not (str/includes? generated "horiz_0_1")))
+    (is (not (str/includes? generated "horiz_0_2")))))
+
+(deftest combo-layer-left-with-right-override
+  (let [template "    // BEGIN combos\n    // END combos\n    // BEGIN keymap\n    // END keymap\n"
+        config {:keyboard {:row-widths [4]}
+                :regions [[:combos
+                           {:nodes [{:name "horiz"
+                                      :type :combo-layer
+                                      :pattern [[0 0] [0 1]]
+                                      :left [[:A :B]]
+                                      :right-override [[:X :*]]}]}]
+                          [:keymap
+                           {:nodes [{:name "BASE"
+                                     :bindings [[:A :B :X :A]]}]}]]}
+        generated (generator/generate-keymap template config)]
+    ;; left half: A at 0, B at 1
+    (is (str/includes? generated "horiz_0_0"))
+    (is (str/includes? generated "key-positions = <0 1>;"))
+    (is (str/includes? generated "bindings = <&kp A>;"))
+    (is (str/includes? generated "horiz_0_1"))
+    (is (str/includes? generated "key-positions = <1 2>;"))
+    (is (str/includes? generated "bindings = <&kp B>;"))
+    ;; right half with override: X at col 2, mirrored A at col 3
+    (is (str/includes? generated "horiz_0_2"))
+    (is (str/includes? generated "key-positions = <2 1>;"))
+    (is (str/includes? generated "bindings = <&kp X>;"))
+    (is (str/includes? generated "horiz_0_3"))
+    (is (str/includes? generated "key-positions = <3 2>;"))
+    (is (str/includes? generated "bindings = <&kp A>;"))))
+
+(deftest combo-layer-left-uses-mirrored-pattern-for-right-half
+  (let [template "    // BEGIN combos\n    // END combos\n    // BEGIN keymap\n    // END keymap\n"
+        config {:keyboard {:row-widths [4 4]}
+                :regions [[:combos
+                           {:nodes [{:name "diag"
+                                      :type :combo-layer
+                                      :pattern [[0 0] [1 1]]
+                                      :left [[:A :none]
+                                             [:none :B]]}]}]
+                          [:keymap
+                           {:nodes [{:name "BASE"
+                                     :bindings [[:A :none :none :A]
+                                                [:none :B :B :none]]}]}]]}
+        generated (generator/generate-keymap template config)]
+    ;; left half, base [0,0]: original pattern [0,0]→[1,1] → positions <0 5>
+    (is (str/includes? generated "diag_0_0"))
+    (is (str/includes? generated "key-positions = <0 5>;"))
+    ;; right half, base [0,3]: mirrored pattern [0,0]→[1,-1] → positions <3 6>
+    (is (str/includes? generated "diag_0_3"))
+    (is (str/includes? generated "key-positions = <3 6>;"))))
+
 (deftest combo-layer-expands-aliases
   (let [template "    // BEGIN combos
     // END combos
