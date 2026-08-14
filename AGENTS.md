@@ -31,7 +31,7 @@ Do **not** modify firmware config files in `config/` or `build.yaml` unless expl
   - Layer rendering
 
 ## Repo context (read-only)
-- This is a ZMK user-config repo for the Totem keyboard.
+- This is a ZMK user-config repo for the Corne keyboard.
 - CI builds via `.github/workflows/build.yml` using upstream `build-user-config.yml@v0.3`.
 - `build.yaml` defines the build matrix; `config/west.yml` fetches external modules.
 - `zephyr/module.yml` points `board_root` to `.` for local shield lookup.

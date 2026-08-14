@@ -1,24 +1,24 @@
 {:paths ["." "test"]
  :tasks
- {generate {:doc "Generate config/totem.keymap from totem_config.edn + totem_template.keymap"
+ {generate {:doc "Generate config/corne.keymap from corne_config.edn + corne_template.keymap"
             :task (let [exit (:exit (clojure.java.shell/sh
                                      "bb" "generator.clj"
-                                     "--config" "totem_config.edn"
-                                     "--input" "totem_template.keymap"
+                                     "--config" "corne_config.edn"
+                                     "--input" "corne_template.keymap"
                                      "--output" "config/corne.keymap"))]
                     (if (zero? exit)
                       (println "Generated config/corne.keymap")
                       (throw (ex-info "Generator failed" {:exit exit}))))}
-  verify-totem-equivalence {:doc "Regenerate Totem keymap and diff it against the pre-refactor baseline"
-                            :task (let [baseline "examples/totem_generated_baseline.keymap"
-                                        generated-file (java.io.File/createTempFile "totem-generated-" ".keymap")
+  verify-corne-equivalence {:doc "Regenerate Corne keymap and diff it against the pre-refactor baseline"
+                            :task (let [baseline "examples/corne_generated_baseline.keymap"
+                                        generated-file (java.io.File/createTempFile "corne-generated-" ".keymap")
                                         generated (.getPath generated-file)]
                                     (try
                                       (let [{generate-exit :exit generate-err :err}
                                             (clojure.java.shell/sh
                                              "bb" "generator.clj"
-                                             "--config" "totem_config.edn"
-                                             "--input" "totem_template.keymap"
+                                             "--config" "corne_config.edn"
+                                             "--input" "corne_template.keymap"
                                              "--output" generated)]
                                         (when-not (zero? generate-exit)
                                           (print generate-err)
@@ -26,11 +26,11 @@
                                         (let [{diff-exit :exit diff-out :out diff-err :err}
                                               (clojure.java.shell/sh "diff" "-u" baseline generated)]
                                           (if (zero? diff-exit)
-                                            (println "Generated Totem keymap matches" baseline)
+                                            (println "Generated Corne keymap matches" baseline)
                                             (do
                                               (print diff-out)
                                               (print diff-err)
-                                              (throw (ex-info "Generated Totem keymap differs from baseline"
+                                              (throw (ex-info "Generated Corne keymap differs from baseline"
                                                               {:baseline baseline
                                                                :generated generated
                                                                :exit diff-exit}))))))

@@ -77,13 +77,13 @@
 
 (deftest-examples)
 
-(deftest totem-config-generates-captured-baseline
-  (let [config (generator/load-config "totem_config.edn")
-        template (slurp "totem_template.keymap")
-        expected (slurp "examples/totem_generated_baseline.keymap")
+(deftest corne-config-generates-captured-baseline
+  (let [config (generator/load-config "corne_config.edn")
+        template (slurp "corne_template.keymap")
+        expected (slurp "examples/corne_generated_baseline.keymap")
         generated (generator/generate-keymap template config)]
     (is (= expected generated)
-        "totem_config.edn + totem_template.keymap must regenerate the captured pre-refactor keymap baseline exactly.")))
+        "corne_config.edn + corne_template.keymap must regenerate the captured pre-refactor keymap baseline exactly.")))
 
 (deftest missing-markers-throws
   (let [config {:regions [[:keymap {:raw-body? true
