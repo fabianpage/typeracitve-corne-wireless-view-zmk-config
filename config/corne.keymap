@@ -23,99 +23,99 @@
         compatible = "zmk,combos";
 
         // BEGIN combos
-        horiz_base_0_0 {
-            bindings = <&kp DE_X>;
-            key-positions = <0 1>;
-            layers = <0>;
-        };
-
         horiz_base_0_1 {
-            bindings = <&kp DE_W>;
+            bindings = <&kp DE_X>;
             key-positions = <1 2>;
             layers = <0>;
         };
 
         horiz_base_0_2 {
-            bindings = <&kp DE_M>;
+            bindings = <&kp DE_W>;
             key-positions = <2 3>;
             layers = <0>;
         };
 
         horiz_base_0_3 {
-            bindings = <&kp DE_Z>;
+            bindings = <&kp DE_M>;
             key-positions = <3 4>;
             layers = <0>;
         };
 
-        horiz_base_0_8 {
+        horiz_base_0_4 {
             bindings = <&kp DE_Z>;
+            key-positions = <4 5>;
+            layers = <0>;
+        };
+
+        horiz_base_0_7 {
+            bindings = <&kp DE_Z>;
+            key-positions = <7 6>;
+            layers = <0>;
+        };
+
+        horiz_base_0_8 {
+            bindings = <&kp DE_M>;
             key-positions = <8 7>;
             layers = <0>;
         };
 
         horiz_base_0_9 {
-            bindings = <&kp DE_M>;
+            bindings = <&kp DE_W>;
             key-positions = <9 8>;
             layers = <0>;
         };
 
         horiz_base_0_10 {
-            bindings = <&kp DE_W>;
+            bindings = <&kp DE_X>;
             key-positions = <10 9>;
             layers = <0>;
         };
 
-        horiz_base_0_11 {
-            bindings = <&kp DE_X>;
-            key-positions = <11 10>;
-            layers = <0>;
-        };
-
-        horiz_base_1_0 {
-            bindings = <&kp DE_Q>;
-            key-positions = <12 13>;
-            layers = <0>;
-        };
-
         horiz_base_1_1 {
-            bindings = <&kp TAB>;
+            bindings = <&kp DE_Q>;
             key-positions = <13 14>;
             layers = <0>;
         };
 
         horiz_base_1_2 {
-            bindings = <&kp DE_V>;
+            bindings = <&kp TAB>;
             key-positions = <14 15>;
             layers = <0>;
         };
 
         horiz_base_1_3 {
-            bindings = <&kp DE_G>;
+            bindings = <&kp DE_V>;
             key-positions = <15 16>;
             layers = <0>;
         };
 
-        horiz_base_1_8 {
+        horiz_base_1_4 {
             bindings = <&kp DE_G>;
+            key-positions = <16 17>;
+            layers = <0>;
+        };
+
+        horiz_base_1_7 {
+            bindings = <&kp DE_G>;
+            key-positions = <19 18>;
+            layers = <0>;
+        };
+
+        horiz_base_1_8 {
+            bindings = <&kp DE_V>;
             key-positions = <20 19>;
             layers = <0>;
         };
 
         horiz_base_1_9 {
-            bindings = <&kp DE_V>;
+            bindings = <&kp TAB>;
             key-positions = <21 20>;
             layers = <0>;
         };
 
         horiz_base_1_10 {
-            bindings = <&kp TAB>;
-            key-positions = <22 21>;
-            layers = <0>;
-        };
-
-        horiz_base_1_11 {
             bindings = <&kp DE_Q>;
-            key-positions = <23 22>;
+            key-positions = <22 21>;
             layers = <0>;
         };
 
@@ -167,63 +167,63 @@
             layers = <0>;
         };
 
-        vert_base_0_0 {
-            bindings = <&backspace_delete>;
-            key-positions = <0 12>;
-            layers = <0>;
-        };
-
         vert_base_0_1 {
-            bindings = <&round_brackets>;
+            bindings = <&backspace_delete>;
             key-positions = <1 13>;
             layers = <0>;
         };
 
         vert_base_0_2 {
-            bindings = <&esc_layerreset>;
+            bindings = <&round_brackets>;
             key-positions = <2 14>;
             layers = <0>;
         };
 
         vert_base_0_3 {
-            bindings = <&sk LEFT_ALT>;
+            bindings = <&esc_layerreset>;
             key-positions = <3 15>;
             layers = <0>;
         };
 
         vert_base_0_4 {
-            bindings = <&sk LEFT_GUI>;
+            bindings = <&sk LEFT_ALT>;
             key-positions = <4 16>;
             layers = <0>;
         };
 
-        vert_base_0_7 {
+        vert_base_0_5 {
             bindings = <&sk LEFT_GUI>;
+            key-positions = <5 17>;
+            layers = <0>;
+        };
+
+        vert_base_0_6 {
+            bindings = <&sk LEFT_GUI>;
+            key-positions = <6 18>;
+            layers = <0>;
+        };
+
+        vert_base_0_7 {
+            bindings = <&sk LEFT_ALT>;
             key-positions = <7 19>;
             layers = <0>;
         };
 
         vert_base_0_8 {
-            bindings = <&sk LEFT_ALT>;
+            bindings = <&esc_layerreset>;
             key-positions = <8 20>;
             layers = <0>;
         };
 
         vert_base_0_9 {
-            bindings = <&esc_layerreset>;
+            bindings = <&round_brackets>;
             key-positions = <9 21>;
             layers = <0>;
         };
 
         vert_base_0_10 {
-            bindings = <&round_brackets>;
-            key-positions = <10 22>;
-            layers = <0>;
-        };
-
-        vert_base_0_11 {
             bindings = <&backspace_delete>;
-            key-positions = <11 23>;
+            key-positions = <10 22>;
             layers = <0>;
         };
 
@@ -239,51 +239,51 @@
             layers = <0>;
         };
 
-        diag_down_base_1_0 {
-            bindings = <&kp ENTER>;
-            key-positions = <12 25>;
-            layers = <0>;
-        };
-
         diag_down_base_1_1 {
-            bindings = <&square_brackets>;
+            bindings = <&kp ENTER>;
             key-positions = <13 26>;
             layers = <0>;
         };
 
-        diag_down_base_1_3 {
-            bindings = <&caps_word>;
-            key-positions = <15 28>;
+        diag_down_base_1_2 {
+            bindings = <&square_brackets>;
+            key-positions = <14 27>;
             layers = <0>;
         };
 
         diag_down_base_1_4 {
-            bindings = <&sk LCTRL>;
+            bindings = <&caps_word>;
             key-positions = <16 29>;
             layers = <0>;
         };
 
-        diag_down_base_1_7 {
+        diag_down_base_1_5 {
             bindings = <&sk LCTRL>;
+            key-positions = <17 30>;
+            layers = <0>;
+        };
+
+        diag_down_base_1_6 {
+            bindings = <&sk LCTRL>;
+            key-positions = <18 29>;
+            layers = <0>;
+        };
+
+        diag_down_base_1_7 {
+            bindings = <&caps_word>;
             key-positions = <19 30>;
             layers = <0>;
         };
 
-        diag_down_base_1_8 {
-            bindings = <&caps_word>;
-            key-positions = <20 31>;
+        diag_down_base_1_9 {
+            bindings = <&square_brackets>;
+            key-positions = <21 32>;
             layers = <0>;
         };
 
         diag_down_base_1_10 {
-            bindings = <&square_brackets>;
-            key-positions = <22 33>;
-            layers = <0>;
-        };
-
-        diag_down_base_1_11 {
             bindings = <&kp ENTER>;
-            key-positions = <23 34>;
+            key-positions = <22 33>;
             layers = <0>;
         };
 
@@ -770,7 +770,7 @@
             bindings = <
 &trans &kp P &kp O &kp I &kp U &kp T &kp T &kp U &kp I &kp O &kp P &trans
 &trans &lt 3 DE_S &kp A &kp E &kp N &kp R &kp R &kp N &kp E &kp A &lt 3 DE_S &trans
-&kp DE_G &kp D &kp L &kp C &kp F &kp H &kp H &kp F &kp C &kp L &kp D &kp DE_G
+&trans &kp D &kp L &kp C &kp F &kp H &kp H &kp F &kp C &kp L &kp D &trans
 &sl 1 &sk LEFT_SHIFT &sl 2 &sl 2 &sk LEFT_SHIFT &sl 1
             >;
         };

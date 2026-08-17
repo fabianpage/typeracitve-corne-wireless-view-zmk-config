@@ -7,8 +7,8 @@
       :pattern [[0 0] [0 1]],
       :layers [:BASE],
       :left
-      [[:DE_X :DE_W :DE_M :DE_Z :none :none]
-       [:DE_Q :TAB :DE_V :DE_G :none :none]
+      [[:none :DE_X :DE_W :DE_M :DE_Z :none]
+       [:none :DE_Q :TAB :DE_V :DE_G :none]
        [:none :DE_Y :DE_K :DE_J :DE_B :none]
        [:none :none :none]]}
      {:name "vert_base",
@@ -16,7 +16,7 @@
       :pattern [[0 0] [1 0]],
       :layers [:BASE],
       :left
-      [[[:backspace_delete] [:round_brackets] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI] :none]
+      [[:none [:backspace_delete] [:round_brackets] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
        [:none :none :none :none :none :none]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
@@ -26,7 +26,7 @@
       :layers [:BASE],
       :left
       [[:none :none [:punkt_doppelpunkt] :none :none :none]
-       [:ENTER [:square_brackets] :none [:caps_word] [:sk :LCTRL] :none]
+       [:none :ENTER [:square_brackets] :none [:caps_word] [:sk :LCTRL] ]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
      {:name "diag_up_base",
@@ -257,9 +257,8 @@
       :left
       [[:trans :P :O :I :U :T]
        [:trans [:lt 3 :DE_S] :A :E :N :R]
-       [:DE_G :D :L :C :F :H]
-       [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]],
-      }
+       [:trans :D :L :C :F :H]
+       [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]]}
      {:name "Nav1",
       :left
       [[:trans [:B_UE] :END :PG_UP :PG_DN :HOME]
@@ -270,8 +269,7 @@
         [:double_single_quote]
         [:back_front_tick]
         [:hash_pipe]]
-       [:trans :trans :trans]],
-      }
+       [:trans :trans :trans]]}
      {:name "Nav2",
       :left
       [[:trans
@@ -287,15 +285,13 @@
         :trans
         [:prozent_ringli]
         [:daechli_tilde]]
-       [:trans :trans :trans]],
-      }
+       [:trans :trans :trans]]}
      {:name "Num",
       :left
       [[:trans :trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
        [:trans :trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
        [:trans :trans [:n9ue9] [:n8ue8] [:n7ue7] [:mal_plus]]
-       [:trans :trans :trans]],
-      }
+       [:trans :trans :trans]]}
      {:name "BT",
       :left
       [[:trans [:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]
@@ -306,5 +302,4 @@
         :trans
         [:out :OUT_USB]
         [:bootloader]]
-       [:trans :trans :trans]],
-      })}]]}
+       [:trans :trans :trans]]})}]]}
