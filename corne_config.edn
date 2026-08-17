@@ -255,15 +255,15 @@
    {:nodes
     ({:name "BASE",
       :left
-      [[:trans :P :O :I :U :T]
-       [:trans [:lt 3 :DE_S] :A :E :N :R]
-       [:trans :D :L :C :F :H]
+      [[:none :P :O :I :U :T]
+       [:none [:lt 3 :DE_S] :A :E :N :R]
+       [:none :D [:mt :LCTRL :DE_L] [:mt :LEFT_ALT :DE_C] [:mt :LEFT_GUI :DE_F] :H]
        [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]]}
      {:name "Nav1",
       :left
-      [[:trans [:B_UE] :END :PG_UP :PG_DN :HOME]
-       [:trans [:B_OE] :RIGHT_ARROW :UP :DOWN :LEFT_ARROW]
-       [:trans
+      [[:none [:B_UE] :END :PG_UP :PG_DN :HOME]
+       [:none [:B_OE] :RIGHT_ARROW :UP :DOWN :LEFT_ARROW]
+       [:none
         :DE_A_UMLAUT
         :N9
         [:double_single_quote]
@@ -272,14 +272,14 @@
        [:trans :trans :trans]]}
      {:name "Nav2",
       :left
-      [[:trans
+      [[:none
         [:frage_ausrufe_zeichen]
         [:mac_prev_next_window]
         [:swapper]
         [:tmux_next_pre]
         [:kp "LC(DE_U_UMLAUT)"]]
-       [:trans [:at_equal] [:lCl] [:kCk] [:jCj] [:hCh]]
-       [:trans
+       [:none [:at_equal] [:lCl] [:kCk] [:jCj] [:hCh]]
+       [:none
         [:slash_backslash]
         [:dollar_ampersand]
         :trans
@@ -288,15 +288,15 @@
        [:trans :trans :trans]]}
      {:name "Num",
       :left
-      [[:trans :trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
-       [:trans :trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
-       [:trans :trans [:n9ue9] [:n8ue8] [:n7ue7] [:mal_plus]]
+      [[:none :trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
+       [:none :trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
+       [:none :trans [:n9ue9] [:n8ue8] [:n7ue7] [:mal_plus]]
        [:trans :trans :trans]]}
      {:name "BT",
       :left
-      [[:trans [:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]
-       [:trans :trans :trans :trans [:out :OUT_BLE] :trans]
-       [:trans
+      [[:none [:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]
+       [:none :trans :trans :trans [:out :OUT_BLE] :trans]
+       [:none
         [:esc_layerreset]
         :trans
         :trans
