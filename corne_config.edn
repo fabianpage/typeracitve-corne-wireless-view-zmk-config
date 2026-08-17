@@ -259,16 +259,7 @@
        [:trans [:lt 3 :DE_S] :A :E :N :R]
        [:DE_G :D :L :C :F :H]
        [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]],
-      :right-override
-      [[[:bt :BT_SEL 0]
-        [:bt :BT_SEL 1]
-        [:out :OUT_TOG]
-        [:bootloader]
-        [:bt :BT_CLR_ALL]
-        :trans]
-       [:H :D :DE_F :DE_H [:mt :RGUI :O] :trans]
-       [:K :M :COMMA :DOT :FSLH :FSLH]
-       [:C :A :B]]}
+      }
      {:name "Nav1",
       :left
       [[:trans [:B_UE] :END :PG_UP :PG_DN :HOME]
@@ -280,11 +271,7 @@
         [:back_front_tick]
         [:hash_pipe]]
        [:trans :trans :trans]],
-      :right-override
-      [[:N1 :trans :trans :trans :trans :trans]
-       [:trans :trans :trans :trans :trans :trans]
-       [:N3 :trans :trans :trans :trans :*]
-       [:* :* :*]]}
+      }
      {:name "Nav2",
       :left
       [[:trans
@@ -301,22 +288,14 @@
         [:prozent_ringli]
         [:daechli_tilde]]
        [:trans :trans :trans]],
-      :right-override
-      [[:trans :trans :trans :trans :trans :trans]
-       [:trans :trans :trans :trans :trans :trans]
-       [:trans :trans :* :trans :trans :*]
-       [:* :* :*]]}
+      }
      {:name "Num",
       :left
       [[:trans :trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
        [:trans :trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
        [:trans :trans [:n9ue9] [:n8ue8] [:n7ue7] [:mal_plus]]
        [:trans :trans :trans]],
-      :right-override
-      [[:trans :trans :trans :trans :* :*]
-       [:trans :trans :trans :trans :* :*]
-       [:trans :trans :trans :trans :* :*]
-       [:* :* :*]]}
+      }
      {:name "BT",
       :left
       [[:trans [:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]
@@ -328,8 +307,4 @@
         [:out :OUT_USB]
         [:bootloader]]
        [:trans :trans :trans]],
-      :right-override
-      [[:trans :trans :trans :trans :trans :trans]
-       [:* :trans :* :* :* :*]
-       [:trans :trans :* :* :trans :*]
-       [:* :* :*]]})}]]}
+      })}]]}
