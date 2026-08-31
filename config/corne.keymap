@@ -240,7 +240,7 @@
         };
 
         vert_base_1_3 {
-            bindings = <&kp space>;
+            bindings = <&kp SPACE>;
             key-positions = <15 27>;
             layers = <0>;
         };
@@ -270,7 +270,7 @@
         };
 
         vert_base_1_8 {
-            bindings = <&kp space>;
+            bindings = <&kp SPACE>;
             key-positions = <20 32>;
             layers = <0>;
         };
