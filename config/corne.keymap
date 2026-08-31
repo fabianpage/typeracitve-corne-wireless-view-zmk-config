@@ -293,15 +293,27 @@
             layers = <0>;
         };
 
-        diag_down_base_0_1 {
+        diag_down_base_0_4 {
             bindings = <&punkt_doppelpunkt>;
-            key-positions = <1 14>;
+            key-positions = <4 17>;
             layers = <0>;
         };
 
-        diag_down_base_0_10 {
+        diag_down_base_0_5 {
+            bindings = <&curly_brackets>;
+            key-positions = <5 18>;
+            layers = <0>;
+        };
+
+        diag_down_base_0_6 {
+            bindings = <&curly_brackets>;
+            key-positions = <6 17>;
+            layers = <0>;
+        };
+
+        diag_down_base_0_7 {
             bindings = <&punkt_doppelpunkt>;
-            key-positions = <10 21>;
+            key-positions = <7 18>;
             layers = <0>;
         };
 
@@ -311,51 +323,27 @@
             layers = <0>;
         };
 
-        diag_down_base_1_1 {
-            bindings = <&kp ENTER>;
-            key-positions = <13 26>;
-            layers = <0>;
-        };
-
-        diag_down_base_1_2 {
-            bindings = <&square_brackets>;
-            key-positions = <14 27>;
-            layers = <0>;
-        };
-
         diag_down_base_1_4 {
-            bindings = <&caps_word>;
+            bindings = <&komma_strickpunkt>;
             key-positions = <16 29>;
             layers = <0>;
         };
 
         diag_down_base_1_5 {
-            bindings = <&sk LCTRL>;
+            bindings = <&angled_brackets>;
             key-positions = <17 30>;
             layers = <0>;
         };
 
         diag_down_base_1_6 {
-            bindings = <&sk LCTRL>;
+            bindings = <&angled_brackets>;
             key-positions = <18 29>;
             layers = <0>;
         };
 
         diag_down_base_1_7 {
-            bindings = <&caps_word>;
+            bindings = <&komma_strickpunkt>;
             key-positions = <19 30>;
-            layers = <0>;
-        };
-
-        diag_down_base_1_9 {
-            bindings = <&square_brackets>;
-            key-positions = <21 32>;
-            layers = <0>;
-        };
-
-        diag_down_base_1_10 {
-            bindings = <&kp ENTER>;
-            key-positions = <22 33>;
             layers = <0>;
         };
 
@@ -380,30 +368,6 @@
         diag_up_base_2_8 {
             bindings = <&kp SPACE>;
             key-positions = <32 21>;
-            layers = <0>;
-        };
-
-        diag_knight_base_2_4 {
-            bindings = <&komma_strickpunkt>;
-            key-positions = <28 14>;
-            layers = <0>;
-        };
-
-        diag_knight_base_2_5 {
-            bindings = <&angled_brackets>;
-            key-positions = <29 15>;
-            layers = <0>;
-        };
-
-        diag_knight_base_2_6 {
-            bindings = <&angled_brackets>;
-            key-positions = <30 20>;
-            layers = <0>;
-        };
-
-        diag_knight_base_2_7 {
-            bindings = <&komma_strickpunkt>;
-            key-positions = <31 21>;
             layers = <0>;
         };
 

@@ -25,8 +25,8 @@
       :pattern [[0 0] [1 1]],
       :layers [:BASE],
       :left
-      [[[:curly_brackets]  [:punkt_doppelpunkt] :none :none :none :none]
-       [:none :ENTER [:square_brackets] :none [:caps_word] [:sk :LCTRL] ]
+      [[[:curly_brackets] :none :none :none [:punkt_doppelpunkt]  [:curly_brackets]]
+       [:none :none :none :none [:komma_strickpunkt] [:angled_brackets]]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
      {:name "diag_up_base",
@@ -38,15 +38,15 @@
        [:none :none :none :none [:curly_brackets] :none]
        [:none :none :none :SPACE :none :none]
        [:none :none :none]]}
-     {:name "diag_knight_base",
-      :type :combo-layer,
-      :pattern [[0 0] [-1 -2]],
-      :layers [:BASE],
-      :left
-      [[:none :none :none :none :none :none]
-       [:none :none :none :none :none :none]
-       [:none :none :none :none [:komma_strickpunkt] [:angled_brackets]]
-       [:none :none :none]]}
+    ;;  {:name "diag_knight_base",
+    ;;   :type :combo-layer,
+    ;;   :pattern [[0 0] [-1 -2]],
+    ;;   :layers [:BASE],
+    ;;   :left
+    ;;   [[:none :none :none :none :none :none]
+    ;;    [:none :none :none :none :none :none]
+    ;;    [:none :none :none :none [:komma_strickpunkt] [:angled_brackets]]
+    ;;    [:none :none :none]]}
      {:name "toBT",
       :body
       ["bindings = <&to 4>;"
