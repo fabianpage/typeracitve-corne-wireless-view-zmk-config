@@ -17,7 +17,7 @@
       :layers [:BASE],
       :left
       [[:none [:backspace_delete] [:round_brackets] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
-       [:none :ENTER [:square_brackets] :none [:caps_word] [:sk :LCTRL] ]
+       [:none :ENTER [:square_brackets] :space [:caps_word] [:sk :LCTRL] ]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
      {:name "diag_down_base",

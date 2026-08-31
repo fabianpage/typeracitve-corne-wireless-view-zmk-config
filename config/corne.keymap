@@ -239,6 +239,12 @@
             layers = <0>;
         };
 
+        vert_base_1_3 {
+            bindings = <&kp space>;
+            key-positions = <15 27>;
+            layers = <0>;
+        };
+
         vert_base_1_4 {
             bindings = <&caps_word>;
             key-positions = <16 28>;
@@ -260,6 +266,12 @@
         vert_base_1_7 {
             bindings = <&caps_word>;
             key-positions = <19 31>;
+            layers = <0>;
+        };
+
+        vert_base_1_8 {
+            bindings = <&kp space>;
+            key-positions = <20 32>;
             layers = <0>;
         };
 
