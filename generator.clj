@@ -247,6 +247,14 @@
                      :binding-cells  2
                      :binding-format :macro-groups}})
 
+(defn- dt-string-value?
+  "Return true if a string value should be rendered as a devicetree
+   quoted string rather than an unquoted expression in angle brackets.
+   Numeric strings and paren-wrapped expressions are NOT dt strings."
+  [v]
+  (not (or (re-matches #"-?\d+" v)
+           (re-matches #"\(.*\)" v))))
+
 (defn render-behavior
   "Render any registered behavior type as a ZMK devicetree node.
    :name      — DT node id (:label, if present, is used as the display-name)
@@ -288,7 +296,12 @@
                 (str (indent (inc level)) "#binding-cells = <" binding-cells ">;")
                 bindings-line]
                (map (fn [[k v]]
-                      (str (indent (inc level)) (clojure.core/name k) " = <" v ">;"))
+                      (str (indent (inc level)) (clojure.core/name k)
+                           (cond
+                             (true? v) ";"
+                             (vector? v) (str " = <" (str/join " " v) ">;")
+                             (and (string? v) (dt-string-value? v)) (str " = \"" v "\";")
+                             :else (str " = <" v ">;"))))
                     pass-through)
                [(str (indent level) "};")] )))
     (throw (ex-info (str "Unsupported behavior type: " type) {:node node})))))
