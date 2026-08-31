@@ -487,8 +487,8 @@
 
 ^:rct/test
 (comment
-  (render-behavior {:name "m" :type :mod-morph :bindings [:A :B] :mods "MOD_LGUI"} 0)
-  ;=> "m: m {\n    compatible = \"zmk,behavior-mod-morph\";\n    #binding-cells = <0>;\n    bindings = <&kp A>, <&kp B>;\n    mods = <MOD_LGUI>;\n};"
+  (render-behavior {:name "m" :type :mod-morph :bindings [:A :B] :mods "(MOD_LGUI)"} 0)
+  ;=> "m: m {\n    compatible = \"zmk,behavior-mod-morph\";\n    #binding-cells = <0>;\n    bindings = <&kp A>, <&kp B>;\n    mods = <(MOD_LGUI)>;\n};"
 
   :rcf)
 
