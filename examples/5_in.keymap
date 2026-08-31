@@ -1,0 +1,15 @@
+/ {
+    behaviors {
+        compatible = "zmk,behaviors";
+
+        // BEGIN behaviors
+        // END behaviors
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        // BEGIN keymap
+        // END keymap
+    };
+};
