@@ -11,13 +11,6 @@
 #define SYM  2
 #define ADJ  3
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";

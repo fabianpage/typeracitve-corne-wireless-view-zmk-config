@@ -11,13 +11,6 @@
 #define SYM  2
 #define ADJ  3
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -510,6 +503,30 @@
 
     behaviors {
         // BEGIN behaviors
+        lh_ht: lh_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 11>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            tapping-term-ms = <200>;
+        };
+
+        rh_ht: rh_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            tapping-term-ms = <200>;
+        };
+
         square_brackets: square_brackets {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -794,7 +811,7 @@
             bindings = <
 &none &kp P &kp O &kp I &kp U &kp T &kp T &kp U &kp I &kp O &kp P &none
 &none &lt 3 DE_S &kp A &kp E &kp N &kp R &kp R &kp N &kp E &kp A &lt 3 DE_S &none
-&none &kp D &mt LCTRL DE_L &mt LEFT_ALT DE_C &mt LEFT_GUI DE_F &kp H &kp H &mt LEFT_GUI DE_F &mt LEFT_ALT DE_C &mt LCTRL DE_L &kp D &none
+&none &lh_ht LEFT_SHIFT D &lh_ht LCTRL DE_L &lh_ht LEFT_ALT DE_C &lh_ht LEFT_GUI DE_F &kp H &kp H &rh_ht LEFT_GUI DE_F &rh_ht LEFT_ALT DE_C &rh_ht LCTRL DE_L &rh_ht LEFT_SHIFT D &none
 &sl 1 &sk LEFT_SHIFT &sl 2 &sl 2 &sk LEFT_SHIFT &sl 1
             >;
         };
