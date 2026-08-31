@@ -286,6 +286,34 @@
     (is (str/includes? rendered "bindings = <&kp COMMA>, <&kp SEMICOLON>;"))
     (is (str/includes? rendered "mods = <(MOD_LGUI)>;"))))
 
+(deftest render-behavior-boolean-flag-renders-as-flag
+  (let [rendered (generator/render-behavior {:name "ht"
+                                             :type :macro
+                                             :bindings [:A]
+                                             :global-quick-tap true}
+                                            2)]
+    (is (str/includes? rendered "global-quick-tap;"))
+    (is (not (str/includes? rendered "global-quick-tap = <true>;")))
+    (is (not (str/includes? rendered "global-quick-tap = \"true\";")))))
+
+(deftest render-behavior-string-value-renders-quoted
+  (let [rendered (generator/render-behavior {:name "ht"
+                                             :type :macro
+                                             :bindings [:A]
+                                             :flavor "balanced"}
+                                            2)]
+    (is (str/includes? rendered "flavor = \"balanced\";"))
+    (is (not (str/includes? rendered "flavor = <balanced>;")))))
+
+(deftest render-behavior-vector-value-renders-as-array
+  (let [rendered (generator/render-behavior {:name "ht"
+                                             :type :macro
+                                             :bindings [:A]
+                                             :hold-trigger-key-positions [0 1 2]}
+                                            2)]
+    (is (str/includes? rendered "hold-trigger-key-positions = <0 1 2>;"))
+    (is (not (str/includes? rendered "hold-trigger-key-positions = <[0 1 2]>;")))))
+
 (deftest render-behavior-omits-label-when-absent
   (let [rendered (generator/render-behavior {:name "hello"
                                               :type :macro
