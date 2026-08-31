@@ -1,0 +1,17 @@
+{:regions
+ [[:behaviors
+   {:nodes
+    [{:name "ht"
+      :type :hold-tap
+      :bindings ["&kp" "&kp"]
+      :flavor "balanced"
+      :tapping-term-ms 200
+      :quick-tap-ms 150
+      :global-quick-tap true
+      :hold-trigger-on-release true
+      :hold-trigger-key-positions [0 1 2]}]}]
+  [:keymap
+   {:nodes
+    [{:name "BASE"
+      :bindings
+      [[[:ht :LEFT_SHIFT :A]]]}]}]]}

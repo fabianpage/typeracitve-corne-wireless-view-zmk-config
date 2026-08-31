@@ -1,0 +1,32 @@
+/ {
+    behaviors {
+        compatible = "zmk,behaviors";
+
+        // BEGIN behaviors
+        ht: ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            tapping-term-ms = <200>;
+        };
+        // END behaviors
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        // BEGIN keymap
+        BASE {
+            display-name = "BASE";
+            bindings = <
+&ht LEFT_SHIFT A
+            >;
+        };
+        // END keymap
+    };
+};

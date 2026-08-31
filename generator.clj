@@ -237,6 +237,9 @@
    :smart-toggle    {:compatible     "zmk,behavior-smart-toggle"
                      :binding-cells  0
                      :binding-format :multi-bracket-comma}
+   :hold-tap        {:compatible     "zmk,behavior-hold-tap"
+                     :binding-cells  2
+                     :binding-format :multi-bracket-comma}
    :macro           {:compatible     "zmk,behavior-macro"
                      :binding-cells  0
                      :binding-format :single-bracket-space}
