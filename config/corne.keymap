@@ -287,63 +287,51 @@
             layers = <0>;
         };
 
-        diag_down_base_0_0 {
-            bindings = <&curly_brackets>;
-            key-positions = <0 13>;
+        diag_down_base_0_3 {
+            bindings = <&punkt_doppelpunkt>;
+            key-positions = <3 16>;
             layers = <0>;
         };
 
         diag_down_base_0_4 {
-            bindings = <&punkt_doppelpunkt>;
+            bindings = <&curly_brackets>;
             key-positions = <4 17>;
             layers = <0>;
         };
 
-        diag_down_base_0_5 {
-            bindings = <&curly_brackets>;
-            key-positions = <5 18>;
-            layers = <0>;
-        };
-
-        diag_down_base_0_6 {
-            bindings = <&curly_brackets>;
-            key-positions = <6 17>;
-            layers = <0>;
-        };
-
         diag_down_base_0_7 {
-            bindings = <&punkt_doppelpunkt>;
+            bindings = <&curly_brackets>;
             key-positions = <7 18>;
             layers = <0>;
         };
 
-        diag_down_base_0_11 {
-            bindings = <&curly_brackets>;
-            key-positions = <11 22>;
+        diag_down_base_0_8 {
+            bindings = <&punkt_doppelpunkt>;
+            key-positions = <8 19>;
+            layers = <0>;
+        };
+
+        diag_down_base_1_3 {
+            bindings = <&komma_strickpunkt>;
+            key-positions = <15 28>;
             layers = <0>;
         };
 
         diag_down_base_1_4 {
-            bindings = <&komma_strickpunkt>;
+            bindings = <&angled_brackets>;
             key-positions = <16 29>;
             layers = <0>;
         };
 
-        diag_down_base_1_5 {
-            bindings = <&angled_brackets>;
-            key-positions = <17 30>;
-            layers = <0>;
-        };
-
-        diag_down_base_1_6 {
-            bindings = <&angled_brackets>;
-            key-positions = <18 29>;
-            layers = <0>;
-        };
-
         diag_down_base_1_7 {
-            bindings = <&komma_strickpunkt>;
+            bindings = <&angled_brackets>;
             key-positions = <19 30>;
+            layers = <0>;
+        };
+
+        diag_down_base_1_8 {
+            bindings = <&komma_strickpunkt>;
+            key-positions = <20 31>;
             layers = <0>;
         };
 
