@@ -95,7 +95,25 @@
      {:name "tmux_prev_window", :type :macro, :bindings [:DE_U_UMLAUT :DE_P]}]}]
   [:behaviors
    {:nodes
-    [{:name "square_brackets",
+    [{:name "lh_ht"
+      :type :hold-tap
+      :bindings ["&kp" "&kp"]
+      :flavor "balanced"
+      :tapping-term-ms 200
+      :quick-tap-ms 150
+      :global-quick-tap true
+      :hold-trigger-on-release true
+      :hold-trigger-key-positions [6 7 8 9 10 11]}
+     {:name "rh_ht"
+      :type :hold-tap
+      :bindings ["&kp" "&kp"]
+      :flavor "balanced"
+      :tapping-term-ms 200
+      :quick-tap-ms 150
+      :global-quick-tap true
+      :hold-trigger-on-release true
+      :hold-trigger-key-positions [0 1 2 3 4 5]}
+     {:name "square_brackets",
       :type :mod-morph,
       :bindings ["&kp LA(DE_N5)" "&kp LA(DE_N6)"],
       :mods "(MOD_LSFT)"}
@@ -257,8 +275,13 @@
       :left
       [[:none :P :O :I :U :T]
        [:none [:lt 3 :DE_S] :A :E :N :R]
-       [:none :D [:mt :LCTRL :DE_L] [:mt :LEFT_ALT :DE_C] [:mt :LEFT_GUI :DE_F] :H]
-       [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]]}
+       [:none [:lh_ht :LEFT_SHIFT :D] [:lh_ht :LCTRL :DE_L] [:lh_ht :LEFT_ALT :DE_C] [:lh_ht :LEFT_GUI :DE_F] :H]
+       [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]]
+      :right-override
+      [nil
+       nil
+       [:H [:rh_ht :LEFT_GUI :DE_F] [:rh_ht :LEFT_ALT :DE_C] [:rh_ht :LCTRL :DE_L] [:rh_ht :LEFT_SHIFT :D] :none]
+       nil]}
      {:name "Nav1",
       :left
       [[:none [:B_UE] :END :PG_UP :PG_DN :HOME]
