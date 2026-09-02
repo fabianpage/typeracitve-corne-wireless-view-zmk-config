@@ -819,7 +819,7 @@
         Nav1 {
             display-name = "Nav1";
             bindings = <
-&none &B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp HOME &kp PG_DN &kp PG_UP &kp END &B_UE &none
+&tog 5 &B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp HOME &kp PG_DN &kp PG_UP &kp END &B_UE &tog 5
 &none &B_OE &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW &kp RIGHT_ARROW &kp UP &kp DOWN &kp LEFT_ARROW &B_OE &none
 &none &kp DE_A_UMLAUT &kp N9 &double_single_quote &back_front_tick &hash_pipe &hash_pipe &back_front_tick &double_single_quote &kp N9 &kp DE_A_UMLAUT &none
 &trans &trans &trans &trans &trans &trans
@@ -855,6 +855,26 @@
 &trans &trans &trans &trans &trans &trans
             >;
         };
+
+        Vim {
+            display-name = "Vim";
+            bindings = <
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
+
+        NavVim {
+            display-name = "NavVim";
+            bindings = <
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &kp H &kp J &kp K &kp L &kp L &kp K &kp J &kp H &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
         // END keymap
     };
 
@@ -864,6 +884,11 @@
         BT {
             if-layers = <1 2>;
             then-layer = <4>;
+        };
+
+        NavVim {
+            if-layers = <1 5>;
+            then-layer = <6>;
         };
     };
 };

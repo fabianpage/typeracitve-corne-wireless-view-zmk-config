@@ -12,6 +12,8 @@
 - **Placement** — A tile referenced at a position within a larger grid, with optional mirroring. `{:tile :name :pos [col row] :mirror :horizontal}`.
 - **Behavior** — A named, typed ZMK behavior node. Defined as a map with `:name` (DT node id), `:type` (keyword, looked up in the generator's behavior-type registry), optional `:label` (display-name; omitted if absent), `:bindings` (binding DSL forms), and type-specific pass-through keys (e.g. `:mods`). Macros are a subclass of Behavior whose `compatible` string is `zmk,behavior-macro` (or a param variant).
 - **Assembled grid** — The flat binding grid produced by merging placements into a container with given `:row-widths` and an `:empty` fill cell.
+- **Nav mode** — Which keycodes the four navigation cells emit while the nav layer (`Nav1`) is held: either **Arrow** (arrow keycodes) or **Vim** (the literal letters `h j k l`). It is a global toggle that persists independently of layer entry — flipping it survives `:sl`/holding the nav layer. Implemented as the `Vim` flag layer (index 5, all `&trans`) plus a `NavVim` overlay (index 6) activated by a conditional layer when both `Nav1` and `Vim` are on.
+  _Avoid_: hjkl mode, arrow toggle.
 
 ## Decisions
 
