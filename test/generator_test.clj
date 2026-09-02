@@ -85,6 +85,14 @@
     (is (= expected generated)
         "corne_config.edn + corne_template.keymap must regenerate the captured pre-refactor keymap baseline exactly.")))
 
+(deftest nav1-arrows-hjkl-order
+  (let [config (generator/load-config "corne_config.edn")
+        template (slurp "corne_template.keymap")
+        generated (generator/generate-keymap template config)]
+    (is (re-find #"&none &B_OE &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW"
+                 generated)
+        "Nav1 row-2 nav cells must render left-to-right as LEFT_ARROW DOWN UP RIGHT_ARROW (hjkl-aligned).")))
+
 (deftest missing-markers-throws
   (let [config {:regions [[:keymap {:raw-body? true
                                     :nodes [{:name "base_layer"
