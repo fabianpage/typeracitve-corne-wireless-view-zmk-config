@@ -93,6 +93,41 @@
                  generated)
         "Nav1 row-2 nav cells must render left-to-right as LEFT_ARROW DOWN UP RIGHT_ARROW (hjkl-aligned).")))
 
+(deftest vim-layer-all-trans
+  (let [config (generator/load-config "corne_config.edn")
+        template (slurp "corne_template.keymap")
+        generated (generator/generate-keymap template config)
+        block (node-block "Vim" generated)]
+    (is (some? block) "Vim layer node must be present")
+    (is (re-find #"(?s)display-name = \"Vim\";" block))
+    (is (not (re-find #"&kp" block))
+        "Vim layer (index 5) must be an all-&trans flag layer")))
+
+(deftest navvim-layer-hjkl-overlay
+  (let [config (generator/load-config "corne_config.edn")
+        template (slurp "corne_template.keymap")
+        generated (generator/generate-keymap template config)
+        block (node-block "NavVim" generated)]
+    (is (some? block) "NavVim layer node must be present")
+    (is (re-find #"(?s)display-name = \"NavVim\";" block))
+    (is (re-find #"&trans &trans &kp H &kp J &kp K &kp L" block)
+        "NavVim row-2 cells must emit H J K L left-to-right, aligned to Nav1's reordered arrows")))
+
+(deftest nav1-tog-vim-on-outer-top-cell
+  (let [config (generator/load-config "corne_config.edn")
+        template (slurp "corne_template.keymap")
+        generated (generator/generate-keymap template config)
+        block (node-block "Nav1" generated)]
+    (is (re-find #"&tog 5 &B_UE &kp END" block)
+        "&tog 5 must render on Nav1's outer-column top cell")))
+
+(deftest conditional-layers-vim-overlay-wiring
+  (let [config (generator/load-config "corne_config.edn")
+        template (slurp "corne_template.keymap")
+        generated (generator/generate-keymap template config)]
+    (is (re-find #"(?s)if-layers = <1 5>;\s*then-layer = <6>;" generated)
+        "conditional_layers must wire if-layers <1 5> -> then-layer <6>")))
+
 (deftest missing-markers-throws
   (let [config {:regions [[:keymap {:raw-body? true
                                     :nodes [{:name "base_layer"

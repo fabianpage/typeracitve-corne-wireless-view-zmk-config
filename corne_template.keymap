@@ -43,5 +43,10 @@
             if-layers = <1 2>;
             then-layer = <4>;
         };
+
+        NavVim {
+            if-layers = <1 5>;
+            then-layer = <6>;
+        };
     };
 };

@@ -284,7 +284,7 @@
        nil]}
      {:name "Nav1",
       :left
-      [[:none [:B_UE] :END :PG_UP :PG_DN :HOME]
+      [[[:tog 5] [:B_UE] :END :PG_UP :PG_DN :HOME]
        [:none [:B_OE] :LEFT_ARROW :DOWN :UP :RIGHT_ARROW]
        [:none
         :DE_A_UMLAUT
@@ -325,4 +325,16 @@
         :trans
         [:out :OUT_USB]
         [:bootloader]]
+       [:trans :trans :trans]]}
+     {:name "Vim",
+      :left
+      [[:trans :trans :trans :trans :trans :trans]
+       [:trans :trans :trans :trans :trans :trans]
+       [:trans :trans :trans :trans :trans :trans]
+       [:trans :trans :trans]]}
+     {:name "NavVim",
+      :left
+      [[:trans :trans :trans :trans :trans :trans]
+       [:trans :trans :H :J :K :L]
+       [:trans :trans :trans :trans :trans :trans]
        [:trans :trans :trans]]})}]]}
