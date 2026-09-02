@@ -507,7 +507,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <6 7 8 9 10 11>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
             flavor = "balanced";
             hold-trigger-on-release;
             quick-tap-ms = <150>;
@@ -519,7 +519,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
             flavor = "balanced";
             hold-trigger-on-release;
             quick-tap-ms = <150>;
@@ -819,8 +819,8 @@
         Nav1 {
             display-name = "Nav1";
             bindings = <
-&none &B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp HOME &kp PG_DN &kp PG_UP &kp END &B_UE &none
-&none &B_OE &kp RIGHT_ARROW &kp UP &kp DOWN &kp LEFT_ARROW &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW &B_OE &none
+&tog 5 &B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp HOME &kp PG_DN &kp PG_UP &kp END &B_UE &tog 5
+&none &B_OE &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW &kp RIGHT_ARROW &kp UP &kp DOWN &kp LEFT_ARROW &B_OE &none
 &none &kp DE_A_UMLAUT &kp N9 &double_single_quote &back_front_tick &hash_pipe &hash_pipe &back_front_tick &double_single_quote &kp N9 &kp DE_A_UMLAUT &none
 &trans &trans &trans &trans &trans &trans
             >;
@@ -855,6 +855,26 @@
 &trans &trans &trans &trans &trans &trans
             >;
         };
+
+        Vim {
+            display-name = "Vim";
+            bindings = <
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
+
+        NavVim {
+            display-name = "NavVim";
+            bindings = <
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &kp H &kp J &kp K &kp L &kp L &kp K &kp J &kp H &trans &trans
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+            >;
+        };
         // END keymap
     };
 
@@ -864,6 +884,11 @@
         BT {
             if-layers = <1 2>;
             then-layer = <4>;
+        };
+
+        NavVim {
+            if-layers = <1 5>;
+            then-layer = <6>;
         };
     };
 };
