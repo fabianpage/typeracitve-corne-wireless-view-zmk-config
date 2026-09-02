@@ -285,7 +285,7 @@
      {:name "Nav1",
       :left
       [[:none [:B_UE] :END :PG_UP :PG_DN :HOME]
-       [:none [:B_OE] :RIGHT_ARROW :UP :DOWN :LEFT_ARROW]
+       [:none [:B_OE] :LEFT_ARROW :DOWN :UP :RIGHT_ARROW]
        [:none
         :DE_A_UMLAUT
         :N9
