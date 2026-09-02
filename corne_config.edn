@@ -103,7 +103,7 @@
       :quick-tap-ms 150
       :global-quick-tap true
       :hold-trigger-on-release true
-      :hold-trigger-key-positions [6 7 8 9 10 11]}
+      :hold-trigger-key-positions :right-half}
      {:name "rh_ht"
       :type :hold-tap
       :bindings ["&kp" "&kp"]
@@ -112,7 +112,7 @@
       :quick-tap-ms 150
       :global-quick-tap true
       :hold-trigger-on-release true
-      :hold-trigger-key-positions [0 1 2 3 4 5]}
+      :hold-trigger-key-positions :left-half}
      {:name "square_brackets",
       :type :mod-morph,
       :bindings ["&kp LA(DE_N5)" "&kp LA(DE_N6)"],
