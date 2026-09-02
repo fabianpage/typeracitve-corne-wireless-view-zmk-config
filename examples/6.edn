@@ -1,0 +1,28 @@
+{:keyboard {:row-widths [12 12 12 6]}
+ :regions
+ [[:behaviors
+   {:nodes
+    [{:name "lh_ht"
+      :type :hold-tap
+      :bindings ["&kp" "&kp"]
+      :flavor "balanced"
+      :tapping-term-ms 200
+      :quick-tap-ms 150
+      :global-quick-tap true
+      :hold-trigger-on-release true
+      :hold-trigger-key-positions :right-half}
+     {:name "rh_ht"
+      :type :hold-tap
+      :bindings ["&kp" "&kp"]
+      :flavor "balanced"
+      :tapping-term-ms 200
+      :quick-tap-ms 150
+      :global-quick-tap true
+      :hold-trigger-on-release true
+      :hold-trigger-key-positions :left-half}]}]
+  [:keymap
+   {:nodes
+    [{:name "BASE"
+      :bindings
+      [[[:lh_ht :LEFT_SHIFT :DE_D]]
+       [[:rh_ht :LEFT_SHIFT :DE_D]]]}]}]]}

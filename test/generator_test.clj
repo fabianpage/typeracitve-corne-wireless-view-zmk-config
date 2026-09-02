@@ -305,6 +305,22 @@
     (is (str/includes? rendered "flavor = \"balanced\";"))
     (is (not (str/includes? rendered "flavor = <balanced>;")))))
 
+(deftest half-key-positions-computes-opposite-half-from-row-widths
+  (is (= [0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29]
+         (vec (generator/half-key-positions [12 12 12 6] :left)))
+      "left half excludes the narrower thumb row")
+  (is (= [6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35]
+         (vec (generator/half-key-positions [12 12 12 6] :right)))
+      "right half excludes the narrower thumb row"))
+
+(deftest render-behavior-resolves-half-position-shorthand
+  (let [rendered (generator/render-behavior {:name "lh_ht"
+                                             :type :hold-tap
+                                             :bindings ["&kp" "&kp"]
+                                             :hold-trigger-key-positions :right-half}
+                                            2 false {:keyboard {:row-widths [12 12 12 6]}})]
+    (is (str/includes? rendered "hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;"))))
+
 (deftest render-behavior-vector-value-renders-as-array
   (let [rendered (generator/render-behavior {:name "ht"
                                              :type :macro

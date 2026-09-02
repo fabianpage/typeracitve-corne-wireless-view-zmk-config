@@ -258,6 +258,50 @@
   (not (or (re-matches #"-?\d+" v)
            (re-matches #"\(.*\)" v))))
 
+(defn half-key-positions
+  "Compute the zero-based key positions of one horizontal half of the keyboard
+   from `row-widths`. `side` is :left or :right. Only the widest rows (the alpha
+   rows) are split; narrower rows such as the thumb cluster are excluded so the
+   result matches a Corne's opposite-half positional trigger list."
+  [row-widths side]
+  (let [max-w (apply max row-widths)]
+    (loop [offset 0, [w & more] row-widths, acc []]
+      (if (nil? w)
+        acc
+        (let [half (quot w 2)
+              row-positions (if (= w max-w)
+                              (case side
+                                :left  (range offset (+ offset half))
+                                :right (range (+ offset half) (+ offset w)))
+                              [])]
+          (recur (+ offset w) more (into acc row-positions)))))))
+
+(defn- resolve-half-shorthand
+  "Resolve a :left-half / :right-half keyword value for a positional property
+   into a concrete vector of key positions using the keyboard's :row-widths.
+   Non-shorthand values pass through unchanged."
+  [v row-widths]
+  (case v
+    :left-half  (vec (half-key-positions row-widths :left))
+    :right-half (vec (half-key-positions row-widths :right))
+    v))
+
+(def ^:private positional-shorthand-properties
+  "Behavior properties whose value may use a :left-half / :right-half shorthand."
+  #{:hold-trigger-key-positions})
+
+(defn- resolve-positional-shorthands
+  "Preprocess a behavior node's properties, expanding any :left-half /
+   :right-half shorthand in positional properties into concrete key-position
+   vectors computed from `row-widths`."
+  [node row-widths]
+  (reduce (fn [n k]
+            (if (contains? n k)
+              (update n k resolve-half-shorthand row-widths)
+              n))
+          node
+          positional-shorthand-properties))
+
 (defn render-behavior
   "Render any registered behavior type as a ZMK devicetree node.
    :name      — DT node id (:label, if present, is used as the display-name)
@@ -267,9 +311,11 @@
    Any other keys are emitted as pass-through properties: key = <value>;"
   ([node level]
    (render-behavior node level false nil))
-  ([{:keys [name type bindings body label] :as node} level _raw-body? _opts]
+  ([{:keys [name type bindings body label] :as node} level _raw-body? opts]
   (if-let [{:keys [compatible binding-cells binding-format]} (get behavior-types type)]
     (let [display-name   (or label name)
+          row-widths     (get-in opts [:keyboard :row-widths])
+          node           (resolve-positional-shorthands node row-widths)
           reserved       #{:name :type :bindings :body :label}
           pass-through   (remove (comp reserved key) node)
           b              (or body bindings)
@@ -443,7 +489,8 @@
                    expand-aliases
                    resolve-left-bindings)
         layer-index-map (extract-layer-indexes config)
-        opts {:layer-index-map layer-index-map}]
+        opts {:layer-index-map layer-index-map
+              :keyboard (:keyboard config)}]
     (str/replace
      (reduce (fn [text [region {:keys [nodes raw-body?]}]]
                (replace-between-markers text region nodes raw-body? opts))
