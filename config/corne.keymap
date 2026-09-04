@@ -19,145 +19,121 @@
         horiz_base_0_1 {
             bindings = <&kp DE_X>;
             key-positions = <1 2>;
-            layers = <0>;
         };
 
         horiz_base_0_2 {
             bindings = <&kp DE_W>;
             key-positions = <2 3>;
-            layers = <0>;
         };
 
         horiz_base_0_3 {
             bindings = <&kp DE_M>;
             key-positions = <3 4>;
-            layers = <0>;
         };
 
         horiz_base_0_4 {
             bindings = <&kp DE_Z>;
             key-positions = <4 5>;
-            layers = <0>;
         };
 
         horiz_base_0_7 {
             bindings = <&kp DE_Z>;
             key-positions = <7 6>;
-            layers = <0>;
         };
 
         horiz_base_0_8 {
             bindings = <&kp DE_M>;
             key-positions = <8 7>;
-            layers = <0>;
         };
 
         horiz_base_0_9 {
             bindings = <&kp DE_W>;
             key-positions = <9 8>;
-            layers = <0>;
         };
 
         horiz_base_0_10 {
             bindings = <&kp DE_X>;
             key-positions = <10 9>;
-            layers = <0>;
         };
 
         horiz_base_1_1 {
             bindings = <&kp DE_Q>;
             key-positions = <13 14>;
-            layers = <0>;
         };
 
         horiz_base_1_2 {
             bindings = <&kp TAB>;
             key-positions = <14 15>;
-            layers = <0>;
         };
 
         horiz_base_1_3 {
             bindings = <&kp DE_V>;
             key-positions = <15 16>;
-            layers = <0>;
         };
 
         horiz_base_1_4 {
             bindings = <&kp DE_G>;
             key-positions = <16 17>;
-            layers = <0>;
         };
 
         horiz_base_1_7 {
             bindings = <&kp DE_G>;
             key-positions = <19 18>;
-            layers = <0>;
         };
 
         horiz_base_1_8 {
             bindings = <&kp DE_V>;
             key-positions = <20 19>;
-            layers = <0>;
         };
 
         horiz_base_1_9 {
             bindings = <&kp TAB>;
             key-positions = <21 20>;
-            layers = <0>;
         };
 
         horiz_base_1_10 {
             bindings = <&kp DE_Q>;
             key-positions = <22 21>;
-            layers = <0>;
         };
 
         horiz_base_2_1 {
             bindings = <&kp DE_Y>;
             key-positions = <25 26>;
-            layers = <0>;
         };
 
         horiz_base_2_2 {
             bindings = <&kp DE_K>;
             key-positions = <26 27>;
-            layers = <0>;
         };
 
         horiz_base_2_3 {
             bindings = <&kp DE_J>;
             key-positions = <27 28>;
-            layers = <0>;
         };
 
         horiz_base_2_4 {
             bindings = <&kp DE_B>;
             key-positions = <28 29>;
-            layers = <0>;
         };
 
         horiz_base_2_7 {
             bindings = <&kp DE_B>;
             key-positions = <31 30>;
-            layers = <0>;
         };
 
         horiz_base_2_8 {
             bindings = <&kp DE_J>;
             key-positions = <32 31>;
-            layers = <0>;
         };
 
         horiz_base_2_9 {
             bindings = <&kp DE_K>;
             key-positions = <33 32>;
-            layers = <0>;
         };
 
         horiz_base_2_10 {
             bindings = <&kp DE_Y>;
             key-positions = <34 33>;
-            layers = <0>;
         };
 
         vert_base_0_1 {

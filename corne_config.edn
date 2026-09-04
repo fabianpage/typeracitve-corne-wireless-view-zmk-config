@@ -5,7 +5,7 @@
     ({:name "horiz_base",
       :type :combo-layer,
       :pattern [[0 0] [0 1]],
-      :layers [:BASE],
+      ;; :layers [:BASE],
       :left
       [[:none :DE_X :DE_W :DE_M :DE_Z :none]
        [:none :DE_Q :TAB :DE_V :DE_G :none]
