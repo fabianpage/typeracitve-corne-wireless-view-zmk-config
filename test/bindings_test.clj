@@ -1,6 +1,7 @@
 (ns bindings-test
-  (:require [clojure.test :refer [deftest is run-tests]]
-            [bindings :as bindings]))
+  (:require
+   [bindings :as bindings]
+   [clojure.test :refer [deftest is run-tests]]))
 
 ;; --- Keyword dispatch keys -----------------------------------------------
 
@@ -91,5 +92,4 @@
     result))
 
 (comment
-  (run)
-  )
+  (run))

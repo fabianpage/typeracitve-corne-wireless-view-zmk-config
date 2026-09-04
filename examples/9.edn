@@ -41,5 +41,5 @@
       :wait-ms 20}]}]
   [:keymap
    {:nodes [{:name "BASE"
-              :bindings [[:Q :W :E]
-                         [:A :S :D]]}]}]]}
+             :bindings [[:Q :W :E]
+                        [:A :S :D]]}]}]]}

@@ -1,28 +1,28 @@
 {:regions
  [[:combos
    {:nodes
-    [{:name "horizontal_ltr",
-      :type :combo-layer,
-      :pattern [[0 0] [0 1]],
-      :layers [:BASE],
+    [{:name "horizontal_ltr"
+      :type :combo-layer
+      :pattern [[0 0] [0 1]]
+      :layers [:BASE]
       :bindings
       [[:DE_X :DE_W :none :none :none :none :none :none :none :none]
        [:DE_Q :TAB :none :DE_G :none :none :none :none :none :none]
        [:none :DE_Y :DE_K :none :none :none :none :none :none :none :none :none]
        [:none :none :none :none :none :none]]}
-     {:name "horizontal_rtl",
-      :type :combo-layer,
-      :pattern [[0 0] [0 -1]],
-      :layers [:BASE],
+     {:name "horizontal_rtl"
+      :type :combo-layer
+      :pattern [[0 0] [0 -1]]
+      :layers [:BASE]
       :bindings
       [[:none :none :none :DE_M :DE_Z :none :none :none :none :none]
        [:none :none :none :DE_V :none :none :none :none :none :none]
        [:none :none :none :none :DE_J :DE_B :none :none :none :none :none :none]
        [:none :none :none :none :none :none]]}
-     {:name "vertical",
-      :type :combo-layer,
-      :pattern [[0 0] [1 0]],
-      :layers [:BASE],
+     {:name "vertical"
+      :type :combo-layer
+      :pattern [[0 0] [1 0]]
+      :layers [:BASE]
       :bindings
       [[[:backspace_delete]
         [:round_brackets]
@@ -37,49 +37,49 @@
        [:none :none :none :none :none :none :none :none :none :none]
        [:none :none :none :none :none :none :none :none :none :none :none :none]
        [:none :none :none :none :none :none]]}
-     {:name "diagonal_down_right",
-      :type :combo-layer,
-      :pattern [[0 0] [1 1]],
-      :layers [:BASE],
+     {:name "diagonal_down_right"
+      :type :combo-layer
+      :pattern [[0 0] [1 1]]
+      :layers [:BASE]
       :bindings
       [[:none :none [:punkt_doppelpunkt] :none :none :none :none :none :none :none]
        [:ENTER [:square_brackets] :none [:caps_word] [:sk :LCTRL] :none :none :none :none :none]
        [:none :none :none :none :none :none :none :none :none :none :none :none]
        [:none :none :none :none :none :none]]}
-     {:name "diagonal_down_right_reverse",
-      :type :combo-layer,
-      :pattern [[0 0] [-1 -1]],
-      :layers [:BASE],
+     {:name "diagonal_down_right_reverse"
+      :type :combo-layer
+      :pattern [[0 0] [-1 -1]]
+      :layers [:BASE]
       :bindings
       [[:none :none :none :none :none :none :none :none :none :none]
        [:none :none :none :none [:curly_brackets] :none :none :none :none :none]
        [:none :none :none :SPACE :none :none :none :none :none :none :none :none]
        [:none :none :none :none :none :none]]}
      {:name "angled_brackets", :layers [:BASE], :body ["bindings = <&angled_brackets>;" "key-positions = <25 13>;"]}
-     {:name "komma_strichpunkt",
-      :layers [:BASE],
+     {:name "komma_strichpunkt"
+      :layers [:BASE]
       :body ["bindings = <&komma_strickpunkt>;" "key-positions = <24 12>;"]}
      {:name "toBT", :layers [:BASE], :body ["bindings = <&to 4>;" "key-positions = <1 2 3 4>;"]}
-     {:name "ae",
-      :layers [:BASE],
+     {:name "ae"
+      :layers [:BASE]
       :body ["bindings = <&M_UPPER_AEOEUE DE_A_UMLAUT>;" "key-positions = <33 21 32>;"]}]}]
   [:macros
    {:nodes
     [{:name "esc_layerreset", :label "esc_layerreset", :type :macro, :bindings [:ESCAPE [:to 0]]}
      {:name "daechli", :label "daechli", :type :macro, :bindings [:DE_CARET :SPACE]}
      {:name "tilde", :label "tilde", :type :macro, :bindings [[:kp "LA(DE_N)"] :SPACE]}
-     {:name "M_UPPER_AEOEUE",
-      :label "AE",
-      :type :macro-one-param,
-      :wait-ms 80,
-      :tap-ms 80,
+     {:name "M_UPPER_AEOEUE"
+      :label "AE"
+      :type :macro-one-param
+      :wait-ms 80
+      :tap-ms 80
       :bindings [:CAPSLOCK [:pause] [:param-1to1 [:kp :_placeholder]] :CAPSLOCK]}
      {:name "M_UE", :label "UE", :type :macro, :wait-ms 20, :tap-ms 20, :bindings [:CAPSLOCK :DE_U_UMLAUT :CAPSLOCK]}
-     {:name "M_OE",
-      :label "M_OE",
-      :type :macro,
-      :wait-ms 100,
-      :tap-ms 100,
+     {:name "M_OE"
+      :label "M_OE"
+      :type :macro
+      :wait-ms 100
+      :tap-ms 100
       :bindings [:CAPSLOCK :DE_O_UMLAUT :CAPSLOCK]}
      {:name "backtick_macro", :label "backtick_macro", :type :macro, :bindings [:DE_GRAVE :SPACE]}
      {:name "fronttick_macro", :label "fronttick_macro", :type :macro, :bindings [[:kp "RA(EQUAL)"] :SPACE]}
@@ -138,55 +138,55 @@
      {:name "swapper", :type :smart-toggle, :bindings [:LGUI :TAB], :ignored-key-positions "33"}]}]
   [:keymap
    {:nodes
-    [{:name "BASE",
-      :left [[:P :O :I :U :T] [[:lt 3 :DE_S] :A :E :N :R] [:DE_G :D :L :C :F :H] [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]],
+    [{:name "BASE"
+      :left [[:P :O :I :U :T] [[:lt 3 :DE_S] :A :E :N :R] [:DE_G :D :L :C :F :H] [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]]
       :right-override
       [[[:bt :BT_SEL 0] [:bt :BT_SEL 1] [:out :OUT_TOG] [:bootloader] [:bt :BT_CLR_ALL]]
        [:H :D :DE_F :DE_H [:mt :RGUI :O]]
        [:K :M :COMMA :DOT :FSLH :FSLH]
        [:C :A :B]]}
-     {:name "Nav1",
+     {:name "Nav1"
       :left
       [[[:B_UE] :END :PG_UP :PG_DN :HOME]
        [[:B_OE] :RIGHT_ARROW :UP :DOWN :LEFT_ARROW]
        [:trans :DE_A_UMLAUT :N9 :double_single_quote :back_front_tick :hash_pipe]
-       [:trans :trans :trans]],
+       [:trans :trans :trans]]
       :right-override
       [[:N1 :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans]
        [:N3 :trans :trans :trans :trans :trans]
        [:trans :trans :trans]]}
-     {:name "Nav2",
+     {:name "Nav2"
       :left
       [[[:frage_ausrufe_zeichen] [:mac_prev_next_window] [:swapper] [:tmux_next_pre] [:kp "LC(DE_U_UMLAUT)"]]
        [[:at_equal] [:lCl] [:kCk] [:jCj] [:hCh]]
        [:trans [:slash_backslash] [:dollar_ampersand] :trans [:prozent_ringli] [:daechli_tilde]]
-       [:trans :trans :trans]],
+       [:trans :trans :trans]]
       :right-override
       [[:trans :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans :trans]
        [:trans :trans :trans]]}
-     {:name "Num",
+     {:name "Num"
       :left
       [[:trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
        [:trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
        [:trans :trans [:n9ue9] [:n8ue8] [:n7ue7] [:mal_plus]]
-       [:trans :trans :trans]],
+       [:trans :trans :trans]]
       :right-override
       [[:trans :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans :trans]
        [:trans :trans :trans]]}
-     {:name "BT",
+     {:name "BT"
       :left
       [[[:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]
        [:trans :trans :trans [:out :OUT_BLE] :trans]
        [:trans [:esc_layerreset] :trans :trans [:out :OUT_USB] [:bootloader]]
-       [:trans :trans :trans]],
+       [:trans :trans :trans]]
       :right-override
       [[:trans :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans :trans]
-       [:trans :trans :trans]]}]}]],
+       [:trans :trans :trans]]}]}]]
  :keyboard {:row-widths [10 10 12 6]}}
