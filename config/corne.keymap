@@ -139,193 +139,161 @@
         vert_base_0_1 {
             bindings = <&backspace_delete>;
             key-positions = <1 13>;
-            layers = <0>;
         };
 
         vert_base_0_2 {
             bindings = <&round_brackets>;
             key-positions = <2 14>;
-            layers = <0>;
         };
 
         vert_base_0_3 {
             bindings = <&esc_layerreset>;
             key-positions = <3 15>;
-            layers = <0>;
         };
 
         vert_base_0_4 {
             bindings = <&sk LEFT_ALT>;
             key-positions = <4 16>;
-            layers = <0>;
         };
 
         vert_base_0_5 {
             bindings = <&sk LEFT_GUI>;
             key-positions = <5 17>;
-            layers = <0>;
         };
 
         vert_base_0_6 {
             bindings = <&sk LEFT_GUI>;
             key-positions = <6 18>;
-            layers = <0>;
         };
 
         vert_base_0_7 {
             bindings = <&sk LEFT_ALT>;
             key-positions = <7 19>;
-            layers = <0>;
         };
 
         vert_base_0_8 {
             bindings = <&esc_layerreset>;
             key-positions = <8 20>;
-            layers = <0>;
         };
 
         vert_base_0_9 {
             bindings = <&round_brackets>;
             key-positions = <9 21>;
-            layers = <0>;
         };
 
         vert_base_0_10 {
             bindings = <&backspace_delete>;
             key-positions = <10 22>;
-            layers = <0>;
         };
 
         vert_base_1_1 {
             bindings = <&kp ENTER>;
             key-positions = <13 25>;
-            layers = <0>;
         };
 
         vert_base_1_2 {
             bindings = <&square_brackets>;
             key-positions = <14 26>;
-            layers = <0>;
         };
 
         vert_base_1_3 {
             bindings = <&kp SPACE>;
             key-positions = <15 27>;
-            layers = <0>;
         };
 
         vert_base_1_4 {
             bindings = <&caps_word>;
             key-positions = <16 28>;
-            layers = <0>;
         };
 
         vert_base_1_5 {
             bindings = <&sk LCTRL>;
             key-positions = <17 29>;
-            layers = <0>;
         };
 
         vert_base_1_6 {
             bindings = <&sk LCTRL>;
             key-positions = <18 30>;
-            layers = <0>;
         };
 
         vert_base_1_7 {
             bindings = <&caps_word>;
             key-positions = <19 31>;
-            layers = <0>;
         };
 
         vert_base_1_8 {
             bindings = <&kp SPACE>;
             key-positions = <20 32>;
-            layers = <0>;
         };
 
         vert_base_1_9 {
             bindings = <&square_brackets>;
             key-positions = <21 33>;
-            layers = <0>;
         };
 
         vert_base_1_10 {
             bindings = <&kp ENTER>;
             key-positions = <22 34>;
-            layers = <0>;
         };
 
         diag_down_base_0_3 {
             bindings = <&punkt_doppelpunkt>;
             key-positions = <3 16>;
-            layers = <0>;
         };
 
         diag_down_base_0_4 {
             bindings = <&curly_brackets>;
             key-positions = <4 17>;
-            layers = <0>;
         };
 
         diag_down_base_0_7 {
             bindings = <&curly_brackets>;
             key-positions = <7 18>;
-            layers = <0>;
         };
 
         diag_down_base_0_8 {
             bindings = <&punkt_doppelpunkt>;
             key-positions = <8 19>;
-            layers = <0>;
         };
 
         diag_down_base_1_3 {
             bindings = <&komma_strickpunkt>;
             key-positions = <15 28>;
-            layers = <0>;
         };
 
         diag_down_base_1_4 {
             bindings = <&angled_brackets>;
             key-positions = <16 29>;
-            layers = <0>;
         };
 
         diag_down_base_1_7 {
             bindings = <&angled_brackets>;
             key-positions = <19 30>;
-            layers = <0>;
         };
 
         diag_down_base_1_8 {
             bindings = <&komma_strickpunkt>;
             key-positions = <20 31>;
-            layers = <0>;
         };
 
         diag_up_base_1_4 {
             bindings = <&curly_brackets>;
             key-positions = <16 3>;
-            layers = <0>;
         };
 
         diag_up_base_1_7 {
             bindings = <&curly_brackets>;
             key-positions = <19 8>;
-            layers = <0>;
         };
 
         diag_up_base_2_3 {
             bindings = <&kp SPACE>;
             key-positions = <27 14>;
-            layers = <0>;
         };
 
         diag_up_base_2_8 {
             bindings = <&kp SPACE>;
             key-positions = <32 21>;
-            layers = <0>;
         };
 
         toBT {

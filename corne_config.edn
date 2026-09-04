@@ -14,7 +14,7 @@
      {:name "vert_base"
       :type :combo-layer
       :pattern [[0 0] [1 0]]
-      :layers [:BASE]
+      ;; :layers [:BASE]
       :left
       [[:none [:backspace_delete] [:round_brackets] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
        [:none :ENTER [:square_brackets] :SPACE [:caps_word] [:sk :LCTRL]]
@@ -23,7 +23,7 @@
      {:name "diag_down_base"
       :type :combo-layer
       :pattern [[0 0] [1 1]]
-      :layers [:BASE]
+      ;; :layers [:BASE]
       :left
       [[:none :none :none [:punkt_doppelpunkt]  [:curly_brackets] :none]
        [:none :none :none  [:komma_strickpunkt] [:angled_brackets] :none]
@@ -32,7 +32,7 @@
      {:name "diag_up_base"
       :type :combo-layer
       :pattern [[0 0] [-1 -1]]
-      :layers [:BASE]
+      ;; :layers [:BASE]
       :left
       [[:none :none :none :none :none :none]
        [:none :none :none :none [:curly_brackets] :none]
@@ -281,7 +281,8 @@
       [nil
        nil
        [:H [:rh_ht :LEFT_GUI :DE_F] [:rh_ht :LEFT_ALT :DE_C] [:rh_ht :LCTRL :DE_L] [:rh_ht :LEFT_SHIFT :D] :none]
-       nil]}
+       nil]
+      }
      {:name "Nav1"
       :left
       [[[:tog 5] [:B_UE] :END :PG_UP :PG_DN :HOME]
