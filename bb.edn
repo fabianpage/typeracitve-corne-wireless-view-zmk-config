@@ -2,10 +2,10 @@
  :tasks
  {generate {:doc "Generate config/corne.keymap from corne_config.edn + corne_template.keymap"
             :task (let [exit (:exit (clojure.java.shell/sh
-                                     "bb" "generator.clj"
-                                     "--config" "corne_config.edn"
-                                     "--input" "corne_template.keymap"
-                                     "--output" "config/corne.keymap"))]
+                                      "bb" "generator.clj"
+                                      "--config" "corne_config.edn"
+                                      "--input" "corne_template.keymap"
+                                      "--output" "config/corne.keymap"))]
                     (if (zero? exit)
                       (println "Generated config/corne.keymap")
                       (throw (ex-info "Generator failed" {:exit exit}))))}
@@ -16,10 +16,10 @@
                                     (try
                                       (let [{generate-exit :exit generate-err :err}
                                             (clojure.java.shell/sh
-                                             "bb" "generator.clj"
-                                             "--config" "corne_config.edn"
-                                             "--input" "corne_template.keymap"
-                                             "--output" generated)]
+                                              "bb" "generator.clj"
+                                              "--config" "corne_config.edn"
+                                              "--input" "corne_template.keymap"
+                                              "--output" generated)]
                                         (when-not (zero? generate-exit)
                                           (print generate-err)
                                           (throw (ex-info "Generator failed" {:exit generate-exit})))
@@ -38,8 +38,8 @@
                                         (.delete generated-file))))}
   test {:doc "Run Babashka tests"
         :extra-deps {io.github.matthewdowney/rich-comment-tests {:git/url "https://github.com/matthewdowney/rich-comment-tests.git"
-                                                                  :git/tag "v1.0.3"
-                                                                  :git/sha "a8711e9"}}
+                                                                 :git/tag "v1.0.3"
+                                                                 :git/sha "a8711e9"}}
         :requires ([generator-test :as generator-test]
                    [bindings-test :as bindings-test]
                    [com.mjdowney.rich-comment-tests.test-runner :as rct])

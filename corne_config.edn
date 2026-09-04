@@ -1,58 +1,58 @@
-{:keyboard {:row-widths [12 12 12 6], :empty :trans},
+{:keyboard {:row-widths [12 12 12 6], :empty :trans}
  :regions
  [[:combos
    {:nodes
-    ({:name "horiz_base",
-      :type :combo-layer,
-      :pattern [[0 0] [0 1]],
-      :layers [:BASE],
+    ({:name "horiz_base"
+      :type :combo-layer
+      :pattern [[0 0] [0 1]]
+      ;; :layers [:BASE],
       :left
       [[:none :DE_X :DE_W :DE_M :DE_Z :none]
        [:none :DE_Q :TAB :DE_V :DE_G :none]
        [:none :DE_Y :DE_K :DE_J :DE_B :none]
        [:none :none :none]]}
-     {:name "vert_base",
-      :type :combo-layer,
-      :pattern [[0 0] [1 0]],
-      :layers [:BASE],
+     {:name "vert_base"
+      :type :combo-layer
+      :pattern [[0 0] [1 0]]
+      :layers [:BASE]
       :left
       [[:none [:backspace_delete] [:round_brackets] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
-       [:none :ENTER [:square_brackets] :SPACE [:caps_word] [:sk :LCTRL] ]
+       [:none :ENTER [:square_brackets] :SPACE [:caps_word] [:sk :LCTRL]]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
-     {:name "diag_down_base",
-      :type :combo-layer,
-      :pattern [[0 0] [1 1]],
-      :layers [:BASE],
+     {:name "diag_down_base"
+      :type :combo-layer
+      :pattern [[0 0] [1 1]]
+      :layers [:BASE]
       :left
       [[:none :none :none [:punkt_doppelpunkt]  [:curly_brackets] :none]
        [:none :none :none  [:komma_strickpunkt] [:angled_brackets] :none]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
-     {:name "diag_up_base",
-      :type :combo-layer,
-      :pattern [[0 0] [-1 -1]],
-      :layers [:BASE],
+     {:name "diag_up_base"
+      :type :combo-layer
+      :pattern [[0 0] [-1 -1]]
+      :layers [:BASE]
       :left
       [[:none :none :none :none :none :none]
        [:none :none :none :none [:curly_brackets] :none]
        [:none :none :none :SPACE :none :none]
        [:none :none :none]]}
-    ;;  {:name "diag_knight_base",
-    ;;   :type :combo-layer,
-    ;;   :pattern [[0 0] [-1 -2]],
-    ;;   :layers [:BASE],
-    ;;   :left
-    ;;   [[:none :none :none :none :none :none]
-    ;;    [:none :none :none :none :none :none]
-    ;;    [:none :none :none :none [:komma_strickpunkt] [:angled_brackets]]
-    ;;    [:none :none :none]]}
-     {:name "toBT",
+     ;;  {:name "diag_knight_base",
+     ;;   :type :combo-layer,
+     ;;   :pattern [[0 0] [-1 -2]],
+     ;;   :layers [:BASE],
+     ;;   :left
+     ;;   [[:none :none :none :none :none :none]
+     ;;    [:none :none :none :none :none :none]
+     ;;    [:none :none :none :none [:komma_strickpunkt] [:angled_brackets]]
+     ;;    [:none :none :none]]}
+     {:name "toBT"
       :body
       ["bindings = <&to 4>;"
        "key-positions = <1 2 3 4>;"
        "layers = <0>;"]}
-     {:name "ae",
+     {:name "ae"
       :body
       ["bindings = <&M_UPPER_AEOEUE DE_A_UMLAUT>;"
        "key-positions = <36 25 37>;"
@@ -62,22 +62,22 @@
     [{:name "esc_layerreset", :type :macro, :bindings [:ESCAPE [:to 0]]}
      {:name "daechli", :type :macro, :bindings [:DE_CARET :SPACE]}
      {:name "tilde", :type :macro, :bindings [[:kp "LA(DE_N)"] :SPACE]}
-     {:name "M_UPPER_AEOEUE",
-      :label "AE",
-      :type :macro-one-param,
-      :wait-ms 80,
-      :tap-ms 80,
+     {:name "M_UPPER_AEOEUE"
+      :label "AE"
+      :type :macro-one-param
+      :wait-ms 80
+      :tap-ms 80
       :bindings
       [:CAPSLOCK [:pause] [:param-1to1 [:kp :_placeholder]] :CAPSLOCK]}
-     {:name "M_UE",
-      :type :macro,
-      :bindings [:CAPSLOCK :DE_U_UMLAUT :CAPSLOCK],
-      :wait-ms 20,
+     {:name "M_UE"
+      :type :macro
+      :bindings [:CAPSLOCK :DE_U_UMLAUT :CAPSLOCK]
+      :wait-ms 20
       :tap-ms 20}
-     {:name "M_OE",
-      :type :macro,
-      :bindings [:CAPSLOCK :DE_O_UMLAUT :CAPSLOCK],
-      :wait-ms 100,
+     {:name "M_OE"
+      :type :macro
+      :bindings [:CAPSLOCK :DE_O_UMLAUT :CAPSLOCK]
+      :wait-ms 100
       :tap-ms 100}
      {:name "backtick_macro", :type :macro, :bindings [:DE_GRAVE :SPACE]}
      {:name "fronttick_macro", :type :macro, :bindings [[:kp "RA(EQUAL)"] :SPACE]}
@@ -113,165 +113,165 @@
       :global-quick-tap true
       :hold-trigger-on-release true
       :hold-trigger-key-positions :left-half}
-     {:name "square_brackets",
-      :type :mod-morph,
-      :bindings ["&kp LA(DE_N5)" "&kp LA(DE_N6)"],
+     {:name "square_brackets"
+      :type :mod-morph
+      :bindings ["&kp LA(DE_N5)" "&kp LA(DE_N6)"]
       :mods "(MOD_LSFT)"}
-     {:name "round_brackets",
-      :type :mod-morph,
-      :bindings ["&kp LS(DE_N8)" "&kp LS(DE_N9)"],
+     {:name "round_brackets"
+      :type :mod-morph
+      :bindings ["&kp LS(DE_N8)" "&kp LS(DE_N9)"]
       :mods "(MOD_LSFT)"}
-     {:name "angled_brackets",
-      :type :mod-morph,
-      :bindings [:DE_LESS_THAN :DE_GREATER_THAN],
+     {:name "angled_brackets"
+      :type :mod-morph
+      :bindings [:DE_LESS_THAN :DE_GREATER_THAN]
       :mods "(MOD_LSFT)"}
-     {:name "curly_brackets",
-      :type :mod-morph,
-      :bindings ["&kp LA(DE_N8)" "&kp LA(DE_N9)"],
+     {:name "curly_brackets"
+      :type :mod-morph
+      :bindings ["&kp LA(DE_N8)" "&kp LA(DE_N9)"]
       :mods "(MOD_LSFT)"}
-     {:name "backspace_delete",
-      :type :mod-morph,
-      :bindings [:BACKSPACE :DELETE],
+     {:name "backspace_delete"
+      :type :mod-morph
+      :bindings [:BACKSPACE :DELETE]
       :mods "(MOD_LSFT)"}
-     {:name "double_single_quote",
-      :type :mod-morph,
-      :bindings [:DE_DOUBLE_QUOTES :MINUS],
+     {:name "double_single_quote"
+      :type :mod-morph
+      :bindings [:DE_DOUBLE_QUOTES :MINUS]
       :mods "(MOD_LSFT)"}
-     {:name "back_front_tick",
-      :type :mod-morph,
-      :bindings [[:backtick_macro] [:fronttick_macro]],
+     {:name "back_front_tick"
+      :type :mod-morph
+      :bindings [[:backtick_macro] [:fronttick_macro]]
       :mods "(MOD_LSFT)"}
-     {:name "punkt_doppelpunkt",
-      :type :mod-morph,
-      :bindings [:DE_DOT :DE_COLON],
+     {:name "punkt_doppelpunkt"
+      :type :mod-morph
+      :bindings [:DE_DOT :DE_COLON]
       :mods "(MOD_LSFT)"}
-     {:name "komma_strickpunkt",
-      :type :mod-morph,
-      :bindings [:DE_COMMA :DE_SEMICOLON],
+     {:name "komma_strickpunkt"
+      :type :mod-morph
+      :bindings [:DE_COMMA :DE_SEMICOLON]
       :mods "(MOD_LSFT)"}
-     {:name "frage_ausrufe_zeichen",
-      :type :mod-morph,
-      :bindings [:DE_QUESTION :DE_EXCLAMATION],
+     {:name "frage_ausrufe_zeichen"
+      :type :mod-morph
+      :bindings [:DE_QUESTION :DE_EXCLAMATION]
       :mods "(MOD_LSFT)"}
-     {:name "daechli_tilde",
-      :type :mod-morph,
-      :bindings [[:daechli] [:tilde]],
+     {:name "daechli_tilde"
+      :type :mod-morph
+      :bindings [[:daechli] [:tilde]]
       :mods "(MOD_LSFT)"}
-     {:name "prozent_ringli",
-      :type :mod-morph,
-      :bindings [:DE_PERCENT "&kp LS(NON_US_BSLH)"],
+     {:name "prozent_ringli"
+      :type :mod-morph
+      :bindings [:DE_PERCENT "&kp LS(NON_US_BSLH)"]
       :mods "(MOD_LSFT)"}
-     {:name "hash_pipe",
-      :type :mod-morph,
-      :bindings [:DE_HASH :DE_PIPE],
+     {:name "hash_pipe"
+      :type :mod-morph
+      :bindings [:DE_HASH :DE_PIPE]
       :mods "(MOD_LSFT)"}
-     {:name "at_equal",
-      :type :mod-morph,
-      :bindings ["&kp LA(DE_G)" :DE_EQUAL],
+     {:name "at_equal"
+      :type :mod-morph
+      :bindings ["&kp LA(DE_G)" :DE_EQUAL]
       :mods "(MOD_LSFT)"}
-     {:name "dollar_ampersand",
-      :type :mod-morph,
-      :bindings [:DE_DOLLAR :DE_AMPERSAND],
+     {:name "dollar_ampersand"
+      :type :mod-morph
+      :bindings [:DE_DOLLAR :DE_AMPERSAND]
       :mods "(MOD_LSFT)"}
-     {:name "slash_backslash",
-      :type :mod-morph,
-      :bindings [:DE_SLASH "&kp LS(LA(DE_N7))"],
+     {:name "slash_backslash"
+      :type :mod-morph
+      :bindings [:DE_SLASH "&kp LS(LA(DE_N7))"]
       :mods "(MOD_LSFT)"}
-     {:name "mal_plus",
-      :type :mod-morph,
-      :bindings [:DE_ASTERISK :DE_PLUS],
+     {:name "mal_plus"
+      :type :mod-morph
+      :bindings [:DE_ASTERISK :DE_PLUS]
       :mods "(MOD_LSFT)"}
-     {:name "minus_underscore",
-      :type :mod-morph,
-      :bindings [:DE_MINUS :DE_UNDER],
+     {:name "minus_underscore"
+      :type :mod-morph
+      :bindings [:DE_MINUS :DE_UNDER]
       :mods "(MOD_LSFT)"}
-     {:name "B_AE",
-      :type :mod-morph,
-      :bindings [:DE_A_UMLAUT [:M_UPPER_AEOEUE :DE_A_UMLAUT]],
+     {:name "B_AE"
+      :type :mod-morph
+      :bindings [:DE_A_UMLAUT [:M_UPPER_AEOEUE :DE_A_UMLAUT]]
       :mods "(MOD_LSFT)"}
-     {:name "B_UE",
-      :type :mod-morph,
-      :bindings [:DE_U_UMLAUT [:M_UE]],
+     {:name "B_UE"
+      :type :mod-morph
+      :bindings [:DE_U_UMLAUT [:M_UE]]
       :mods "(MOD_LSFT)"}
-     {:name "B_OE",
-      :type :mod-morph,
-      :bindings [:DE_O_UMLAUT [:M_OE]],
+     {:name "B_OE"
+      :type :mod-morph
+      :bindings [:DE_O_UMLAUT [:M_OE]]
       :mods "(MOD_LSFT)"}
-     {:name "hCh",
-      :type :mod-morph,
-      :bindings [:DE_H "&kp LC(DE_H)"],
+     {:name "hCh"
+      :type :mod-morph
+      :bindings [:DE_H "&kp LC(DE_H)"]
       :mods "(MOD_LSFT)"}
-     {:name "jCj",
-      :type :mod-morph,
-      :bindings [:DE_J "&kp LC(DE_J)"],
+     {:name "jCj"
+      :type :mod-morph
+      :bindings [:DE_J "&kp LC(DE_J)"]
       :mods "(MOD_LSFT)"}
-     {:name "kCk",
-      :type :mod-morph,
-      :bindings [:DE_K "&kp LC(DE_K)"],
+     {:name "kCk"
+      :type :mod-morph
+      :bindings [:DE_K "&kp LC(DE_K)"]
       :mods "(MOD_LSFT)"}
-     {:name "lCl",
-      :type :mod-morph,
-      :bindings [:DE_L "&kp LC(DE_L)"],
+     {:name "lCl"
+      :type :mod-morph
+      :bindings [:DE_L "&kp LC(DE_L)"]
       :mods "(MOD_LSFT)"}
-     {:name "n0ue0",
-      :type :mod-morph,
-      :bindings [:DE_N0 [:ue0]],
+     {:name "n0ue0"
+      :type :mod-morph
+      :bindings [:DE_N0 [:ue0]]
       :mods "(MOD_LSFT)"}
-     {:name "n1ue1",
-      :type :mod-morph,
-      :bindings [:DE_N1 [:ue1]],
+     {:name "n1ue1"
+      :type :mod-morph
+      :bindings [:DE_N1 [:ue1]]
       :mods "(MOD_LSFT)"}
-     {:name "n2ue2",
-      :type :mod-morph,
-      :bindings [:DE_N2 [:ue2]],
+     {:name "n2ue2"
+      :type :mod-morph
+      :bindings [:DE_N2 [:ue2]]
       :mods "(MOD_LSFT)"}
-     {:name "n3ue3",
-      :type :mod-morph,
-      :bindings [:DE_N3 [:ue3]],
+     {:name "n3ue3"
+      :type :mod-morph
+      :bindings [:DE_N3 [:ue3]]
       :mods "(MOD_LSFT)"}
-     {:name "n4ue4",
-      :type :mod-morph,
-      :bindings [:DE_N4 [:ue4]],
+     {:name "n4ue4"
+      :type :mod-morph
+      :bindings [:DE_N4 [:ue4]]
       :mods "(MOD_LSFT)"}
-     {:name "n5ue5",
-      :type :mod-morph,
-      :bindings [:DE_N5 [:ue5]],
+     {:name "n5ue5"
+      :type :mod-morph
+      :bindings [:DE_N5 [:ue5]]
       :mods "(MOD_LSFT)"}
-     {:name "n6ue6",
-      :type :mod-morph,
-      :bindings [:DE_N6 [:ue6]],
+     {:name "n6ue6"
+      :type :mod-morph
+      :bindings [:DE_N6 [:ue6]]
       :mods "(MOD_LSFT)"}
-     {:name "n7ue7",
-      :type :mod-morph,
-      :bindings [:DE_N7 [:ue7]],
+     {:name "n7ue7"
+      :type :mod-morph
+      :bindings [:DE_N7 [:ue7]]
       :mods "(MOD_LSFT)"}
-     {:name "n8ue8",
-      :type :mod-morph,
-      :bindings [:DE_N8 [:ue8]],
+     {:name "n8ue8"
+      :type :mod-morph
+      :bindings [:DE_N8 [:ue8]]
       :mods "(MOD_LSFT)"}
-     {:name "n9ue9",
-      :type :mod-morph,
-      :bindings [:DE_N9 [:ue9]],
+     {:name "n9ue9"
+      :type :mod-morph
+      :bindings [:DE_N9 [:ue9]]
       :mods "(MOD_LSFT)"}
-     {:name "tmux_next_pre",
-      :type :mod-morph,
-      :bindings [[:tmux_next_window] [:tmux_prev_window]],
+     {:name "tmux_next_pre"
+      :type :mod-morph
+      :bindings [[:tmux_next_window] [:tmux_prev_window]]
       :mods "(MOD_LSFT)"}
-     {:name "mac_next_prev_app",
-      :type :mod-morph,
-      :bindings ["&kp LG(TAB)" "&kp LG(LS(TAB))"],
+     {:name "mac_next_prev_app"
+      :type :mod-morph
+      :bindings ["&kp LG(TAB)" "&kp LG(LS(TAB))"]
       :mods "(MOD_LSFT)"}
-     {:name "mac_prev_next_window",
-      :type :mod-morph,
-      :bindings ["&kp LC(F9)" "&kp LS(LC(F9))"],
+     {:name "mac_prev_next_window"
+      :type :mod-morph
+      :bindings ["&kp LC(F9)" "&kp LS(LC(F9))"]
       :mods "(MOD_LSFT)"}
-     {:name "swapper",
-      :type :smart-toggle,
-      :bindings [:LGUI :TAB],
+     {:name "swapper"
+      :type :smart-toggle
+      :bindings [:LGUI :TAB]
       :ignored-key-positions "37"}]}]
   [:keymap
    {:nodes
-    ({:name "BASE",
+    ({:name "BASE"
       :left
       [[:none :P :O :I :U :T]
        [:none [:lt 3 :DE_S] :A :E :N :R]
@@ -282,59 +282,48 @@
        nil
        [:H [:rh_ht :LEFT_GUI :DE_F] [:rh_ht :LEFT_ALT :DE_C] [:rh_ht :LCTRL :DE_L] [:rh_ht :LEFT_SHIFT :D] :none]
        nil]}
-     {:name "Nav1",
+     {:name "Nav1"
       :left
       [[[:tog 5] [:B_UE] :END :PG_UP :PG_DN :HOME]
        [:none [:B_OE] :LEFT_ARROW :DOWN :UP :RIGHT_ARROW]
-       [:none
-        :DE_A_UMLAUT
-        :N9
-        [:double_single_quote]
-        [:back_front_tick]
-        [:hash_pipe]]
-       [:trans :trans :trans]]}
-     {:name "Nav2",
+       [:none :DE_A_UMLAUT :N9 [:double_single_quote] [:back_front_tick] [:hash_pipe]] [:trans :trans :trans]]
+      :right-override
+      [nil
+       [:LEFT_ARROW :DOWN :UP :RIGHT_ARROW :* :*]
+       nil
+       nil]}
+     {:name "Nav2"
       :left
-      [[:none
-        [:frage_ausrufe_zeichen]
-        [:mac_prev_next_window]
-        [:swapper]
-        [:tmux_next_pre]
-        [:kp "LC(DE_U_UMLAUT)"]]
+      [[:none [:frage_ausrufe_zeichen] [:mac_prev_next_window] [:swapper] [:tmux_next_pre] [:kp "LC(DE_U_UMLAUT)"]]
        [:none [:at_equal] [:lCl] [:kCk] [:jCj] [:hCh]]
-       [:none
-        [:slash_backslash]
-        [:dollar_ampersand]
-        :trans
-        [:prozent_ringli]
-        [:daechli_tilde]]
+       [:none [:slash_backslash] [:dollar_ampersand] :trans [:prozent_ringli] [:daechli_tilde]]
        [:trans :trans :trans]]}
-     {:name "Num",
+     {:name "Num"
       :left
       [[:none :trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
        [:none :trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
        [:none :trans [:n9ue9] [:n8ue8] [:n7ue7] [:mal_plus]]
        [:trans :trans :trans]]}
-     {:name "BT",
+     {:name "BT"
       :left
       [[:none [:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]
        [:none :trans :trans :trans [:out :OUT_BLE] :trans]
-       [:none
-        [:esc_layerreset]
-        :trans
-        :trans
-        [:out :OUT_USB]
-        [:bootloader]]
+       [:none [:esc_layerreset] :trans :trans [:out :OUT_USB] [:bootloader]]
        [:trans :trans :trans]]}
-     {:name "Vim",
+     {:name "Vim"
       :left
       [[:trans :trans :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans :trans]
        [:trans :trans :trans :trans :trans :trans]
        [:trans :trans :trans]]}
-     {:name "NavVim",
+     {:name "NavVim"
       :left
       [[:trans :trans :trans :trans :trans :trans]
        [:trans :trans :H :J :K :L]
        [:trans :trans :trans :trans :trans :trans]
-       [:trans :trans :trans]]})}]]}
+       [:trans :trans :trans]]
+      :right-override
+      [nil
+       [:H :J :K :L :* :*]
+       nil
+       nil]})}]]}

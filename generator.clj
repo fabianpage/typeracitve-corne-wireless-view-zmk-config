@@ -5,12 +5,14 @@
 (deps/add-deps '{:deps {aero/aero {:mvn/version "1.1.6"}}})
 
 (ns generator
-  (:require [aero.core :as aero]
-            [babashka.cli :as cli]
-            [bindings]
-            [clojure.string :as str]
-            [clojure.walk :as walk])
-  (:import [java.util.regex Pattern]))
+  (:require
+   [aero.core :as aero]
+   [babashka.cli :as cli]
+   [bindings]
+   [clojure.string :as str]
+   [clojure.walk :as walk])
+  (:import
+   (java.util.regex Pattern)))
 
 (defn indent
   [level]
@@ -52,9 +54,9 @@
   [config]
   (if-let [aliases (not-empty (:aliases config))]
     (walk/postwalk
-      (fn [x]
-        (resolve-alias aliases x))
-      config)
+     (fn [x]
+       (resolve-alias aliases x))
+     config)
     config))
 
 (defn extract-layer-indexes
@@ -66,7 +68,7 @@
                                (:regions config))]
     (into {} (map-indexed (fn [idx node]
                             [(name (:name node)) idx])
-                           (:nodes keymap-region)))
+                          (:nodes keymap-region)))
     {}))
 
 (defn assemble-layer-bindings
@@ -100,7 +102,7 @@
   (doseq [[idx left-row row-width] (map vector (range) left row-widths)]
     (let [expected-half (quot row-width 2)]
       (when-not (= (count left-row) expected-half)
-        (throw (ex-info (str ":left row " idx " length (" (count left-row) 
+        (throw (ex-info (str ":left row " idx " length (" (count left-row)
                              ") does not match half row-width (" expected-half ")")
                         {:row-idx idx
                          :left-row left-row
@@ -116,7 +118,7 @@
       (when (some? override-row)
         (let [expected-half (quot row-width 2)]
           (when-not (= (count override-row) expected-half)
-            (throw (ex-info (str ":right-override row " idx " length (" (count override-row) 
+            (throw (ex-info (str ":right-override row " idx " length (" (count override-row)
                                  ") does not match half row-width (" expected-half ")")
                             {:row-idx idx
                              :override-row override-row
@@ -219,13 +221,13 @@
    :_placeholder replaced by :MACRO_PLACEHOLDER."
   [body]
   (mapcat
-    (fn [cell]
-      (if (param-step? cell)
-        (let [[param-op inner-binding] cell]
-          [(str "&macro_param_" (subs (name param-op) 6))
-           (bindings/compile-binding (replace-placeholder inner-binding))])
-        [(bindings/compile-binding cell)]))
-    body))
+   (fn [cell]
+     (if (param-step? cell)
+       (let [[param-op inner-binding] cell]
+         [(str "&macro_param_" (subs (name param-op) 6))
+          (bindings/compile-binding (replace-placeholder inner-binding))])
+       [(bindings/compile-binding cell)]))
+   body))
 
 (def behavior-types
   "Registry of declarative ZMK behavior node types.
@@ -312,48 +314,48 @@
   ([node level]
    (render-behavior node level false nil))
   ([{:keys [name type bindings body label] :as node} level _raw-body? opts]
-  (if-let [{:keys [compatible binding-cells binding-format]} (get behavior-types type)]
-    (let [display-name   (or label name)
-          row-widths     (get-in opts [:keyboard :row-widths])
-          node           (resolve-positional-shorthands node row-widths)
-          reserved       #{:name :type :bindings :body :label}
-          pass-through   (remove (comp reserved key) node)
-          b              (or body bindings)
-          bindings-line  (case binding-format
-                           :single-bracket-space
-                           (str (indent (inc level)) "bindings = <"
-                                (str/join " " (map bindings/compile-binding b))
-                                ">;")
+   (if-let [{:keys [compatible binding-cells binding-format]} (get behavior-types type)]
+     (let [display-name   (or label name)
+           row-widths     (get-in opts [:keyboard :row-widths])
+           node           (resolve-positional-shorthands node row-widths)
+           reserved       #{:name :type :bindings :body :label}
+           pass-through   (remove (comp reserved key) node)
+           b              (or body bindings)
+           bindings-line  (case binding-format
+                            :single-bracket-space
+                            (str (indent (inc level)) "bindings = <"
+                                 (str/join " " (map bindings/compile-binding b))
+                                 ">;")
 
-                           :multi-bracket-comma
-                           (str (indent (inc level)) "bindings = "
-                                (str/join ", "
-                                  (map #(str "<" (bindings/compile-binding %) ">") b))
-                                ";")
+                            :multi-bracket-comma
+                            (str (indent (inc level)) "bindings = "
+                                 (str/join ", "
+                                           (map #(str "<" (bindings/compile-binding %) ">") b))
+                                 ";")
 
-                           :macro-groups
-                           (let [groups (macro-binding-groups b)]
-                             (str (indent (inc level)) "bindings =\n"
-                                  (str/join ",\n"
-                                            (map #(str (indent (inc level)) "    <" % ">")
-                                                 groups))
-                                  ";")))]
-      (str/join
-       "\n"
-       (concat [(str (indent level) name ": " display-name " {")
-                (str (indent (inc level)) "compatible = \"" compatible "\";")
-                (str (indent (inc level)) "#binding-cells = <" binding-cells ">;")
-                bindings-line]
-               (map (fn [[k v]]
-                      (str (indent (inc level)) (clojure.core/name k)
-                           (cond
-                             (true? v) ";"
-                             (vector? v) (str " = <" (str/join " " v) ">;")
-                             (and (string? v) (dt-string-value? v)) (str " = \"" v "\";")
-                             :else (str " = <" v ">;"))))
-                    pass-through)
-               [(str (indent level) "};")] )))
-    (throw (ex-info (str "Unsupported behavior type: " type) {:node node})))))
+                            :macro-groups
+                            (let [groups (macro-binding-groups b)]
+                              (str (indent (inc level)) "bindings =\n"
+                                   (str/join ",\n"
+                                             (map #(str (indent (inc level)) "    <" % ">")
+                                                  groups))
+                                   ";")))]
+       (str/join
+        "\n"
+        (concat [(str (indent level) name ": " display-name " {")
+                 (str (indent (inc level)) "compatible = \"" compatible "\";")
+                 (str (indent (inc level)) "#binding-cells = <" binding-cells ">;")
+                 bindings-line]
+                (map (fn [[k v]]
+                       (str (indent (inc level)) (clojure.core/name k)
+                            (cond
+                              (true? v) ";"
+                              (vector? v) (str " = <" (str/join " " v) ">;")
+                              (and (string? v) (dt-string-value? v)) (str " = \"" v "\";")
+                              :else (str " = <" v ">;"))))
+                     pass-through)
+                [(str (indent level) "};")])))
+     (throw (ex-info (str "Unsupported behavior type: " type) {:node node})))))
 
 (defn render-layer
   "Render a keymap layer node. The :name doubles as the DT node id and the
@@ -361,18 +363,18 @@
   ([node level]
    (render-layer node level false nil))
   ([{:keys [name bindings]} level _raw-body? _opts]
-  (str/join
-   "\n"
-   (concat [(str (indent level) name " {")
-            (str (indent (inc level)) "display-name = \"" name "\";")
-            (str (indent (inc level)) "bindings = <")]
-           (map (fn [row] (str/join " " (map bindings/compile-binding row))) bindings)
+   (str/join
+    "\n"
+    (concat [(str (indent level) name " {")
+             (str (indent (inc level)) "display-name = \"" name "\";")
+             (str (indent (inc level)) "bindings = <")]
+            (map (fn [row] (str/join " " (map bindings/compile-binding row))) bindings)
             [(str (indent (inc level)) ">;")
              (str (indent level) "};")]))))
 
 (defn resolve-layer-nums
   "Resolve layer references (keywords or raw indexes) into numeric indexes.
-   Keywords are resolved via layer-index-map and unknown names throw." 
+   Keywords are resolved via layer-index-map and unknown names throw."
   [layers layer-index-map]
   (when (seq layers)
     (map (fn [layer]
@@ -394,32 +396,32 @@
   ([node level opts]
    (render-combo-layer node level false opts))
   ([{:keys [name row-widths pattern bindings layers auto-symmetric?] :as node} level _raw-body? {:keys [layer-index-map]}]
-  (when-not row-widths
-    (throw (ex-info ":row-widths is required for :combo-layer" {:node node})))
-  (let [layer-nums (resolve-layer-nums layers layer-index-map)
-        layer-line (when (seq layer-nums)
-                     (str (indent (inc level)) "layers = <" (str/join " " layer-nums) ">;"))
-        half-widths (when auto-symmetric? (mapv #(quot % 2) row-widths))
-        mirrored-pattern (when auto-symmetric? (mapv (fn [[dr dc]] [dr (- dc)]) pattern))
-        combos (for [r (range (count bindings))
-                     c (range (count (nth bindings r)))
-                     :let [cell (get-in bindings [r c])
-                           effective-pattern (if (and auto-symmetric?
-                                                      (>= c (nth half-widths r)))
-                                               mirrored-pattern
-                                               pattern)
-                           positions (combo-positions row-widths effective-pattern [r c])]
-                     :when (and positions
-                                (not (#{:none :trans} cell)))]
-                 (let [combo-name (str name "_" r "_" c)]
-                   (str/join
-                    "\n"
-                    (concat [(str (indent level) combo-name " {")
-                             (str (indent (inc level)) "bindings = <" (bindings/compile-binding cell) ">;")
-                             (str (indent (inc level)) "key-positions = <" (str/join " " positions) ">;")]
-                            (when layer-line [layer-line])
-                            [(str (indent level) "};")]))))]
-    (str/join "\n\n" combos))))
+   (when-not row-widths
+     (throw (ex-info ":row-widths is required for :combo-layer" {:node node})))
+   (let [layer-nums (resolve-layer-nums layers layer-index-map)
+         layer-line (when (seq layer-nums)
+                      (str (indent (inc level)) "layers = <" (str/join " " layer-nums) ">;"))
+         half-widths (when auto-symmetric? (mapv #(quot % 2) row-widths))
+         mirrored-pattern (when auto-symmetric? (mapv (fn [[dr dc]] [dr (- dc)]) pattern))
+         combos (for [r (range (count bindings))
+                      c (range (count (nth bindings r)))
+                      :let [cell (get-in bindings [r c])
+                            effective-pattern (if (and auto-symmetric?
+                                                       (>= c (nth half-widths r)))
+                                                mirrored-pattern
+                                                pattern)
+                            positions (combo-positions row-widths effective-pattern [r c])]
+                      :when (and positions
+                                 (not (#{:none :trans} cell)))]
+                  (let [combo-name (str name "_" r "_" c)]
+                    (str/join
+                     "\n"
+                     (concat [(str (indent level) combo-name " {")
+                              (str (indent (inc level)) "bindings = <" (bindings/compile-binding cell) ">;")
+                              (str (indent (inc level)) "key-positions = <" (str/join " " positions) ">;")]
+                             (when layer-line [layer-line])
+                             [(str (indent level) "};")]))))]
+     (str/join "\n\n" combos))))
 
 (defn render-raw-body
   "Render a raw-body node (falls through when no specific type matches)."
@@ -538,15 +540,15 @@
 ^:rct/test
 (comment
   (render-behavior {:name "m" :type :mod-morph :bindings [:A :B] :mods "(MOD_LGUI)"} 0)
-  ;=> "m: m {\n    compatible = \"zmk,behavior-mod-morph\";\n    #binding-cells = <0>;\n    bindings = <&kp A>, <&kp B>;\n    mods = <(MOD_LGUI)>;\n};"
+  ; => "m: m {\n    compatible = \"zmk,behavior-mod-morph\";\n    #binding-cells = <0>;\n    bindings = <&kp A>, <&kp B>;\n    mods = <(MOD_LGUI)>;\n};"
 
   :rcf)
 
 ^:rct/test
 (comment
-  (bindings/compile-binding :P) ;=> "&kp P"
+  (bindings/compile-binding :P) ; => "&kp P"
 
-  (bindings/compile-binding :X) ;=> "&kp X"
+  (bindings/compile-binding :X) ; => "&kp X"
 
   :rcf)
 

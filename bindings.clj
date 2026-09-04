@@ -1,5 +1,6 @@
 (ns bindings
-  (:require [clojure.string :as str]))
+  (:require
+   [clojure.string :as str]))
 
 (defn- token->str
   "Convert a token to its string representation for ZMK output."
@@ -20,16 +21,16 @@
         :tap-time               :vector/tap-time
         :pause                  :vector/pause
         (:param-1to1 :param-1to2 :param-2to1 :param-2to2)
-                                :vector/param-op
-                                :vector/generic))
+        :vector/param-op
+        :vector/generic))
 
     (keyword? cell)
     (case cell
       :trans                  :keyword/trans
       :none                   :keyword/none
       (:param-1to1 :param-1to2 :param-2to1 :param-2to2)
-                              :keyword/param-op
-                              :keyword/generic)
+      :keyword/param-op
+      :keyword/generic)
 
     :else :primitive))
 
@@ -105,36 +106,36 @@
 ^:rct/test
 (comment
   (compile-binding :P)
-  ;=> "&kp P"
+  ; => "&kp P"
 
   (compile-binding [:lt 3 :DE_S])
-  ;=> "&lt 3 DE_S"
+  ; => "&lt 3 DE_S"
 
   (compile-binding [:press :A])
-  ;=> "&macro_press &kp A"
+  ; => "&macro_press &kp A"
 
   (compile-binding [:release [:mo 2]])
-  ;=> "&macro_release &mo 2"
+  ; => "&macro_release &mo 2"
 
   (compile-binding [:wait 30])
-  ;=> "&macro_wait_time 30"
+  ; => "&macro_wait_time 30"
 
   (compile-binding [:tap-time 50])
-  ;=> "&macro_tap_time 50"
+  ; => "&macro_tap_time 50"
 
   (compile-binding [:pause])
-  ;=> "&macro_pause_for_release"
+  ; => "&macro_pause_for_release"
 
   (compile-binding :trans)
-  ;=> "&trans"
+  ; => "&trans"
 
   (compile-binding :none)
-  ;=> "&none"
+  ; => "&none"
 
   (compile-binding :param-1to1)
-  ;=> "&macro_param_1to1"
+  ; => "&macro_param_1to1"
 
   (compile-binding 0)
-  ;=> "0"
+  ; => "0"
 
   :rcf)
