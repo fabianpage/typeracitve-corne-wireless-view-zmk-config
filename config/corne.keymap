@@ -136,13 +136,18 @@
             key-positions = <34 33>;
         };
 
-        vert_base_0_1 {
+        vert_base_0_0 {
             bindings = <&backspace_delete>;
+            key-positions = <0 12>;
+        };
+
+        vert_base_0_1 {
+            bindings = <&LS DE_N8>;
             key-positions = <1 13>;
         };
 
         vert_base_0_2 {
-            bindings = <&round_brackets>;
+            bindings = <&LS DE_N9>;
             key-positions = <2 14>;
         };
 
@@ -177,18 +182,23 @@
         };
 
         vert_base_0_9 {
-            bindings = <&round_brackets>;
+            bindings = <&LS DE_N9>;
             key-positions = <9 21>;
         };
 
         vert_base_0_10 {
-            bindings = <&backspace_delete>;
+            bindings = <&LS DE_N8>;
             key-positions = <10 22>;
         };
 
-        vert_base_1_1 {
+        vert_base_0_11 {
+            bindings = <&backspace_delete>;
+            key-positions = <11 23>;
+        };
+
+        vert_base_1_0 {
             bindings = <&kp ENTER>;
-            key-positions = <13 25>;
+            key-positions = <12 24>;
         };
 
         vert_base_1_2 {
@@ -231,9 +241,9 @@
             key-positions = <21 33>;
         };
 
-        vert_base_1_10 {
+        vert_base_1_11 {
             bindings = <&kp ENTER>;
-            key-positions = <22 34>;
+            key-positions = <23 35>;
         };
 
         diag_down_base_0_3 {
@@ -744,7 +754,7 @@
             display-name = "Nav1";
             bindings = <
 &tog 5 &B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp HOME &kp PG_DN &kp PG_UP &kp END &B_UE &tog 5
-&none &B_OE &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW &B_OE &none
+&none &B_OE &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW &B_OE &none
 &none &kp DE_A_UMLAUT &kp N9 &double_single_quote &back_front_tick &hash_pipe &hash_pipe &back_front_tick &double_single_quote &kp N9 &kp DE_A_UMLAUT &none
 &trans &trans &trans &trans &trans &trans
             >;
