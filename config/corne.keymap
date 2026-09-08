@@ -142,7 +142,7 @@
         };
 
         vert_base_0_1 {
-            bindings = <&kp LS(DE_N8)>;
+            bindings = <&kp DE_LEFT_PARENTHESIS>;
             key-positions = <1 13>;
         };
 
@@ -187,7 +187,7 @@
         };
 
         vert_base_0_10 {
-            bindings = <&kp LS(DE_N8)>;
+            bindings = <&kp DE_LEFT_PARENTHESIS>;
             key-positions = <10 22>;
         };
 
