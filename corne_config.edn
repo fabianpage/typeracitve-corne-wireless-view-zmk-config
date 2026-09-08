@@ -18,7 +18,7 @@
       ;;
       ; :bindings ["&kp LS(DE_N8)" "&kp LS(DE_N9)"]
       :left
-      [[[:backspace_delete] [:LS :DE_N8] [:LS :DE_N9] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
+      [[[:backspace_delete] ["&kp LS(DE_N8)"] [:LS :DE_N9] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
        [:ENTER :none [:square_brackets] :SPACE [:sk :LEFT_SHIFT] [:sk :LCTRL]]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
