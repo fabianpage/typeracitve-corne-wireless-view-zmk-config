@@ -142,12 +142,12 @@
         };
 
         vert_base_0_1 {
-            bindings = <&&kp LS(DE_N8)>;
+            bindings = <&kp LS(DE_N8)>;
             key-positions = <1 13>;
         };
 
         vert_base_0_2 {
-            bindings = <&LS DE_N9>;
+            bindings = <&kp LS(DE_N9)>;
             key-positions = <2 14>;
         };
 
@@ -182,12 +182,12 @@
         };
 
         vert_base_0_9 {
-            bindings = <&LS DE_N9>;
+            bindings = <&kp LS(DE_N9)>;
             key-positions = <9 21>;
         };
 
         vert_base_0_10 {
-            bindings = <&&kp LS(DE_N8)>;
+            bindings = <&kp LS(DE_N8)>;
             key-positions = <10 22>;
         };
 
