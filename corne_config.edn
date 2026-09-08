@@ -17,7 +17,7 @@
       ;; :layers [:BASE]
       :left
       [[:none [:backspace_delete] [:round_brackets] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
-       [:none :ENTER [:square_brackets] :SPACE [:caps_word] [:sk :LCTRL]]
+       [:none :ENTER [:square_brackets] :SPACE [:sk :LEFT_SHIFT] [:sk :LCTRL]]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
      {:name "diag_down_base"
@@ -29,15 +29,15 @@
        [:none :none :none  [:komma_strickpunkt] [:angled_brackets] :none]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
-     {:name "diag_up_base"
-      :type :combo-layer
-      :pattern [[0 0] [-1 -1]]
-      ;; :layers [:BASE]
-      :left
-      [[:none :none :none :none :none :none]
-       [:none :none :none :none [:curly_brackets] :none]
-       [:none :none :none :SPACE :none :none]
-       [:none :none :none]]}
+     ; {:name "diag_up_base"
+     ;  :type :combo-layer
+     ;  :pattern [[0 0] [-1 -1]]
+     ;  ;; :layers [:BASE]
+     ;  :left
+     ;  [[:none :none :none :none :none :none]
+     ;   [:none :none :none :none [:curly_brackets] :none]
+     ;   [:none :none :none :SPACE :none :none]
+     ;   [:none :none :none]]}
      ;;  {:name "diag_knight_base",
      ;;   :type :combo-layer,
      ;;   :pattern [[0 0] [-1 -2]],
@@ -273,14 +273,14 @@
    {:nodes
     ({:name "BASE"
       :left
-      [[:none :P :O :I :U :T]
-       [:none [:lt 3 :DE_S] :A :E :N :R]
-       [:none [:lh_ht :LEFT_SHIFT :D] [:lh_ht :LCTRL :DE_L] [:lh_ht :LEFT_ALT :DE_C] [:lh_ht :LEFT_GUI :DE_F] :H]
+      [[:K :P :O :I :U :T]
+       [:J [:lt 3 :DE_S] :A :E :N :R]
+       [:B [:lh_ht :LEFT_SHIFT :D] [:lh_ht :LCTRL :DE_L] [:lh_ht :LEFT_ALT :DE_C] [:lh_ht :LEFT_GUI :DE_F] :H]
        [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]]
       :right-override
       [nil
        nil
-       [:H [:rh_ht :LEFT_GUI :DE_F] [:rh_ht :LEFT_ALT :DE_C] [:rh_ht :LCTRL :DE_L] [:rh_ht :LEFT_SHIFT :D] :none]
+       [:H [:rh_ht :LEFT_GUI :DE_F] [:rh_ht :LEFT_ALT :DE_C] [:rh_ht :LCTRL :DE_L] [:rh_ht :LEFT_SHIFT :D] :B]
        nil]
       }
      {:name "Nav1"
