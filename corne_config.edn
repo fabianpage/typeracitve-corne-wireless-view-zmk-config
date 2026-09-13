@@ -277,9 +277,9 @@
     ({:name "BASE"
       :left
       [[:K :P :O :I :U :T]
-       [:J [:lt 3 :DE_S] :A :E :N :R]
+       [:J [:lt 3 :V] :S :A :N :R]
        [:B [:lh_ht :LEFT_SHIFT :D] [:lh_ht :LCTRL :DE_L] [:lh_ht :LEFT_ALT :DE_C] [:lh_ht :LEFT_GUI :DE_F] :H]
-       [[:sl 1] [:sk :LEFT_SHIFT] [:sl 2]]]
+       [[:sl 1] :E [:sl 2]]]
       :right-override
       [nil
        nil
