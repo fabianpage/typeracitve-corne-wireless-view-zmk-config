@@ -66,11 +66,6 @@
             key-positions = <14 15>;
         };
 
-        horiz_base_1_3 {
-            bindings = <&kp DE_V>;
-            key-positions = <15 16>;
-        };
-
         horiz_base_1_4 {
             bindings = <&kp DE_G>;
             key-positions = <16 17>;
@@ -79,11 +74,6 @@
         horiz_base_1_7 {
             bindings = <&kp DE_G>;
             key-positions = <19 18>;
-        };
-
-        horiz_base_1_8 {
-            bindings = <&kp DE_V>;
-            key-positions = <20 19>;
         };
 
         horiz_base_1_9 {
