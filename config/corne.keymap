@@ -182,12 +182,12 @@
         };
 
         vert_base_0_9 {
-            bindings = <&kp DE_RIGHT_PARENTHESIS>;
+            bindings = <&kp DE_LEFT_PARENTHESIS>;
             key-positions = <9 21>;
         };
 
         vert_base_0_10 {
-            bindings = <&kp DE_LEFT_PARENTHESIS>;
+            bindings = <&kp DE_RIGHT_PARENTHESIS>;
             key-positions = <10 22>;
         };
 
@@ -242,12 +242,12 @@
         };
 
         vert_base_1_9 {
-            bindings = <&kp DE_RIGHT_BRACKET>;
+            bindings = <&kp DE_LEFT_BRACKET>;
             key-positions = <21 33>;
         };
 
         vert_base_1_10 {
-            bindings = <&kp DE_LEFT_BRACKET>;
+            bindings = <&kp DE_RIGHT_BRACKET>;
             key-positions = <22 34>;
         };
 
