@@ -172,12 +172,12 @@
         };
 
         vert_base_0_7 {
-            bindings = <&kp DE_RIGHT_PARENTHESIS>;
+            bindings = <&sk LEFT_ALT>;
             key-positions = <7 19>;
         };
 
         vert_base_0_8 {
-            bindings = <&kp DE_LEFT_PARENTHESIS>;
+            bindings = <&esc_layerreset>;
             key-positions = <8 20>;
         };
 
@@ -232,12 +232,12 @@
         };
 
         vert_base_1_7 {
-            bindings = <&kp DE_RIGHT_BRACKET>;
+            bindings = <&sk LEFT_SHIFT>;
             key-positions = <19 31>;
         };
 
         vert_base_1_8 {
-            bindings = <&kp DE_LEFT_BRACKET>;
+            bindings = <&kp SPACE>;
             key-positions = <20 32>;
         };
 
