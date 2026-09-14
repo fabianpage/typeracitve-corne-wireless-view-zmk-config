@@ -202,12 +202,12 @@
         };
 
         vert_base_1_1 {
-            bindings = <&kp DE_LEFT_BRACKET>;
+            bindings = <&kp LA(DE_N6)>;
             key-positions = <13 25>;
         };
 
         vert_base_1_2 {
-            bindings = <&kp DE_RIGHT_BRACKET>;
+            bindings = <&kp LA(DE_N5)>;
             key-positions = <14 26>;
         };
 
