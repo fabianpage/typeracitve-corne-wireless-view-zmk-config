@@ -754,7 +754,7 @@
             display-name = "BASE";
             bindings = <
 &kp K &kp P &kp O &kp I &kp U &kp T &kp T &kp U &kp I &kp O &kp P &kp K
-&kp J &lt 3 V &kp S &kp A &kp N &kp R &kp R &kp N &kp A &kp S &lt 3 V &kp J
+&kp J &lt 3 S &kp A &kp E &kp N &kp R &kp R &kp N &kp E &kp A &lt 3 S &kp J
 &kp B &lh_ht LEFT_SHIFT D &lh_ht LCTRL DE_L &lh_ht LEFT_ALT DE_C &lh_ht LEFT_GUI DE_F &kp H &kp H &rh_ht LEFT_GUI DE_F &rh_ht LEFT_ALT DE_C &rh_ht LCTRL DE_L &rh_ht LEFT_SHIFT D &kp B
 &sl 1 &kp E &sl 2 &sl 2 &kp E &sl 1
             >;
