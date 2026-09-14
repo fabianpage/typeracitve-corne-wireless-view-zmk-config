@@ -101,36 +101,6 @@
             key-positions = <25 26>;
         };
 
-        horiz_base_2_2 {
-            bindings = <&kp DE_K>;
-            key-positions = <26 27>;
-        };
-
-        horiz_base_2_3 {
-            bindings = <&kp DE_J>;
-            key-positions = <27 28>;
-        };
-
-        horiz_base_2_4 {
-            bindings = <&kp DE_B>;
-            key-positions = <28 29>;
-        };
-
-        horiz_base_2_7 {
-            bindings = <&kp DE_B>;
-            key-positions = <31 30>;
-        };
-
-        horiz_base_2_8 {
-            bindings = <&kp DE_J>;
-            key-positions = <32 31>;
-        };
-
-        horiz_base_2_9 {
-            bindings = <&kp DE_K>;
-            key-positions = <33 32>;
-        };
-
         horiz_base_2_10 {
             bindings = <&kp DE_Y>;
             key-positions = <34 33>;
