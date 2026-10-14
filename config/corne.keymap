@@ -402,6 +402,18 @@
             #binding-cells = <0>;
             bindings = <&kp DE_U_UMLAUT &kp DE_P>;
         };
+
+        vim_split_v: vim_split_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp V>;
+        };
+
+        vim_split_s: vim_split_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp S>;
+        };
         // END macros
     };
 
@@ -723,9 +735,9 @@
         Nav {
             display-name = "Nav";
             bindings = <
-&tog 5 &B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp HOME &kp PG_DN &kp PG_UP &kp END &B_UE &tog 5
-&none &B_OE &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW &B_OE &none
-&none &kp DE_A_UMLAUT &kp N9 &double_single_quote &back_front_tick &hash_pipe &hash_pipe &back_front_tick &double_single_quote &kp N9 &kp DE_A_UMLAUT &none
+&tog 5 &vim_split_v &kp END &kp PG_UP &kp PG_DN &kp HOME &kp HOME &kp PG_DN &kp PG_UP &kp END &vim_split_v &tog 5
+&none &vim_split_s &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &vim_split_s &none
+&none &none &kp H &kp J &kp K &kp L &kp H &kp J &kp K &kp L &none &none
 &trans &trans &trans &trans &trans &trans
             >;
         };

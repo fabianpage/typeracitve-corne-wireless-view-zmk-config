@@ -90,9 +90,9 @@
   (let [config (generator/load-config "corne_config.edn")
         template (slurp "corne_template.keymap")
         generated (generator/generate-keymap template config)]
-    (is (re-find #"&none &B_OE &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW"
+    (is (re-find #"&none &vim_split_s &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW"
                  generated)
-        "Nav1 row-2 nav cells must render left-to-right as LEFT_ARROW DOWN UP RIGHT_ARROW (hjkl-aligned).")))
+        "Nav1 row-2 nav cells must render left-to-right as LEFT_ARROW DOWN_ARROW UP_ARROW RIGHT_ARROW (hjkl-aligned).")))
 
 (deftest vim-layer-all-trans
   (let [config (generator/load-config "corne_config.edn")
@@ -118,9 +118,9 @@
   (let [config (generator/load-config "corne_config.edn")
         template (slurp "corne_template.keymap")
         generated (generator/generate-keymap template config)
-        block (node-block "Nav1" generated)]
-    (is (re-find #"&tog 5 &B_UE &kp END" block)
-        "&tog 5 must render on Nav1's outer-column top cell")))
+        block (node-block "Nav" generated)]
+    (is (re-find #"&tog 5 &vim_split_v &kp END" block)
+        "&tog 5 must render on Nav's outer-column top cell")))
 
 (deftest conditional-layers-vim-overlay-wiring
   (let [config (generator/load-config "corne_config.edn")

@@ -84,7 +84,9 @@
      {:name "ue9", :type :macro, :bindings [:DE_U_UMLAUT :DE_N9]}
      {:name "ue0", :type :macro, :bindings [:DE_U_UMLAUT :DE_N0]}
      {:name "tmux_next_window", :type :macro, :bindings [:DE_U_UMLAUT :DE_N]}
-     {:name "tmux_prev_window", :type :macro, :bindings [:DE_U_UMLAUT :DE_P]}]}]
+     {:name "tmux_prev_window", :type :macro, :bindings [:DE_U_UMLAUT :DE_P]}
+     {:name "vim_split_v", :type :macro, :bindings [[:kp "LC(W)"] :V]}
+     {:name "vim_split_s", :type :macro, :bindings [[:kp "LC(W)"] :S]}]}]
   [:behaviors
    {:nodes
     [{:name "lh_ht"
@@ -276,13 +278,13 @@
        nil]}
      {:name "Nav"
       :left
-      [[[:tog 5] [:B_UE] :END :PG_UP :PG_DN :HOME]
-       [:none [:B_OE] :LEFT_ARROW :DOWN_ARROW :UP_ARROW :RIGHT_ARROW]
-       [:none :DE_A_UMLAUT :N9 [:double_single_quote] [:back_front_tick] [:hash_pipe]] [:trans :trans :trans]]
+      [[[:tog 5] [:vim_split_v] :END :PG_UP :PG_DN :HOME]
+       [:none [:vim_split_s] :LEFT_ARROW :DOWN_ARROW :UP_ARROW :RIGHT_ARROW]
+       [:none :none :H :J :K :L] [:trans :trans :trans]]
       :right-override
       [nil
-       [:LEFT_ARROW :DOWN :UP :RIGHT_ARROW :* :*]
-       nil
+       [:LEFT_ARROW :DOWN_ARROW :UP_ARROW :RIGHT_ARROW :* :*]
+       [:H :J :K :L :* :*]
        nil]}
      {:name "sym"
       :left
