@@ -513,118 +513,6 @@
             tapping-term-ms = <200>;
         };
 
-        square_brackets: square_brackets {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LA(DE_N5)>, <&kp LA(DE_N6)>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        round_brackets: round_brackets {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LS(DE_N8)>, <&kp LS(DE_N9)>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        angled_brackets: angled_brackets {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_LESS_THAN>, <&kp DE_GREATER_THAN>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        curly_brackets: curly_brackets {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LA(DE_N8)>, <&kp LA(DE_N9)>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        backspace_delete: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        double_single_quote: double_single_quote {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_DOUBLE_QUOTES>, <&kp MINUS>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        back_front_tick: back_front_tick {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&backtick_macro>, <&fronttick_macro>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        punkt_doppelpunkt: punkt_doppelpunkt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_DOT>, <&kp DE_COLON>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        komma_strickpunkt: komma_strickpunkt {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_COMMA>, <&kp DE_SEMICOLON>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        frage_ausrufe_zeichen: frage_ausrufe_zeichen {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_QUESTION>, <&kp DE_EXCLAMATION>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        daechli_tilde: daechli_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&daechli>, <&tilde>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        prozent_ringli: prozent_ringli {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_PERCENT>, <&kp LS(NON_US_BSLH)>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        hash_pipe: hash_pipe {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_HASH>, <&kp DE_PIPE>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        at_equal: at_equal {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LA(DE_G)>, <&kp DE_EQUAL>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        dollar_ampersand: dollar_ampersand {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_DOLLAR>, <&kp DE_AMPERSAND>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        slash_backslash: slash_backslash {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_SLASH>, <&kp LS(LA(DE_N7))>;
-            mods = <(MOD_LSFT)>;
-        };
-
         mal_plus: mal_plus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -636,55 +524,6 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DE_MINUS>, <&kp DE_UNDER>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        B_AE: B_AE {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_A_UMLAUT>, <&M_UPPER_AEOEUE DE_A_UMLAUT>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        B_UE: B_UE {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT>, <&M_UE>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        B_OE: B_OE {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_O_UMLAUT>, <&M_OE>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        hCh: hCh {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_H>, <&kp LC(DE_H)>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        jCj: jCj {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_J>, <&kp LC(DE_J)>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        kCk: kCk {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_K>, <&kp LC(DE_K)>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        lCl: lCl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_L>, <&kp LC(DE_L)>;
             mods = <(MOD_LSFT)>;
         };
 
@@ -763,27 +602,6 @@
             #binding-cells = <0>;
             bindings = <&tmux_next_window>, <&tmux_prev_window>;
             mods = <(MOD_LSFT)>;
-        };
-
-        mac_next_prev_app: mac_next_prev_app {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LG(TAB)>, <&kp LG(LS(TAB))>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        mac_prev_next_window: mac_prev_next_window {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LC(F9)>, <&kp LS(LC(F9))>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        swapper: swapper {
-            compatible = "zmk,behavior-smart-toggle";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp TAB>;
-            ignored-key-positions = <37>;
         };
         // END behaviors
     };

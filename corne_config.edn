@@ -107,70 +107,6 @@
       :global-quick-tap true
       :hold-trigger-on-release true
       :hold-trigger-key-positions :left-half}
-     {:name "square_brackets"
-      :type :mod-morph
-      :bindings ["&kp LA(DE_N5)" "&kp LA(DE_N6)"]
-      :mods "(MOD_LSFT)"}
-     {:name "round_brackets"
-      :type :mod-morph
-      :bindings ["&kp LS(DE_N8)" "&kp LS(DE_N9)"]
-      :mods "(MOD_LSFT)"}
-     {:name "angled_brackets"
-      :type :mod-morph
-      :bindings [:DE_LESS_THAN :DE_GREATER_THAN]
-      :mods "(MOD_LSFT)"}
-     {:name "curly_brackets"
-      :type :mod-morph
-      :bindings ["&kp LA(DE_N8)" "&kp LA(DE_N9)"]
-      :mods "(MOD_LSFT)"}
-     {:name "backspace_delete"
-      :type :mod-morph
-      :bindings [:BACKSPACE :DELETE]
-      :mods "(MOD_LSFT)"}
-     {:name "double_single_quote"
-      :type :mod-morph
-      :bindings [:DE_DOUBLE_QUOTES :MINUS]
-      :mods "(MOD_LSFT)"}
-     {:name "back_front_tick"
-      :type :mod-morph
-      :bindings [[:backtick_macro] [:fronttick_macro]]
-      :mods "(MOD_LSFT)"}
-     {:name "punkt_doppelpunkt"
-      :type :mod-morph
-      :bindings [:DE_DOT :DE_COLON]
-      :mods "(MOD_LSFT)"}
-     {:name "komma_strickpunkt"
-      :type :mod-morph
-      :bindings [:DE_COMMA :DE_SEMICOLON]
-      :mods "(MOD_LSFT)"}
-     {:name "frage_ausrufe_zeichen"
-      :type :mod-morph
-      :bindings [:DE_QUESTION :DE_EXCLAMATION]
-      :mods "(MOD_LSFT)"}
-     {:name "daechli_tilde"
-      :type :mod-morph
-      :bindings [[:daechli] [:tilde]]
-      :mods "(MOD_LSFT)"}
-     {:name "prozent_ringli"
-      :type :mod-morph
-      :bindings [:DE_PERCENT "&kp LS(NON_US_BSLH)"]
-      :mods "(MOD_LSFT)"}
-     {:name "hash_pipe"
-      :type :mod-morph
-      :bindings [:DE_HASH :DE_PIPE]
-      :mods "(MOD_LSFT)"}
-     {:name "at_equal"
-      :type :mod-morph
-      :bindings ["&kp LA(DE_G)" :DE_EQUAL]
-      :mods "(MOD_LSFT)"}
-     {:name "dollar_ampersand"
-      :type :mod-morph
-      :bindings [:DE_DOLLAR :DE_AMPERSAND]
-      :mods "(MOD_LSFT)"}
-     {:name "slash_backslash"
-      :type :mod-morph
-      :bindings [:DE_SLASH "&kp LS(LA(DE_N7))"]
-      :mods "(MOD_LSFT)"}
      {:name "mal_plus"
       :type :mod-morph
       :bindings [:DE_ASTERISK :DE_PLUS]
@@ -179,34 +115,10 @@
       :type :mod-morph
       :bindings [:DE_MINUS :DE_UNDER]
       :mods "(MOD_LSFT)"}
-     {:name "B_AE"
-      :type :mod-morph
-      :bindings [:DE_A_UMLAUT [:M_UPPER_AEOEUE :DE_A_UMLAUT]]
-      :mods "(MOD_LSFT)"}
-     {:name "B_UE"
-      :type :mod-morph
-      :bindings [:DE_U_UMLAUT [:M_UE]]
-      :mods "(MOD_LSFT)"}
-     {:name "B_OE"
-      :type :mod-morph
-      :bindings [:DE_O_UMLAUT [:M_OE]]
-      :mods "(MOD_LSFT)"}
-     {:name "hCh"
-      :type :mod-morph
-      :bindings [:DE_H "&kp LC(DE_H)"]
-      :mods "(MOD_LSFT)"}
-     {:name "jCj"
-      :type :mod-morph
-      :bindings [:DE_J "&kp LC(DE_J)"]
-      :mods "(MOD_LSFT)"}
-     {:name "kCk"
-      :type :mod-morph
-      :bindings [:DE_K "&kp LC(DE_K)"]
-      :mods "(MOD_LSFT)"}
-     {:name "lCl"
-      :type :mod-morph
-      :bindings [:DE_L "&kp LC(DE_L)"]
-      :mods "(MOD_LSFT)"}
+
+
+
+
      {:name "n0ue0"
       :type :mod-morph
       :bindings [:DE_N0 [:ue0]]
@@ -250,19 +162,7 @@
      {:name "tmux_next_pre"
       :type :mod-morph
       :bindings [[:tmux_next_window] [:tmux_prev_window]]
-      :mods "(MOD_LSFT)"}
-     {:name "mac_next_prev_app"
-      :type :mod-morph
-      :bindings ["&kp LG(TAB)" "&kp LG(LS(TAB))"]
-      :mods "(MOD_LSFT)"}
-     {:name "mac_prev_next_window"
-      :type :mod-morph
-      :bindings ["&kp LC(F9)" "&kp LS(LC(F9))"]
-      :mods "(MOD_LSFT)"}
-     {:name "swapper"
-      :type :smart-toggle
-      :bindings [:LGUI :TAB]
-      :ignored-key-positions "37"}]}]
+      :mods "(MOD_LSFT)"}]}]
   [:keymap
    {:nodes
     ({:name "BASE"
