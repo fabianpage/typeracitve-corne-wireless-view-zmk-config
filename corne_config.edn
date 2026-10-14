@@ -26,10 +26,10 @@
       :right-override
       [[:* :* :* :DE_LEFT_PARENTHESIS :DE_RIGHT_PARENTHESIS :*]
        [:*  :* :* :DE_LEFT_BRACKET :DE_RIGHT_BRACKET  :*]
-nil
-  nil]
+       nil
+       nil]}
 
-}
+
      {:name "diag_down_base"
       :type :combo-layer
       :pattern [[0 0] [1 1]]
@@ -273,9 +273,8 @@ nil
       [nil
        nil
        [:H [:rh_ht :LEFT_GUI :DE_F] [:rh_ht :LEFT_ALT :DE_C] [:rh_ht :LCTRL :DE_L] [:rh_ht :LEFT_SHIFT :D] :B]
-       nil]
-      }
-     {:name "Nav1"
+       nil]}
+     {:name "Nav"
       :left
       [[[:tog 5] [:B_UE] :END :PG_UP :PG_DN :HOME]
        [:none [:B_OE] :LEFT_ARROW :DOWN_ARROW :UP_ARROW :RIGHT_ARROW]
@@ -285,7 +284,7 @@ nil
        [:LEFT_ARROW :DOWN :UP :RIGHT_ARROW :* :*]
        nil
        nil]}
-     {:name "Nav2"
+     {:name "sym"
       :left
       [[:none [:frage_ausrufe_zeichen] [:mac_prev_next_window] [:swapper] [:tmux_next_pre] [:kp "LC(DE_U_UMLAUT)"]]
        [:none [:at_equal] [:lCl] [:kCk] [:jCj] [:hCh]]

@@ -720,8 +720,8 @@
             >;
         };
 
-        Nav1 {
-            display-name = "Nav1";
+        Nav {
+            display-name = "Nav";
             bindings = <
 &tog 5 &B_UE &kp END &kp PG_UP &kp PG_DN &kp HOME &kp HOME &kp PG_DN &kp PG_UP &kp END &B_UE &tog 5
 &none &B_OE &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &kp LEFT_ARROW &kp DOWN &kp UP &kp RIGHT_ARROW &B_OE &none
@@ -730,8 +730,8 @@
             >;
         };
 
-        Nav2 {
-            display-name = "Nav2";
+        sym {
+            display-name = "sym";
             bindings = <
 &none &frage_ausrufe_zeichen &mac_prev_next_window &swapper &tmux_next_pre &kp LC(DE_U_UMLAUT) &kp LC(DE_U_UMLAUT) &tmux_next_pre &swapper &mac_prev_next_window &frage_ausrufe_zeichen &none
 &none &at_equal &lCl &kCk &jCj &hCh &hCh &jCj &kCk &lCl &at_equal &none
