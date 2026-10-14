@@ -16,6 +16,11 @@
         compatible = "zmk,combos";
 
         // BEGIN combos
+        horiz_base_0_0 {
+            bindings = <&kp DE_A_UMLAUT>;
+            key-positions = <0 1>;
+        };
+
         horiz_base_0_1 {
             bindings = <&kp DE_X>;
             key-positions = <1 2>;
@@ -56,6 +61,16 @@
             key-positions = <10 9>;
         };
 
+        horiz_base_0_11 {
+            bindings = <&kp DE_A_UMLAUT>;
+            key-positions = <11 10>;
+        };
+
+        horiz_base_1_0 {
+            bindings = <&kp DE_O_UMLAUT>;
+            key-positions = <12 13>;
+        };
+
         horiz_base_1_1 {
             bindings = <&kp DE_Q>;
             key-positions = <13 14>;
@@ -66,14 +81,24 @@
             key-positions = <14 15>;
         };
 
-        horiz_base_1_4 {
+        horiz_base_1_3 {
             bindings = <&kp DE_G>;
+            key-positions = <15 16>;
+        };
+
+        horiz_base_1_4 {
+            bindings = <&kp DE_Y>;
             key-positions = <16 17>;
         };
 
         horiz_base_1_7 {
-            bindings = <&kp DE_G>;
+            bindings = <&kp DE_Y>;
             key-positions = <19 18>;
+        };
+
+        horiz_base_1_8 {
+            bindings = <&kp DE_G>;
+            key-positions = <20 19>;
         };
 
         horiz_base_1_9 {
@@ -86,14 +111,59 @@
             key-positions = <22 21>;
         };
 
+        horiz_base_1_11 {
+            bindings = <&kp DE_O_UMLAUT>;
+            key-positions = <23 22>;
+        };
+
+        horiz_base_2_0 {
+            bindings = <&kp DE_U_UMLAUT>;
+            key-positions = <24 25>;
+        };
+
         horiz_base_2_1 {
-            bindings = <&kp DE_Y>;
+            bindings = <&kp DE_LESS_THAN>;
             key-positions = <25 26>;
         };
 
+        horiz_base_2_2 {
+            bindings = <&kp DE_GREATER_THAN>;
+            key-positions = <26 27>;
+        };
+
+        horiz_base_2_3 {
+            bindings = <&kp LA(DE_N8)>;
+            key-positions = <27 28>;
+        };
+
+        horiz_base_2_4 {
+            bindings = <&kp LA(DE_N9)>;
+            key-positions = <28 29>;
+        };
+
+        horiz_base_2_7 {
+            bindings = <&kp LA(DE_N9)>;
+            key-positions = <31 30>;
+        };
+
+        horiz_base_2_8 {
+            bindings = <&kp LA(DE_N8)>;
+            key-positions = <32 31>;
+        };
+
+        horiz_base_2_9 {
+            bindings = <&kp DE_GREATER_THAN>;
+            key-positions = <33 32>;
+        };
+
         horiz_base_2_10 {
-            bindings = <&kp DE_Y>;
+            bindings = <&kp DE_LESS_THAN>;
             key-positions = <34 33>;
+        };
+
+        horiz_base_2_11 {
+            bindings = <&kp DE_U_UMLAUT>;
+            key-positions = <35 34>;
         };
 
         vert_base_0_0 {
@@ -162,12 +232,12 @@
         };
 
         vert_base_1_1 {
-            bindings = <&kp LA(DE_N6)>;
+            bindings = <&kp LA(DE_N5)>;
             key-positions = <13 25>;
         };
 
         vert_base_1_2 {
-            bindings = <&kp LA(DE_N5)>;
+            bindings = <&kp LA(DE_N6)>;
             key-positions = <14 26>;
         };
 

@@ -7,9 +7,9 @@
       :pattern [[0 0] [0 1]]
       ;; :layers [:BASE],
       :left
-      [[:none :DE_X :DE_W :DE_M :DE_Z :none]
-       [:none :DE_Q :TAB :none :DE_G :none]
-       [:none :DE_Y :none :none :none :none]
+      [[:DE_A_UMLAUT :DE_X :DE_W :DE_M :DE_Z :none]
+       [:DE_O_UMLAUT :DE_Q :TAB :DE_G :DE_Y :none]
+       [:DE_U_UMLAUT :DE_LESS_THAN :DE_GREATER_THAN [:kp "LA(DE_N8)"] [:kp "LA(DE_N9)"] :none]
        [:none :none :none]]}
      {:name "vert_base"
       :type :combo-layer
@@ -20,7 +20,7 @@
       :left
       ; [[[:backspace_delete] [:kp "LS(DE_N8)"] [:kp "LS(DE_N9)"] [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
       [[[:backspace_delete] :DE_LEFT_PARENTHESIS :DE_RIGHT_PARENTHESIS [:esc_layerreset] [:sk :LEFT_ALT] [:sk :LEFT_GUI]]
-       [:ENTER  [:kp "LA(DE_N6)"]  [:kp "LA(DE_N5)"] :SPACE [:sk :LEFT_SHIFT] [:sk :LCTRL]]
+       [:ENTER [:kp "LA(DE_N5)"] [:kp "LA(DE_N6)"] :SPACE [:sk :LEFT_SHIFT] [:sk :LCTRL]]
        [:none :none :none :none :none :none]
        [:none :none :none]]
       :right-override
