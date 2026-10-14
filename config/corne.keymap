@@ -597,6 +597,13 @@
             mods = <(MOD_LSFT)>;
         };
 
+        backspace_delete: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT)>;
+        };
+
         tmux_next_pre: tmux_next_pre {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;

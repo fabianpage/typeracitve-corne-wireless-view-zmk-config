@@ -159,6 +159,10 @@
       :type :mod-morph
       :bindings [:DE_N9 [:ue9]]
       :mods "(MOD_LSFT)"}
+     {:name "backspace_delete"
+      :type :mod-morph
+      :bindings [:BACKSPACE :DELETE]
+      :mods "(MOD_LSFT)"}
      {:name "tmux_next_pre"
       :type :mod-morph
       :bindings [[:tmux_next_window] [:tmux_prev_window]]
