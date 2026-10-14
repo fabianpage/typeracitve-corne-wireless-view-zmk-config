@@ -745,9 +745,9 @@
         sym {
             display-name = "sym";
             bindings = <
-&none &frage_ausrufe_zeichen &mac_prev_next_window &swapper &tmux_next_pre &kp LC(DE_U_UMLAUT) &kp LC(DE_U_UMLAUT) &tmux_next_pre &swapper &mac_prev_next_window &frage_ausrufe_zeichen &none
-&none &at_equal &lCl &kCk &jCj &hCh &hCh &jCj &kCk &lCl &at_equal &none
-&none &slash_backslash &dollar_ampersand &trans &prozent_ringli &daechli_tilde &daechli_tilde &prozent_ringli &trans &dollar_ampersand &slash_backslash &none
+&kp DE_EXCLAMATION &kp DE_QUESTION &backtick_macro &fronttick_macro &kp DE_SINGLE_QUOTE &kp DE_DOUBLE_QUOTES &kp DE_DOUBLE_QUOTES &kp DE_SINGLE_QUOTE &fronttick_macro &backtick_macro &kp DE_QUESTION &kp DE_EXCLAMATION
+&kp DE_EQUAL &kp DE_AT_SIGN &kp DE_HASH &kp DE_DOLLAR &kp DE_PERCENT &tilde &tilde &kp DE_PERCENT &kp DE_DOLLAR &kp DE_HASH &kp DE_AT_SIGN &kp DE_EQUAL
+&kp DE_SLASH &kp DE_BACKSLASH &kp DE_PIPE &kp DE_AMPERSAND &kp DE_DEGREE &daechli &daechli &kp DE_DEGREE &kp DE_AMPERSAND &kp DE_PIPE &kp DE_BACKSLASH &kp DE_SLASH
 &trans &trans &trans &trans &trans &trans
             >;
         };

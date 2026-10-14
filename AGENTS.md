@@ -1,5 +1,7 @@
 # Agent Notes — ZMK-TOTEMIST
 
+Keymaps is only configured in corne_config.edn
+
 ## Scope boundary
 Focus work on the **generator** (`generator.clj`, `test/generator_test.clj`, `bb.edn`, `examples/`).
 Do **not** modify firmware config files in `config/` or `build.yaml` unless explicitly asked.

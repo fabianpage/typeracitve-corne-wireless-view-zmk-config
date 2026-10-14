@@ -288,9 +288,9 @@
        nil]}
      {:name "sym"
       :left
-      [[:none [:frage_ausrufe_zeichen] [:mac_prev_next_window] [:swapper] [:tmux_next_pre] [:kp "LC(DE_U_UMLAUT)"]]
-       [:none [:at_equal] [:lCl] [:kCk] [:jCj] [:hCh]]
-       [:none [:slash_backslash] [:dollar_ampersand] :trans [:prozent_ringli] [:daechli_tilde]]
+      [[:DE_EXCLAMATION :DE_QUESTION [:backtick_macro] [:fronttick_macro] :DE_SINGLE_QUOTE :DE_DOUBLE_QUOTES]
+       [:DE_EQUAL :DE_AT_SIGN :DE_HASH :DE_DOLLAR :DE_PERCENT [:tilde]]
+       [:DE_SLASH :DE_BACKSLASH :DE_PIPE :DE_AMPERSAND :DE_DEGREE [:daechli]]
        [:trans :trans :trans]]}
      {:name "Num"
       :left
