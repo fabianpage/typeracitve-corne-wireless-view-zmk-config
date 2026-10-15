@@ -59,6 +59,14 @@
     [{:name "esc_layerreset", :type :macro, :bindings [:ESCAPE [:to 0]]}
      {:name "daechli", :type :macro, :bindings [:DE_CARET :SPACE]}
      {:name "tilde", :type :macro, :bindings [[:kp "LA(DE_N)"] :SPACE]}
+     {:name "punkt_doppelpunkt"
+      :type :mod-morph
+      :bindings [:DE_DOT :DE_COLON]
+      :mods "(MOD_LSFT)"}
+     {:name "komma_strickpunkt"
+      :type :mod-morph
+      :bindings [:DE_COMMA :DE_SEMICOLON]
+      :mods "(MOD_LSFT)"}
      {:name "M_UPPER_AEOEUE"
       :label "AE"
       :type :macro-one-param

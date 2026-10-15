@@ -340,6 +340,20 @@
             bindings = <&kp LA(DE_N) &kp SPACE>;
         };
 
+        punkt_doppelpunkt: punkt_doppelpunkt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_DOT>, <&kp DE_COLON>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        komma_strickpunkt: komma_strickpunkt {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DE_COMMA>, <&kp DE_SEMICOLON>;
+            mods = <(MOD_LSFT)>;
+        };
+
         M_UPPER_AEOEUE: AE {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
