@@ -10,7 +10,12 @@
       [[:DE_A_UMLAUT :DE_X :DE_W :DE_M :DE_Z :none]
        [:DE_O_UMLAUT :DE_Q :TAB :DE_G :DE_Y :none]
        [:DE_U_UMLAUT :DE_LESS_THAN :DE_GREATER_THAN [:kp "LA(DE_N8)"] [:kp "LA(DE_N9)"] :none]
-       [:none :none :none]]}
+       [:none :none :none]]
+      :right-override
+      [nil
+       nil
+       [:* [:kp "LA(DE_N8)"] [:kp "LA(DE_N9)"] :DE_LESS_THAN :DE_GREATER_THAN :*]
+       nil]}
      {:name "vert_base"
       :type :combo-layer
       :pattern [[0 0] [1 0]]
@@ -25,7 +30,7 @@
        [:none :none :none]]
       :right-override
       [[:* :* :* :DE_LEFT_PARENTHESIS :DE_RIGHT_PARENTHESIS :*]
-       [:*  :* :* :DE_LEFT_BRACKET :DE_RIGHT_BRACKET  :*]
+       [:*  :* :* [:kp "LA(DE_N5)"] [:kp "LA(DE_N6)"]  :*]
        nil
        nil]}
 
@@ -35,8 +40,8 @@
       :pattern [[0 0] [1 1]]
       ;; :layers [:BASE]
       :left
-      [[:none :none :none [:punkt_doppelpunkt]  [:curly_brackets] :none]
-       [:none :none :none  [:komma_strickpunkt] [:angled_brackets] :none]
+      [[:none :none :none [:punkt_doppelpunkt]  :none :none]
+       [:none :none :none  [:komma_strickpunkt] :none :none]
        [:none :none :none :none :none :none]
        [:none :none :none]]}
      {:name "toBT"
@@ -193,8 +198,8 @@
      {:name "sym"
       :left
       [[:DE_EXCLAMATION :DE_QUESTION [:backtick_macro] [:fronttick_macro] :DE_SINGLE_QUOTE :DE_DOUBLE_QUOTES]
-       [:DE_EQUAL :DE_AT_SIGN :DE_HASH :DE_DOLLAR :DE_PERCENT [:tilde]]
-       [:DE_SLASH :DE_BACKSLASH :DE_PIPE :DE_AMPERSAND :DE_DEGREE [:daechli]]
+       [:DE_EQUAL [:kp "LA(DE_G)"] :DE_HASH :DE_DOLLAR :DE_PERCENT [:tilde]]
+       [:DE_SLASH [:kp "LA(LS(DE_N7))"] :DE_PIPE :DE_AMPERSAND [:kp "LS(DE_SECTION)"] [:daechli]]
        [:trans :trans :trans]]}
      {:name "Num"
       :left

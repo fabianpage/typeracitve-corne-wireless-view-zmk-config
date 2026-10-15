@@ -142,22 +142,22 @@
         };
 
         horiz_base_2_7 {
-            bindings = <&kp LA(DE_N9)>;
+            bindings = <&kp LA(DE_N8)>;
             key-positions = <31 30>;
         };
 
         horiz_base_2_8 {
-            bindings = <&kp LA(DE_N8)>;
+            bindings = <&kp LA(DE_N9)>;
             key-positions = <32 31>;
         };
 
         horiz_base_2_9 {
-            bindings = <&kp DE_GREATER_THAN>;
+            bindings = <&kp DE_LESS_THAN>;
             key-positions = <33 32>;
         };
 
         horiz_base_2_10 {
-            bindings = <&kp DE_LESS_THAN>;
+            bindings = <&kp DE_GREATER_THAN>;
             key-positions = <34 33>;
         };
 
@@ -272,12 +272,12 @@
         };
 
         vert_base_1_9 {
-            bindings = <&kp DE_LEFT_BRACKET>;
+            bindings = <&kp LA(DE_N5)>;
             key-positions = <21 33>;
         };
 
         vert_base_1_10 {
-            bindings = <&kp DE_RIGHT_BRACKET>;
+            bindings = <&kp LA(DE_N6)>;
             key-positions = <22 34>;
         };
 
@@ -291,16 +291,6 @@
             key-positions = <3 16>;
         };
 
-        diag_down_base_0_4 {
-            bindings = <&curly_brackets>;
-            key-positions = <4 17>;
-        };
-
-        diag_down_base_0_7 {
-            bindings = <&curly_brackets>;
-            key-positions = <7 18>;
-        };
-
         diag_down_base_0_8 {
             bindings = <&punkt_doppelpunkt>;
             key-positions = <8 19>;
@@ -309,16 +299,6 @@
         diag_down_base_1_3 {
             bindings = <&komma_strickpunkt>;
             key-positions = <15 28>;
-        };
-
-        diag_down_base_1_4 {
-            bindings = <&angled_brackets>;
-            key-positions = <16 29>;
-        };
-
-        diag_down_base_1_7 {
-            bindings = <&angled_brackets>;
-            key-positions = <19 30>;
         };
 
         diag_down_base_1_8 {
@@ -641,8 +621,8 @@
             display-name = "sym";
             bindings = <
 &kp DE_EXCLAMATION &kp DE_QUESTION &backtick_macro &fronttick_macro &kp DE_SINGLE_QUOTE &kp DE_DOUBLE_QUOTES &kp DE_DOUBLE_QUOTES &kp DE_SINGLE_QUOTE &fronttick_macro &backtick_macro &kp DE_QUESTION &kp DE_EXCLAMATION
-&kp DE_EQUAL &kp DE_AT_SIGN &kp DE_HASH &kp DE_DOLLAR &kp DE_PERCENT &tilde &tilde &kp DE_PERCENT &kp DE_DOLLAR &kp DE_HASH &kp DE_AT_SIGN &kp DE_EQUAL
-&kp DE_SLASH &kp DE_BACKSLASH &kp DE_PIPE &kp DE_AMPERSAND &kp DE_DEGREE &daechli &daechli &kp DE_DEGREE &kp DE_AMPERSAND &kp DE_PIPE &kp DE_BACKSLASH &kp DE_SLASH
+&kp DE_EQUAL &kp LA(DE_G) &kp DE_HASH &kp DE_DOLLAR &kp DE_PERCENT &tilde &tilde &kp DE_PERCENT &kp DE_DOLLAR &kp DE_HASH &kp LA(DE_G) &kp DE_EQUAL
+&kp DE_SLASH &kp LA(LS(DE_N7)) &kp DE_PIPE &kp DE_AMPERSAND &kp LS(DE_SECTION) &daechli &daechli &kp LS(DE_SECTION) &kp DE_AMPERSAND &kp DE_PIPE &kp LA(LS(DE_N7)) &kp DE_SLASH
 &trans &trans &trans &trans &trans &trans
             >;
         };
