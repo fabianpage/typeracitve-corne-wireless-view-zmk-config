@@ -86,16 +86,16 @@
       :tap-ms 100}
      {:name "backtick_macro", :type :macro, :bindings [:DE_GRAVE :SPACE]}
      {:name "fronttick_macro", :type :macro, :bindings [[:kp "RA(EQUAL)"] :SPACE]}
-     {:name "ue1", :type :macro, :bindings [:DE_U_UMLAUT :DE_N1]}
-     {:name "ue2", :type :macro, :bindings [:DE_U_UMLAUT :DE_N2]}
-     {:name "ue3", :type :macro, :bindings [:DE_U_UMLAUT :DE_N3]}
-     {:name "ue4", :type :macro, :bindings [:DE_U_UMLAUT :DE_N4]}
-     {:name "ue5", :type :macro, :bindings [:DE_U_UMLAUT :DE_N5]}
-     {:name "ue6", :type :macro, :bindings [:DE_U_UMLAUT :DE_N6]}
-     {:name "ue7", :type :macro, :bindings [:DE_U_UMLAUT :DE_N7]}
-     {:name "ue8", :type :macro, :bindings [:DE_U_UMLAUT :DE_N8]}
-     {:name "ue9", :type :macro, :bindings [:DE_U_UMLAUT :DE_N9]}
-     {:name "ue0", :type :macro, :bindings [:DE_U_UMLAUT :DE_N0]}
+     {:name "ue1", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N1]}
+     {:name "ue2", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N2]}
+     {:name "ue3", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N3]}
+     {:name "ue4", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N4]}
+     {:name "ue5", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N5]}
+     {:name "ue6", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N6]}
+     {:name "ue7", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N7]}
+     {:name "ue8", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N8]}
+     {:name "ue9", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N9]}
+     {:name "ue0", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N0]}
      {:name "tmux_next_window", :type :macro, :bindings [:DE_U_UMLAUT :DE_N]}
      {:name "tmux_prev_window", :type :macro, :bindings [:DE_U_UMLAUT :DE_P]}
      {:name "vim_split_v", :type :macro, :bindings [[:kp "LC(W)"] :V]}

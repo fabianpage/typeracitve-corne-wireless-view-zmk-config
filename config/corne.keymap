@@ -398,61 +398,61 @@
         ue1: ue1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N1>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N1>;
         };
 
         ue2: ue2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N2>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N2>;
         };
 
         ue3: ue3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N3>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N3>;
         };
 
         ue4: ue4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N4>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N4>;
         };
 
         ue5: ue5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N5>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N5>;
         };
 
         ue6: ue6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N6>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N6>;
         };
 
         ue7: ue7 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N7>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N7>;
         };
 
         ue8: ue8 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N8>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N8>;
         };
 
         ue9: ue9 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N9>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N9>;
         };
 
         ue0: ue0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_U_UMLAUT &kp DE_N0>;
+            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N0>;
         };
 
         tmux_next_window: tmux_next_window {
