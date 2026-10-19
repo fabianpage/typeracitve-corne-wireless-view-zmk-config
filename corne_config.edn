@@ -53,7 +53,37 @@
       :body
       ["bindings = <&M_UPPER_AEOEUE DE_A_UMLAUT>;"
        "key-positions = <36 25 37>;"
-       "layers = <0>;"]})}]
+       "layers = <0>;"]}
+
+     ;; Num layer: hold V (pos 37) + a digit -> ue<digit> macro.
+     ;; The Num layer is mirrored, so each digit has a left and a right
+     ;; position; both are wired up so either hand works.
+     {:name "ue1_l", :body ["bindings = <&ue1>;" "key-positions = <37 4>;"], :layers [:Num]}
+     {:name "ue1_r", :body ["bindings = <&ue1>;" "key-positions = <37 7>;"], :layers [:Num]}
+     {:name "ue2_l", :body ["bindings = <&ue2>;" "key-positions = <37 3>;"], :layers [:Num]}
+     {:name "ue2_r", :body ["bindings = <&ue2>;" "key-positions = <37 8>;"], :layers [:Num]}
+     {:name "ue3_l", :body ["bindings = <&ue3>;" "key-positions = <37 2>;"], :layers [:Num]}
+     {:name "ue3_r", :body ["bindings = <&ue3>;" "key-positions = <37 9>;"], :layers [:Num]}
+     {:name "ue4_l", :body ["bindings = <&ue4>;" "key-positions = <37 16>;"], :layers [:Num]}
+     {:name "ue4_r", :body ["bindings = <&ue4>;" "key-positions = <37 19>;"], :layers [:Num]}
+     {:name "ue5_l", :body ["bindings = <&ue5>;" "key-positions = <37 15>;"], :layers [:Num]}
+     {:name "ue5_r", :body ["bindings = <&ue5>;" "key-positions = <37 20>;"], :layers [:Num]}
+     {:name "ue6_l", :body ["bindings = <&ue6>;" "key-positions = <37 14>;"], :layers [:Num]}
+     {:name "ue6_r", :body ["bindings = <&ue6>;" "key-positions = <37 21>;"], :layers [:Num]}
+     {:name "ue7_l", :body ["bindings = <&ue7>;" "key-positions = <37 28>;"], :layers [:Num]}
+     {:name "ue7_r", :body ["bindings = <&ue7>;" "key-positions = <37 31>;"], :layers [:Num]}
+     {:name "ue8_l", :body ["bindings = <&ue8>;" "key-positions = <37 27>;"], :layers [:Num]}
+     {:name "ue8_r", :body ["bindings = <&ue8>;" "key-positions = <37 32>;"], :layers [:Num]}
+     {:name "ue9_l", :body ["bindings = <&ue9>;" "key-positions = <37 26>;"], :layers [:Num]}
+     {:name "ue9_r", :body ["bindings = <&ue9>;" "key-positions = <37 33>;"], :layers [:Num]}
+     {:name "ue0_l", :body ["bindings = <&ue0>;" "key-positions = <37 17>;"], :layers [:Num]}
+     {:name "ue0_r", :body ["bindings = <&ue0>;" "key-positions = <37 18>;"], :layers [:Num]}
+
+     ;; Num layer: hold V (pos 37) + '-' -> '_', + '*' -> '+'.
+     {:name "under_l", :body ["bindings = <&kp DE_UNDER>;" "key-positions = <37 5>;"], :layers [:Num]}
+     {:name "under_r", :body ["bindings = <&kp DE_UNDER>;" "key-positions = <37 6>;"], :layers [:Num]}
+     {:name "plus_l", :body ["bindings = <&kp DE_PLUS>;" "key-positions = <37 29>;"], :layers [:Num]}
+     {:name "plus_r", :body ["bindings = <&kp DE_PLUS>;" "key-positions = <37 30>;"], :layers [:Num]})}]
   [:macros
    {:nodes
     [{:name "esc_layerreset", :type :macro, :bindings [:ESCAPE [:to 0]]}
@@ -86,16 +116,16 @@
       :tap-ms 100}
      {:name "backtick_macro", :type :macro, :bindings [:DE_GRAVE :SPACE]}
      {:name "fronttick_macro", :type :macro, :bindings [[:kp "RA(EQUAL)"] :SPACE]}
-     {:name "ue1", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N1]}
-     {:name "ue2", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N2]}
-     {:name "ue3", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N3]}
-     {:name "ue4", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N4]}
-     {:name "ue5", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N5]}
-     {:name "ue6", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N6]}
-     {:name "ue7", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N7]}
-     {:name "ue8", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N8]}
-     {:name "ue9", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N9]}
-     {:name "ue0", :type :macro, :bindings [[:release :LEFT_SHIFT] :DE_U_UMLAUT :DE_N0]}
+     {:name "ue1", :type :macro, :bindings [:DE_U_UMLAUT :DE_N1]}
+     {:name "ue2", :type :macro, :bindings [:DE_U_UMLAUT :DE_N2]}
+     {:name "ue3", :type :macro, :bindings [:DE_U_UMLAUT :DE_N3]}
+     {:name "ue4", :type :macro, :bindings [:DE_U_UMLAUT :DE_N4]}
+     {:name "ue5", :type :macro, :bindings [:DE_U_UMLAUT :DE_N5]}
+     {:name "ue6", :type :macro, :bindings [:DE_U_UMLAUT :DE_N6]}
+     {:name "ue7", :type :macro, :bindings [:DE_U_UMLAUT :DE_N7]}
+     {:name "ue8", :type :macro, :bindings [:DE_U_UMLAUT :DE_N8]}
+     {:name "ue9", :type :macro, :bindings [:DE_U_UMLAUT :DE_N9]}
+     {:name "ue0", :type :macro, :bindings [:DE_U_UMLAUT :DE_N0]}
      {:name "tmux_next_window", :type :macro, :bindings [:DE_U_UMLAUT :DE_N]}
      {:name "tmux_prev_window", :type :macro, :bindings [:DE_U_UMLAUT :DE_P]}
      {:name "vim_split_v", :type :macro, :bindings [[:kp "LC(W)"] :V]}
@@ -120,58 +150,6 @@
       :global-quick-tap true
       :hold-trigger-on-release true
       :hold-trigger-key-positions :left-half}
-     {:name "mal_plus"
-      :type :mod-morph
-      :bindings [:DE_ASTERISK :DE_PLUS]
-      :mods "(MOD_LSFT)"}
-     {:name "minus_underscore"
-      :type :mod-morph
-      :bindings [:DE_MINUS :DE_UNDER]
-      :mods "(MOD_LSFT)"}
-
-
-
-
-     {:name "n0ue0"
-      :type :mod-morph
-      :bindings [:DE_N0 [:ue0]]
-      :mods "(MOD_LSFT)"}
-     {:name "n1ue1"
-      :type :mod-morph
-      :bindings [:DE_N1 [:ue1]]
-      :mods "(MOD_LSFT)"}
-     {:name "n2ue2"
-      :type :mod-morph
-      :bindings [:DE_N2 [:ue2]]
-      :mods "(MOD_LSFT)"}
-     {:name "n3ue3"
-      :type :mod-morph
-      :bindings [:DE_N3 [:ue3]]
-      :mods "(MOD_LSFT)"}
-     {:name "n4ue4"
-      :type :mod-morph
-      :bindings [:DE_N4 [:ue4]]
-      :mods "(MOD_LSFT)"}
-     {:name "n5ue5"
-      :type :mod-morph
-      :bindings [:DE_N5 [:ue5]]
-      :mods "(MOD_LSFT)"}
-     {:name "n6ue6"
-      :type :mod-morph
-      :bindings [:DE_N6 [:ue6]]
-      :mods "(MOD_LSFT)"}
-     {:name "n7ue7"
-      :type :mod-morph
-      :bindings [:DE_N7 [:ue7]]
-      :mods "(MOD_LSFT)"}
-     {:name "n8ue8"
-      :type :mod-morph
-      :bindings [:DE_N8 [:ue8]]
-      :mods "(MOD_LSFT)"}
-     {:name "n9ue9"
-      :type :mod-morph
-      :bindings [:DE_N9 [:ue9]]
-      :mods "(MOD_LSFT)"}
      {:name "backspace_delete"
       :type :mod-morph
       :bindings [:BACKSPACE :DELETE]
@@ -211,9 +189,9 @@
        [:trans :trans :trans]]}
      {:name "Num"
       :left
-      [[:none :trans [:n3ue3] [:n2ue2] [:n1ue1] [:minus_underscore]]
-       [:none :trans [:n6ue6] [:n5ue5] [:n4ue4] [:n0ue0]]
-       [:none :trans [:n9ue9] [:n8ue8] [:n7ue7] [:mal_plus]]
+      [[:none :trans :DE_N3 :DE_N2 :DE_N1 :DE_MINUS]
+       [:none :trans :DE_N6 :DE_N5 :DE_N4 :DE_N0]
+       [:none :trans :DE_N9 :DE_N8 :DE_N7 :DE_ASTERISK]
        [:trans :trans :trans]]}
      {:name "BT"
       :left

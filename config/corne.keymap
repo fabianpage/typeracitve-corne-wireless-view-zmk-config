@@ -317,6 +317,150 @@
             key-positions = <36 25 37>;
             layers = <0>;
         };
+
+        ue1_l {
+            bindings = <&ue1>;
+            key-positions = <37 4>;
+            layers = <3>;
+        };
+
+        ue1_r {
+            bindings = <&ue1>;
+            key-positions = <37 7>;
+            layers = <3>;
+        };
+
+        ue2_l {
+            bindings = <&ue2>;
+            key-positions = <37 3>;
+            layers = <3>;
+        };
+
+        ue2_r {
+            bindings = <&ue2>;
+            key-positions = <37 8>;
+            layers = <3>;
+        };
+
+        ue3_l {
+            bindings = <&ue3>;
+            key-positions = <37 2>;
+            layers = <3>;
+        };
+
+        ue3_r {
+            bindings = <&ue3>;
+            key-positions = <37 9>;
+            layers = <3>;
+        };
+
+        ue4_l {
+            bindings = <&ue4>;
+            key-positions = <37 16>;
+            layers = <3>;
+        };
+
+        ue4_r {
+            bindings = <&ue4>;
+            key-positions = <37 19>;
+            layers = <3>;
+        };
+
+        ue5_l {
+            bindings = <&ue5>;
+            key-positions = <37 15>;
+            layers = <3>;
+        };
+
+        ue5_r {
+            bindings = <&ue5>;
+            key-positions = <37 20>;
+            layers = <3>;
+        };
+
+        ue6_l {
+            bindings = <&ue6>;
+            key-positions = <37 14>;
+            layers = <3>;
+        };
+
+        ue6_r {
+            bindings = <&ue6>;
+            key-positions = <37 21>;
+            layers = <3>;
+        };
+
+        ue7_l {
+            bindings = <&ue7>;
+            key-positions = <37 28>;
+            layers = <3>;
+        };
+
+        ue7_r {
+            bindings = <&ue7>;
+            key-positions = <37 31>;
+            layers = <3>;
+        };
+
+        ue8_l {
+            bindings = <&ue8>;
+            key-positions = <37 27>;
+            layers = <3>;
+        };
+
+        ue8_r {
+            bindings = <&ue8>;
+            key-positions = <37 32>;
+            layers = <3>;
+        };
+
+        ue9_l {
+            bindings = <&ue9>;
+            key-positions = <37 26>;
+            layers = <3>;
+        };
+
+        ue9_r {
+            bindings = <&ue9>;
+            key-positions = <37 33>;
+            layers = <3>;
+        };
+
+        ue0_l {
+            bindings = <&ue0>;
+            key-positions = <37 17>;
+            layers = <3>;
+        };
+
+        ue0_r {
+            bindings = <&ue0>;
+            key-positions = <37 18>;
+            layers = <3>;
+        };
+
+        under_l {
+            bindings = <&kp DE_UNDER>;
+            key-positions = <37 5>;
+            layers = <3>;
+        };
+
+        under_r {
+            bindings = <&kp DE_UNDER>;
+            key-positions = <37 6>;
+            layers = <3>;
+        };
+
+        plus_l {
+            bindings = <&kp DE_PLUS>;
+            key-positions = <37 29>;
+            layers = <3>;
+        };
+
+        plus_r {
+            bindings = <&kp DE_PLUS>;
+            key-positions = <37 30>;
+            layers = <3>;
+        };
         // END combos
     };
 
@@ -398,61 +542,61 @@
         ue1: ue1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N1>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N1>;
         };
 
         ue2: ue2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N2>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N2>;
         };
 
         ue3: ue3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N3>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N3>;
         };
 
         ue4: ue4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N4>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N4>;
         };
 
         ue5: ue5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N5>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N5>;
         };
 
         ue6: ue6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N6>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N6>;
         };
 
         ue7: ue7 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N7>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N7>;
         };
 
         ue8: ue8 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N8>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N8>;
         };
 
         ue9: ue9 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N9>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N9>;
         };
 
         ue0: ue0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_release &kp LEFT_SHIFT &kp DE_U_UMLAUT &kp DE_N0>;
+            bindings = <&kp DE_U_UMLAUT &kp DE_N0>;
         };
 
         tmux_next_window: tmux_next_window {
@@ -505,90 +649,6 @@
             quick-tap-ms = <150>;
             global-quick-tap;
             tapping-term-ms = <200>;
-        };
-
-        mal_plus: mal_plus {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_ASTERISK>, <&kp DE_PLUS>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        minus_underscore: minus_underscore {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_MINUS>, <&kp DE_UNDER>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n0ue0: n0ue0 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N0>, <&ue0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n1ue1: n1ue1 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N1>, <&ue1>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n2ue2: n2ue2 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N2>, <&ue2>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n3ue3: n3ue3 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N3>, <&ue3>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n4ue4: n4ue4 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N4>, <&ue4>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n5ue5: n5ue5 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N5>, <&ue5>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n6ue6: n6ue6 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N6>, <&ue6>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n7ue7: n7ue7 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N7>, <&ue7>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n8ue8: n8ue8 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N8>, <&ue8>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        n9ue9: n9ue9 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DE_N9>, <&ue9>;
-            mods = <(MOD_LSFT)>;
         };
 
         backspace_delete: backspace_delete {
@@ -644,9 +704,9 @@
         Num {
             display-name = "Num";
             bindings = <
-&none &trans &n3ue3 &n2ue2 &n1ue1 &minus_underscore &minus_underscore &n1ue1 &n2ue2 &n3ue3 &trans &none
-&none &trans &n6ue6 &n5ue5 &n4ue4 &n0ue0 &n0ue0 &n4ue4 &n5ue5 &n6ue6 &trans &none
-&none &trans &n9ue9 &n8ue8 &n7ue7 &mal_plus &mal_plus &n7ue7 &n8ue8 &n9ue9 &trans &none
+&none &trans &kp DE_N3 &kp DE_N2 &kp DE_N1 &kp DE_MINUS &kp DE_MINUS &kp DE_N1 &kp DE_N2 &kp DE_N3 &trans &none
+&none &trans &kp DE_N6 &kp DE_N5 &kp DE_N4 &kp DE_N0 &kp DE_N0 &kp DE_N4 &kp DE_N5 &kp DE_N6 &trans &none
+&none &trans &kp DE_N9 &kp DE_N8 &kp DE_N7 &kp DE_ASTERISK &kp DE_ASTERISK &kp DE_N7 &kp DE_N8 &kp DE_N9 &trans &none
 &trans &trans &trans &trans &trans &trans
             >;
         };
