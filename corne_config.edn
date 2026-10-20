@@ -192,7 +192,7 @@
       [[:none :trans :DE_N3 :DE_N2 :DE_N1 :DE_MINUS]
        [:none :trans :DE_N6 :DE_N5 :DE_N4 :DE_N0]
        [:none :trans :DE_N9 :DE_N8 :DE_N7 :DE_ASTERISK]
-       [:trans :trans :trans]]}
+       [:none :none :none]]}
      {:name "BT"
       :left
       [[:none [:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]

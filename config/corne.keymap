@@ -707,7 +707,7 @@
 &none &trans &kp DE_N3 &kp DE_N2 &kp DE_N1 &kp DE_MINUS &kp DE_MINUS &kp DE_N1 &kp DE_N2 &kp DE_N3 &trans &none
 &none &trans &kp DE_N6 &kp DE_N5 &kp DE_N4 &kp DE_N0 &kp DE_N0 &kp DE_N4 &kp DE_N5 &kp DE_N6 &trans &none
 &none &trans &kp DE_N9 &kp DE_N8 &kp DE_N7 &kp DE_ASTERISK &kp DE_ASTERISK &kp DE_N7 &kp DE_N8 &kp DE_N9 &trans &none
-&trans &trans &trans &trans &trans &trans
+&none &none &none &none &none &none
             >;
         };
 
