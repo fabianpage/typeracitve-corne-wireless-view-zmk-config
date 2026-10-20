@@ -53,37 +53,7 @@
       :body
       ["bindings = <&M_UPPER_AEOEUE DE_A_UMLAUT>;"
        "key-positions = <36 25 37>;"
-       "layers = <0>;"]}
-
-     ;; Num layer: hold V (pos 37) + a digit -> ue<digit> macro.
-     ;; The Num layer is mirrored, so each digit has a left and a right
-     ;; position; both are wired up so either hand works.
-     {:name "ue1_l", :body ["bindings = <&ue1>;" "key-positions = <37 4>;"], :layers [:Num]}
-     {:name "ue1_r", :body ["bindings = <&ue1>;" "key-positions = <37 7>;"], :layers [:Num]}
-     {:name "ue2_l", :body ["bindings = <&ue2>;" "key-positions = <37 3>;"], :layers [:Num]}
-     {:name "ue2_r", :body ["bindings = <&ue2>;" "key-positions = <37 8>;"], :layers [:Num]}
-     {:name "ue3_l", :body ["bindings = <&ue3>;" "key-positions = <37 2>;"], :layers [:Num]}
-     {:name "ue3_r", :body ["bindings = <&ue3>;" "key-positions = <37 9>;"], :layers [:Num]}
-     {:name "ue4_l", :body ["bindings = <&ue4>;" "key-positions = <37 16>;"], :layers [:Num]}
-     {:name "ue4_r", :body ["bindings = <&ue4>;" "key-positions = <37 19>;"], :layers [:Num]}
-     {:name "ue5_l", :body ["bindings = <&ue5>;" "key-positions = <37 15>;"], :layers [:Num]}
-     {:name "ue5_r", :body ["bindings = <&ue5>;" "key-positions = <37 20>;"], :layers [:Num]}
-     {:name "ue6_l", :body ["bindings = <&ue6>;" "key-positions = <37 14>;"], :layers [:Num]}
-     {:name "ue6_r", :body ["bindings = <&ue6>;" "key-positions = <37 21>;"], :layers [:Num]}
-     {:name "ue7_l", :body ["bindings = <&ue7>;" "key-positions = <37 28>;"], :layers [:Num]}
-     {:name "ue7_r", :body ["bindings = <&ue7>;" "key-positions = <37 31>;"], :layers [:Num]}
-     {:name "ue8_l", :body ["bindings = <&ue8>;" "key-positions = <37 27>;"], :layers [:Num]}
-     {:name "ue8_r", :body ["bindings = <&ue8>;" "key-positions = <37 32>;"], :layers [:Num]}
-     {:name "ue9_l", :body ["bindings = <&ue9>;" "key-positions = <37 26>;"], :layers [:Num]}
-     {:name "ue9_r", :body ["bindings = <&ue9>;" "key-positions = <37 33>;"], :layers [:Num]}
-     {:name "ue0_l", :body ["bindings = <&ue0>;" "key-positions = <37 17>;"], :layers [:Num]}
-     {:name "ue0_r", :body ["bindings = <&ue0>;" "key-positions = <37 18>;"], :layers [:Num]}
-
-     ;; Num layer: hold V (pos 37) + '-' -> '_', + '*' -> '+'.
-     {:name "under_l", :body ["bindings = <&kp DE_UNDER>;" "key-positions = <37 5>;"], :layers [:Num]}
-     {:name "under_r", :body ["bindings = <&kp DE_UNDER>;" "key-positions = <37 6>;"], :layers [:Num]}
-     {:name "plus_l", :body ["bindings = <&kp DE_PLUS>;" "key-positions = <37 29>;"], :layers [:Num]}
-     {:name "plus_r", :body ["bindings = <&kp DE_PLUS>;" "key-positions = <37 30>;"], :layers [:Num]})}]
+       "layers = <0>;"]})}]
   [:macros
    {:nodes
     [{:name "esc_layerreset", :type :macro, :bindings [:ESCAPE [:to 0]]}
@@ -192,7 +162,7 @@
       [[:none :trans :DE_N3 :DE_N2 :DE_N1 :DE_MINUS]
        [:none :trans :DE_N6 :DE_N5 :DE_N4 :DE_N0]
        [:none :trans :DE_N9 :DE_N8 :DE_N7 :DE_ASTERISK]
-       [:none :none :none]]}
+       [:none [:sl 7] :none]]}
      {:name "BT"
       :left
       [[:none [:bt :BT_CLR_ALL] [:bt :BT_SEL 2] [:bt :BT_SEL 1] [:bt :BT_SEL 0] [:bt :BT_CLR]]
@@ -215,4 +185,10 @@
       [nil
        [:H :J :K :L :* :*]
        nil
-       nil]})}]]}
+       nil]}
+     {:name "NumMod"
+      :left
+      [[:none :trans [:ue3] [:ue2] [:ue1] :DE_UNDER]
+       [:none :trans [:ue6] [:ue5] [:ue4] [:ue0]]
+       [:none :trans [:ue9] [:ue8] [:ue7] :DE_PLUS]
+       [:none :trans :none]]})}]]}

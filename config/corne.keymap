@@ -317,150 +317,6 @@
             key-positions = <36 25 37>;
             layers = <0>;
         };
-
-        ue1_l {
-            bindings = <&ue1>;
-            key-positions = <37 4>;
-            layers = <3>;
-        };
-
-        ue1_r {
-            bindings = <&ue1>;
-            key-positions = <37 7>;
-            layers = <3>;
-        };
-
-        ue2_l {
-            bindings = <&ue2>;
-            key-positions = <37 3>;
-            layers = <3>;
-        };
-
-        ue2_r {
-            bindings = <&ue2>;
-            key-positions = <37 8>;
-            layers = <3>;
-        };
-
-        ue3_l {
-            bindings = <&ue3>;
-            key-positions = <37 2>;
-            layers = <3>;
-        };
-
-        ue3_r {
-            bindings = <&ue3>;
-            key-positions = <37 9>;
-            layers = <3>;
-        };
-
-        ue4_l {
-            bindings = <&ue4>;
-            key-positions = <37 16>;
-            layers = <3>;
-        };
-
-        ue4_r {
-            bindings = <&ue4>;
-            key-positions = <37 19>;
-            layers = <3>;
-        };
-
-        ue5_l {
-            bindings = <&ue5>;
-            key-positions = <37 15>;
-            layers = <3>;
-        };
-
-        ue5_r {
-            bindings = <&ue5>;
-            key-positions = <37 20>;
-            layers = <3>;
-        };
-
-        ue6_l {
-            bindings = <&ue6>;
-            key-positions = <37 14>;
-            layers = <3>;
-        };
-
-        ue6_r {
-            bindings = <&ue6>;
-            key-positions = <37 21>;
-            layers = <3>;
-        };
-
-        ue7_l {
-            bindings = <&ue7>;
-            key-positions = <37 28>;
-            layers = <3>;
-        };
-
-        ue7_r {
-            bindings = <&ue7>;
-            key-positions = <37 31>;
-            layers = <3>;
-        };
-
-        ue8_l {
-            bindings = <&ue8>;
-            key-positions = <37 27>;
-            layers = <3>;
-        };
-
-        ue8_r {
-            bindings = <&ue8>;
-            key-positions = <37 32>;
-            layers = <3>;
-        };
-
-        ue9_l {
-            bindings = <&ue9>;
-            key-positions = <37 26>;
-            layers = <3>;
-        };
-
-        ue9_r {
-            bindings = <&ue9>;
-            key-positions = <37 33>;
-            layers = <3>;
-        };
-
-        ue0_l {
-            bindings = <&ue0>;
-            key-positions = <37 17>;
-            layers = <3>;
-        };
-
-        ue0_r {
-            bindings = <&ue0>;
-            key-positions = <37 18>;
-            layers = <3>;
-        };
-
-        under_l {
-            bindings = <&kp DE_UNDER>;
-            key-positions = <37 5>;
-            layers = <3>;
-        };
-
-        under_r {
-            bindings = <&kp DE_UNDER>;
-            key-positions = <37 6>;
-            layers = <3>;
-        };
-
-        plus_l {
-            bindings = <&kp DE_PLUS>;
-            key-positions = <37 29>;
-            layers = <3>;
-        };
-
-        plus_r {
-            bindings = <&kp DE_PLUS>;
-            key-positions = <37 30>;
-            layers = <3>;
-        };
         // END combos
     };
 
@@ -707,7 +563,7 @@
 &none &trans &kp DE_N3 &kp DE_N2 &kp DE_N1 &kp DE_MINUS &kp DE_MINUS &kp DE_N1 &kp DE_N2 &kp DE_N3 &trans &none
 &none &trans &kp DE_N6 &kp DE_N5 &kp DE_N4 &kp DE_N0 &kp DE_N0 &kp DE_N4 &kp DE_N5 &kp DE_N6 &trans &none
 &none &trans &kp DE_N9 &kp DE_N8 &kp DE_N7 &kp DE_ASTERISK &kp DE_ASTERISK &kp DE_N7 &kp DE_N8 &kp DE_N9 &trans &none
-&none &none &none &none &none &none
+&none &sl 7 &none &none &sl 7 &none
             >;
         };
 
@@ -738,6 +594,16 @@
 &trans &trans &kp H &kp J &kp K &kp L &kp H &kp J &kp K &kp L &trans &trans
 &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
 &trans &trans &trans &trans &trans &trans
+            >;
+        };
+
+        NumMod {
+            display-name = "NumMod";
+            bindings = <
+&none &trans &ue3 &ue2 &ue1 &kp DE_UNDER &kp DE_UNDER &ue1 &ue2 &ue3 &trans &none
+&none &trans &ue6 &ue5 &ue4 &ue0 &ue0 &ue4 &ue5 &ue6 &trans &none
+&none &trans &ue9 &ue8 &ue7 &kp DE_PLUS &kp DE_PLUS &ue7 &ue8 &ue9 &trans &none
+&none &trans &none &none &trans &none
             >;
         };
         // END keymap
