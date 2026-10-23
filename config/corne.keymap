@@ -305,18 +305,6 @@
             bindings = <&komma_strickpunkt>;
             key-positions = <20 31>;
         };
-
-        toBT {
-            bindings = <&to 4>;
-            key-positions = <1 2 3 4>;
-            layers = <0>;
-        };
-
-        ae {
-            bindings = <&M_UPPER_AEOEUE DE_A_UMLAUT>;
-            key-positions = <36 25 37>;
-            layers = <0>;
-        };
         // END combos
     };
 

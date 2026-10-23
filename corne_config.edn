@@ -43,17 +43,8 @@
       [[:none :none :none [:punkt_doppelpunkt]  :none :none]
        [:none :none :none  [:komma_strickpunkt] :none :none]
        [:none :none :none :none :none :none]
-       [:none :none :none]]}
-     {:name "toBT"
-      :body
-      ["bindings = <&to 4>;"
-       "key-positions = <1 2 3 4>;"
-       "layers = <0>;"]}
-     {:name "ae"
-      :body
-      ["bindings = <&M_UPPER_AEOEUE DE_A_UMLAUT>;"
-       "key-positions = <36 25 37>;"
-       "layers = <0>;"]})}]
+       [:none :none :none]]})}
+   ]
   [:macros
    {:nodes
     [{:name "esc_layerreset", :type :macro, :bindings [:ESCAPE [:to 0]]}
